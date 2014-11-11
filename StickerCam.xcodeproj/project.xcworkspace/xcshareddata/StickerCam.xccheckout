@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>44420EBC-8080-4EA7-992A-598A0BA48903</string>
+	<key>IDESourceControlProjectName</key>
+	<string>StickerCam</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CAA8C42FEF2D1C00B12C0C4C6B6C8B8801C06999</key>
+		<string>https://github.com/blairvanderhoof/StickerCam.git</string>
+		<key>E4DF6DF11BAA7A05A9CB14CA3D6002E72203F527</key>
+		<string>https://github.com/blairvanderhoof/StickerCam.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>StickerCam.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CAA8C42FEF2D1C00B12C0C4C6B6C8B8801C06999</key>
+		<string>../..</string>
+		<key>E4DF6DF11BAA7A05A9CB14CA3D6002E72203F527</key>
+		<string>../../StickerCam</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/blairvanderhoof/StickerCam.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CAA8C42FEF2D1C00B12C0C4C6B6C8B8801C06999</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CAA8C42FEF2D1C00B12C0C4C6B6C8B8801C06999</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StickerCam</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E4DF6DF11BAA7A05A9CB14CA3D6002E72203F527</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StickerCam</string>
+		</dict>
+	</array>
+</dict>
+</plist>

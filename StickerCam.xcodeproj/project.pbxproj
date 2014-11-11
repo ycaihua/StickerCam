@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F6CAD021A121A0600C03768 /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFA1A121A0600C03768 /* down_arrow.png */; };
+		5F6CAD031A121A0600C03768 /* dead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFC1A121A0600C03768 /* dead@2x.png */; };
+		5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFD1A121A0600C03768 /* excited@2x.png */; };
+		5F6CAD051A121A0600C03768 /* happy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFE1A121A0600C03768 /* happy@2x.png */; };
+		5F6CAD061A121A0600C03768 /* sad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFF1A121A0600C03768 /* sad@2x.png */; };
+		5F6CAD071A121A0600C03768 /* tongue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CAD001A121A0600C03768 /* tongue@2x.png */; };
+		5F6CAD081A121A0600C03768 /* wink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CAD011A121A0600C03768 /* wink@2x.png */; };
 		5FA428A81A12095600F00FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428A71A12095600F00FFF /* main.m */; };
 		5FA428AB1A12095600F00FFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428AA1A12095600F00FFF /* AppDelegate.m */; };
 		5FA428B31A12095600F00FFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428B21A12095600F00FFF /* Images.xcassets */; };
@@ -14,13 +21,6 @@
 		5FA428C21A12095600F00FFF /* StickerCamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428C11A12095600F00FFF /* StickerCamTests.m */; };
 		5FA428CE1A1209D400F00FFF /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428CC1A1209D400F00FFF /* CanvasViewController.m */; };
 		5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */; };
-		5FA428D81A120AE400F00FFF /* dead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D21A120AE400F00FFF /* dead@2x.png */; };
-		5FA428D91A120AE400F00FFF /* excited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D31A120AE400F00FFF /* excited@2x.png */; };
-		5FA428DA1A120AE400F00FFF /* happy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D41A120AE400F00FFF /* happy@2x.png */; };
-		5FA428DB1A120AE400F00FFF /* sad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D51A120AE400F00FFF /* sad@2x.png */; };
-		5FA428DC1A120AE400F00FFF /* tongue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D61A120AE400F00FFF /* tongue@2x.png */; };
-		5FA428DD1A120AE400F00FFF /* wink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D71A120AE400F00FFF /* wink@2x.png */; };
-		5FA428E01A120AF600F00FFF /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428DF1A120AF600F00FFF /* down_arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F6CACFA1A121A0600C03768 /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_arrow.png; sourceTree = "<group>"; };
+		5F6CACFC1A121A0600C03768 /* dead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dead@2x.png"; sourceTree = "<group>"; };
+		5F6CACFD1A121A0600C03768 /* excited@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "excited@2x.png"; sourceTree = "<group>"; };
+		5F6CACFE1A121A0600C03768 /* happy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "happy@2x.png"; sourceTree = "<group>"; };
+		5F6CACFF1A121A0600C03768 /* sad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sad@2x.png"; sourceTree = "<group>"; };
+		5F6CAD001A121A0600C03768 /* tongue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tongue@2x.png"; sourceTree = "<group>"; };
+		5F6CAD011A121A0600C03768 /* wink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wink@2x.png"; sourceTree = "<group>"; };
 		5FA428A21A12095600F00FFF /* StickerCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickerCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA428A61A12095600F00FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA428A71A12095600F00FFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,13 +54,6 @@
 		5FA428CB1A1209D400F00FFF /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
 		5FA428CC1A1209D400F00FFF /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
 		5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanvasViewController.xib; sourceTree = "<group>"; };
-		5FA428D21A120AE400F00FFF /* dead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dead@2x.png"; path = "../../../StickerCam/StickerCam/dead@2x.png"; sourceTree = "<group>"; };
-		5FA428D31A120AE400F00FFF /* excited@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "excited@2x.png"; path = "../../../StickerCam/StickerCam/excited@2x.png"; sourceTree = "<group>"; };
-		5FA428D41A120AE400F00FFF /* happy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "happy@2x.png"; path = "../../../StickerCam/StickerCam/happy@2x.png"; sourceTree = "<group>"; };
-		5FA428D51A120AE400F00FFF /* sad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sad@2x.png"; path = "../../../StickerCam/StickerCam/sad@2x.png"; sourceTree = "<group>"; };
-		5FA428D61A120AE400F00FFF /* tongue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tongue@2x.png"; path = "../../../StickerCam/StickerCam/tongue@2x.png"; sourceTree = "<group>"; };
-		5FA428D71A120AE400F00FFF /* wink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wink@2x.png"; path = "../../../StickerCam/StickerCam/wink@2x.png"; sourceTree = "<group>"; };
-		5FA428DF1A120AF600F00FFF /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = down_arrow.png; path = ../../../StickerCam/StickerCam/down_arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +74,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F6CACF91A121A0600C03768 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5F6CACFA1A121A0600C03768 /* down_arrow.png */,
+				5F6CACFB1A121A0600C03768 /* stickers */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		5F6CACFB1A121A0600C03768 /* stickers */ = {
+			isa = PBXGroup;
+			children = (
+				5F6CACFC1A121A0600C03768 /* dead@2x.png */,
+				5F6CACFD1A121A0600C03768 /* excited@2x.png */,
+				5F6CACFE1A121A0600C03768 /* happy@2x.png */,
+				5F6CACFF1A121A0600C03768 /* sad@2x.png */,
+				5F6CAD001A121A0600C03768 /* tongue@2x.png */,
+				5F6CAD011A121A0600C03768 /* wink@2x.png */,
+			);
+			path = stickers;
+			sourceTree = "<group>";
+		};
 		5FA428991A12095600F00FFF = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +117,7 @@
 		5FA428A41A12095600F00FFF /* StickerCam */ = {
 			isa = PBXGroup;
 			children = (
-				5FA428DE1A120AEC00F00FFF /* images */,
-				5FA428D01A120AC800F00FFF /* stickers */,
+				5F6CACF91A121A0600C03768 /* images */,
 				5FA428A91A12095600F00FFF /* AppDelegate.h */,
 				5FA428AA1A12095600F00FFF /* AppDelegate.m */,
 				5FA428B21A12095600F00FFF /* Images.xcassets */,
@@ -133,35 +154,6 @@
 				5FA428C01A12095600F00FFF /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5FA428D01A120AC800F00FFF /* stickers */ = {
-			isa = PBXGroup;
-			children = (
-				5FA428D11A120AD500F00FFF /* simleys */,
-			);
-			name = stickers;
-			sourceTree = "<group>";
-		};
-		5FA428D11A120AD500F00FFF /* simleys */ = {
-			isa = PBXGroup;
-			children = (
-				5FA428D21A120AE400F00FFF /* dead@2x.png */,
-				5FA428D31A120AE400F00FFF /* excited@2x.png */,
-				5FA428D41A120AE400F00FFF /* happy@2x.png */,
-				5FA428D51A120AE400F00FFF /* sad@2x.png */,
-				5FA428D61A120AE400F00FFF /* tongue@2x.png */,
-				5FA428D71A120AE400F00FFF /* wink@2x.png */,
-			);
-			name = simleys;
-			sourceTree = "<group>";
-		};
-		5FA428DE1A120AEC00F00FFF /* images */ = {
-			isa = PBXGroup;
-			children = (
-				5FA428DF1A120AF600F00FFF /* down_arrow.png */,
-			);
-			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,16 +236,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FA428DD1A120AE400F00FFF /* wink@2x.png in Resources */,
 				5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */,
 				5FA428B61A12095600F00FFF /* LaunchScreen.xib in Resources */,
-				5FA428D81A120AE400F00FFF /* dead@2x.png in Resources */,
-				5FA428D91A120AE400F00FFF /* excited@2x.png in Resources */,
-				5FA428DC1A120AE400F00FFF /* tongue@2x.png in Resources */,
-				5FA428DB1A120AE400F00FFF /* sad@2x.png in Resources */,
+				5F6CAD031A121A0600C03768 /* dead@2x.png in Resources */,
+				5F6CAD081A121A0600C03768 /* wink@2x.png in Resources */,
 				5FA428B31A12095600F00FFF /* Images.xcassets in Resources */,
-				5FA428DA1A120AE400F00FFF /* happy@2x.png in Resources */,
-				5FA428E01A120AF600F00FFF /* down_arrow.png in Resources */,
+				5F6CAD021A121A0600C03768 /* down_arrow.png in Resources */,
+				5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */,
+				5F6CAD051A121A0600C03768 /* happy@2x.png in Resources */,
+				5F6CAD071A121A0600C03768 /* tongue@2x.png in Resources */,
+				5F6CAD061A121A0600C03768 /* sad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +450,7 @@
 				5FA428C71A12095600F00FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5FA428C81A12095600F00FFF /* Build configuration list for PBXNativeTarget "StickerCamTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +459,7 @@
 				5FA428CA1A12095600F00FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
