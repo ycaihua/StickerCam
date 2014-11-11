@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		5FA428A81A12095600F00FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428A71A12095600F00FFF /* main.m */; };
 		5FA428AB1A12095600F00FFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428AA1A12095600F00FFF /* AppDelegate.m */; };
-		5FA428AE1A12095600F00FFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428AD1A12095600F00FFF /* ViewController.m */; };
-		5FA428B11A12095600F00FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428AF1A12095600F00FFF /* Main.storyboard */; };
 		5FA428B31A12095600F00FFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428B21A12095600F00FFF /* Images.xcassets */; };
 		5FA428B61A12095600F00FFF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428B41A12095600F00FFF /* LaunchScreen.xib */; };
 		5FA428C21A12095600F00FFF /* StickerCamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428C11A12095600F00FFF /* StickerCamTests.m */; };
+		5FA428CE1A1209D400F00FFF /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428CC1A1209D400F00FFF /* CanvasViewController.m */; };
+		5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */; };
+		5FA428D81A120AE400F00FFF /* dead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D21A120AE400F00FFF /* dead@2x.png */; };
+		5FA428D91A120AE400F00FFF /* excited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D31A120AE400F00FFF /* excited@2x.png */; };
+		5FA428DA1A120AE400F00FFF /* happy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D41A120AE400F00FFF /* happy@2x.png */; };
+		5FA428DB1A120AE400F00FFF /* sad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D51A120AE400F00FFF /* sad@2x.png */; };
+		5FA428DC1A120AE400F00FFF /* tongue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D61A120AE400F00FFF /* tongue@2x.png */; };
+		5FA428DD1A120AE400F00FFF /* wink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428D71A120AE400F00FFF /* wink@2x.png */; };
+		5FA428E01A120AF600F00FFF /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428DF1A120AF600F00FFF /* down_arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +39,21 @@
 		5FA428A71A12095600F00FFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FA428A91A12095600F00FFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5FA428AA1A12095600F00FFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5FA428AC1A12095600F00FFF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5FA428AD1A12095600F00FFF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5FA428B01A12095600F00FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FA428B21A12095600F00FFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5FA428B51A12095600F00FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5FA428BB1A12095600F00FFF /* StickerCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickerCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA428C01A12095600F00FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA428C11A12095600F00FFF /* StickerCamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StickerCamTests.m; sourceTree = "<group>"; };
+		5FA428CB1A1209D400F00FFF /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
+		5FA428CC1A1209D400F00FFF /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
+		5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanvasViewController.xib; sourceTree = "<group>"; };
+		5FA428D21A120AE400F00FFF /* dead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dead@2x.png"; path = "../../../StickerCam/StickerCam/dead@2x.png"; sourceTree = "<group>"; };
+		5FA428D31A120AE400F00FFF /* excited@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "excited@2x.png"; path = "../../../StickerCam/StickerCam/excited@2x.png"; sourceTree = "<group>"; };
+		5FA428D41A120AE400F00FFF /* happy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "happy@2x.png"; path = "../../../StickerCam/StickerCam/happy@2x.png"; sourceTree = "<group>"; };
+		5FA428D51A120AE400F00FFF /* sad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sad@2x.png"; path = "../../../StickerCam/StickerCam/sad@2x.png"; sourceTree = "<group>"; };
+		5FA428D61A120AE400F00FFF /* tongue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tongue@2x.png"; path = "../../../StickerCam/StickerCam/tongue@2x.png"; sourceTree = "<group>"; };
+		5FA428D71A120AE400F00FFF /* wink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wink@2x.png"; path = "../../../StickerCam/StickerCam/wink@2x.png"; sourceTree = "<group>"; };
+		5FA428DF1A120AF600F00FFF /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = down_arrow.png; path = ../../../StickerCam/StickerCam/down_arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +95,16 @@
 		5FA428A41A12095600F00FFF /* StickerCam */ = {
 			isa = PBXGroup;
 			children = (
+				5FA428DE1A120AEC00F00FFF /* images */,
+				5FA428D01A120AC800F00FFF /* stickers */,
 				5FA428A91A12095600F00FFF /* AppDelegate.h */,
 				5FA428AA1A12095600F00FFF /* AppDelegate.m */,
-				5FA428AC1A12095600F00FFF /* ViewController.h */,
-				5FA428AD1A12095600F00FFF /* ViewController.m */,
-				5FA428AF1A12095600F00FFF /* Main.storyboard */,
 				5FA428B21A12095600F00FFF /* Images.xcassets */,
 				5FA428B41A12095600F00FFF /* LaunchScreen.xib */,
 				5FA428A51A12095600F00FFF /* Supporting Files */,
+				5FA428CB1A1209D400F00FFF /* CanvasViewController.h */,
+				5FA428CC1A1209D400F00FFF /* CanvasViewController.m */,
+				5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */,
 			);
 			path = StickerCam;
 			sourceTree = "<group>";
@@ -117,6 +133,35 @@
 				5FA428C01A12095600F00FFF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FA428D01A120AC800F00FFF /* stickers */ = {
+			isa = PBXGroup;
+			children = (
+				5FA428D11A120AD500F00FFF /* simleys */,
+			);
+			name = stickers;
+			sourceTree = "<group>";
+		};
+		5FA428D11A120AD500F00FFF /* simleys */ = {
+			isa = PBXGroup;
+			children = (
+				5FA428D21A120AE400F00FFF /* dead@2x.png */,
+				5FA428D31A120AE400F00FFF /* excited@2x.png */,
+				5FA428D41A120AE400F00FFF /* happy@2x.png */,
+				5FA428D51A120AE400F00FFF /* sad@2x.png */,
+				5FA428D61A120AE400F00FFF /* tongue@2x.png */,
+				5FA428D71A120AE400F00FFF /* wink@2x.png */,
+			);
+			name = simleys;
+			sourceTree = "<group>";
+		};
+		5FA428DE1A120AEC00F00FFF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5FA428DF1A120AF600F00FFF /* down_arrow.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +244,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FA428B11A12095600F00FFF /* Main.storyboard in Resources */,
+				5FA428DD1A120AE400F00FFF /* wink@2x.png in Resources */,
+				5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */,
 				5FA428B61A12095600F00FFF /* LaunchScreen.xib in Resources */,
+				5FA428D81A120AE400F00FFF /* dead@2x.png in Resources */,
+				5FA428D91A120AE400F00FFF /* excited@2x.png in Resources */,
+				5FA428DC1A120AE400F00FFF /* tongue@2x.png in Resources */,
+				5FA428DB1A120AE400F00FFF /* sad@2x.png in Resources */,
 				5FA428B31A12095600F00FFF /* Images.xcassets in Resources */,
+				5FA428DA1A120AE400F00FFF /* happy@2x.png in Resources */,
+				5FA428E01A120AF600F00FFF /* down_arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FA428AE1A12095600F00FFF /* ViewController.m in Sources */,
 				5FA428AB1A12095600F00FFF /* AppDelegate.m in Sources */,
 				5FA428A81A12095600F00FFF /* main.m in Sources */,
+				5FA428CE1A1209D400F00FFF /* CanvasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +296,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5FA428AF1A12095600F00FFF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5FA428B01A12095600F00FFF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5FA428B41A12095600F00FFF /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

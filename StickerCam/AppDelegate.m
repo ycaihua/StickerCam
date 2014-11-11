@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  StickerCam
 //
-//  Created by Blair Vanderhoof on 11/11/14.
+//  Created by Blair Vanderhoof on 11/5/14.
 //  Copyright (c) 2014 blairv. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "CanvasViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    
+    // Override point for customization after application launch.
+    CanvasViewController *vc = [[CanvasViewController alloc]init];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

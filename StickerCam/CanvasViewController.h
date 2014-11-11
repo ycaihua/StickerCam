@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CanvasViewController.h
 //  StickerCam
 //
 //  Created by Blair Vanderhoof on 11/11/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CanvasViewController : UIViewController<UIGestureRecognizerDelegate>
 
 @end
-
