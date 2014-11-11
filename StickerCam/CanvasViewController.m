@@ -9,12 +9,6 @@
 #import "CanvasViewController.h"
 
 @interface CanvasViewController ()
-//@property (weak, nonatomic) IBOutlet UIImageView *smileImage;
-//@property (weak, nonatomic) IBOutlet UIImageView *bigSmileImage;
-//@property (weak, nonatomic) IBOutlet UIImageView *winkImage;
-//@property (weak, nonatomic) IBOutlet UIImageView *tongueImage;
-//@property (weak, nonatomic) IBOutlet UIImageView *frownImage;
-//@property (weak, nonatomic) IBOutlet UIImageView *deadImage;
 @property (weak, nonatomic) IBOutlet UIView *stickerContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *frownImage;
 @property (weak, nonatomic) IBOutlet UIImageView *bigSmileImage;
