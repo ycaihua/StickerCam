@@ -10,6 +10,7 @@
 		0526010C1A13167D004C5951 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0526010B1A13167D004C5951 /* AVFoundation.framework */; };
 		052601101A131A84004C5951 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0526010D1A131A84004C5951 /* CameraViewController.xib */; };
 		052601111A131A84004C5951 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0526010F1A131A84004C5951 /* CameraViewController.m */; };
+		052601131A131DDF004C5951 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 052601121A131DDF004C5951 /* button.png */; };
 		5F6CAD021A121A0600C03768 /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFA1A121A0600C03768 /* down_arrow.png */; };
 		5F6CAD031A121A0600C03768 /* dead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFC1A121A0600C03768 /* dead@2x.png */; };
 		5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFD1A121A0600C03768 /* excited@2x.png */; };
@@ -41,6 +42,7 @@
 		0526010D1A131A84004C5951 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		0526010E1A131A84004C5951 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		0526010F1A131A84004C5951 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		052601121A131DDF004C5951 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		5F6CACFA1A121A0600C03768 /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_arrow.png; sourceTree = "<group>"; };
 		5F6CACFC1A121A0600C03768 /* dead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dead@2x.png"; sourceTree = "<group>"; };
 		5F6CACFD1A121A0600C03768 /* excited@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "excited@2x.png"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		5F6CACF91A121A0600C03768 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				052601121A131DDF004C5951 /* button.png */,
 				5F6CACFA1A121A0600C03768 /* down_arrow.png */,
 				5F6CACFB1A121A0600C03768 /* stickers */,
 			);
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */,
+				052601131A131DDF004C5951 /* button.png in Resources */,
 				5FA428B61A12095600F00FFF /* LaunchScreen.xib in Resources */,
 				5F6CAD031A121A0600C03768 /* dead@2x.png in Resources */,
 				5F6CAD081A121A0600C03768 /* wink@2x.png in Resources */,

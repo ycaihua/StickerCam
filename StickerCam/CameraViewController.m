@@ -7,6 +7,7 @@
 //
 
 #import "CameraViewController.h"
+#import "CanvasViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface CameraViewController ()
@@ -82,7 +83,9 @@ AVCaptureStillImageOutput *stillImageOutput;
     [stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
         UIImage *image = [UIImage imageWithData:imageData];
-        self.photoImageView.image = image;
+        CanvasViewController *vc = [[CanvasViewController alloc] init];
+        vc.pictureImage = image;
+        [self.navigationController pushViewController:vc animated:YES];
     }];
 }
 @end

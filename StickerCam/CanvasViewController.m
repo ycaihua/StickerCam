@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIView *trayView;
 @property (weak, nonatomic) IBOutlet UIImageView *toggleTrayImage;
 @property BOOL trayOpen;
+@property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
 
 @end
 
@@ -62,6 +63,8 @@
     self.frownImage.userInteractionEnabled = YES;
     [self.frownImage addGestureRecognizer:panGestureRecognizer];
     // Do any additional setup after loading the view from its nib.
+    
+    self.previewImageView.image = self.pictureImage;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -222,5 +225,9 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
+}
+
+- (void)setPictureImage:(UIImage *)picture {
+    _pictureImage = picture;
 }
 @end

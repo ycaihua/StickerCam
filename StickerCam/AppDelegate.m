@@ -23,7 +23,8 @@
     
     // Override point for customization after application launch.
     CameraViewController *vc = [[CameraViewController alloc]init];
-    self.window.rootViewController = vc;
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
+    self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];
     return YES;
 }

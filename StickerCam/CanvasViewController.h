@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CanvasViewController : UIViewController<UIGestureRecognizerDelegate>
-
+@property (strong, nonatomic) UIImage *pictureImage;
+- (void)setPictureImage:(UIImage *)picture;
 @end

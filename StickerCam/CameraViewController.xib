@@ -8,7 +8,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController">
             <connections>
                 <outlet property="frameForCapture" destination="TGp-na-S6x" id="RxA-cJ-1S7"/>
-                <outlet property="photoImageView" destination="kQd-Su-HH2" id="cKb-e3-fKY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,42 +18,47 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGp-na-S6x">
                     <rect key="frame" x="8" y="20" width="304" height="304.5"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8S-od-lwy">
-                            <rect key="frame" x="0.0" y="0.0" width="304" height="304.5"/>
-                            <state key="normal">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="VFY-mD-e9G"/>
-                            </connections>
-                        </button>
-                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="TGp-na-S6x" secondAttribute="height" multiplier="1:1" id="oY8-p4-j4E"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kQd-Su-HH2">
-                    <rect key="frame" x="70" y="368" width="180" height="180"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4l-xR-kM6">
+                    <rect key="frame" x="60" y="358" width="200" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="180" id="4Iz-o6-DCP"/>
-                        <constraint firstAttribute="width" secondItem="kQd-Su-HH2" secondAttribute="height" multiplier="1:1" id="Eee-YX-DTF"/>
-                        <constraint firstAttribute="height" constant="180" id="jqe-Ms-IQ9"/>
+                        <constraint firstAttribute="height" constant="200" id="7Ce-0l-BV1"/>
+                        <constraint firstAttribute="width" constant="200" id="Wbj-Az-nUP"/>
                     </constraints>
-                </imageView>
+                    <state key="normal" image="button.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="mRm-ih-o7x"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="kQd-Su-HH2" secondAttribute="centerX" id="187-nU-Xf7"/>
+                <constraint firstAttribute="centerX" secondItem="t4l-xR-kM6" secondAttribute="centerX" id="3J2-FU-lyU"/>
                 <constraint firstItem="TGp-na-S6x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="7np-sI-Nbl"/>
-                <constraint firstAttribute="bottom" secondItem="kQd-Su-HH2" secondAttribute="bottom" constant="20" id="8xY-ci-s9E"/>
                 <constraint firstAttribute="trailing" secondItem="TGp-na-S6x" secondAttribute="trailing" constant="8" id="m4N-dW-vUj"/>
+                <constraint firstAttribute="bottom" secondItem="t4l-xR-kM6" secondAttribute="bottom" constant="10" id="saM-SW-wjn"/>
                 <constraint firstItem="TGp-na-S6x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="wjS-e6-DRE"/>
             </constraints>
             <point key="canvasLocation" x="127" y="-37"/>
         </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="41I-j2-cFS">
+            <rect key="frame" x="0.0" y="0.0" width="311" height="256"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button" image="button.png">
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <point key="canvasLocation" x="131.5" y="119"/>
+        </button>
     </objects>
+    <resources>
+        <image name="button.png" width="256" height="256"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
