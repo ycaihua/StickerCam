@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CameraViewController.h"
 #import "CanvasViewController.h"
 
 @interface AppDelegate ()
@@ -21,7 +22,7 @@
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     
     // Override point for customization after application launch.
-    CanvasViewController *vc = [[CanvasViewController alloc]init];
+    CameraViewController *vc = [[CameraViewController alloc]init];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     return YES;
