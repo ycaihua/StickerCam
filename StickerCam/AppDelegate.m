@@ -22,8 +22,8 @@
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     
     // Override point for customization after application launch.
-    // CanvasViewController *vc = [[CanvasViewController alloc]init];
-    CameraViewController *vc = [[CameraViewController alloc]init];
+    CanvasViewController *vc = [[CanvasViewController alloc]init];
+    //CameraViewController *vc = [[CameraViewController alloc]init];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
     self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];

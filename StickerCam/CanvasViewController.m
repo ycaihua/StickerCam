@@ -7,6 +7,7 @@
 //
 
 #import "CanvasViewController.h"
+#import "ShareViewController.h"
 
 @interface CanvasViewController ()
 @property (weak, nonatomic) IBOutlet UIView *stickerContainerView;
@@ -64,7 +65,21 @@
     [self.frownImage addGestureRecognizer:panGestureRecognizer];
     // Do any additional setup after loading the view from its nib.
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancelButton)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(onShareButton)];
+    
     self.previewImageView.image = self.pictureImage;
+}
+
+- (void)onCancelButton {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)onShareButton {
+    UIImage *viewImage = [self getImageFromCanvas];
+    ShareViewController* svc = [[ShareViewController alloc] initWithImage:viewImage];
+    [self.navigationController pushViewController:svc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -218,13 +233,18 @@
     }
 }
 
-- (void)saveCanvasToCameraRoll {
-    self.trayView.hidden = YES;
+- (UIImage *)getImageFromCanvas {
     // TODO: change self.view to the square canvas that holds the uploaded image
     UIGraphicsBeginImageContext(self.view.frame.size);
     [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    return viewImage;
+}
+
+- (void)saveCanvasToCameraRoll {
+    self.trayView.hidden = YES;
+    UIImage *viewImage = [self getImageFromCanvas];
     UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);
     self.trayView.hidden = NO;
     NSLog(@"image saved");

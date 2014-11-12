@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareViewController">
+            <connections>
+                <outlet property="shareImageView" destination="m40-tB-nfI" id="an7-C0-46R"/>
+                <outlet property="shareTableView" destination="BOM-hP-uxA" id="LRS-rV-oeh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m40-tB-nfI">
+                    <rect key="frame" x="37" y="74" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="bSg-lU-K7H"/>
+                        <constraint firstAttribute="width" constant="200" id="hes-2q-xvd"/>
+                        <constraint firstAttribute="width" secondItem="m40-tB-nfI" secondAttribute="height" multiplier="1:1" id="xz7-75-kQD"/>
+                        <constraint firstAttribute="height" constant="200" id="yaF-tW-tEs"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="hes-2q-xvd"/>
+                            <exclude reference="yaF-tW-tEs"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BOM-hP-uxA">
+                    <rect key="frame" x="20" y="384" width="335" height="244"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="244" id="WCI-ok-XMR"/>
+                        <constraint firstAttribute="width" constant="375" id="lS0-uY-uMA"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="lS0-uY-uMA"/>
+                        </mask>
+                    </variation>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="m40-tB-nfI" secondAttribute="centerX" id="7CE-Yi-Agk"/>
+                <constraint firstItem="m40-tB-nfI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="CPu-Rc-klZ"/>
+                <constraint firstItem="m40-tB-nfI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="W6H-fb-bht"/>
+                <constraint firstItem="BOM-hP-uxA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WqZ-7o-PRg"/>
+                <constraint firstAttribute="bottom" secondItem="BOM-hP-uxA" secondAttribute="bottom" constant="50" id="Yz8-y4-9Xd"/>
+                <constraint firstItem="BOM-hP-uxA" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="10" id="axU-go-I4A"/>
+                <constraint firstItem="BOM-hP-uxA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="c5o-7d-4iG"/>
+                <constraint firstItem="BOM-hP-uxA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="20" id="ceF-fy-Ckh"/>
+                <constraint firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" constant="20" id="k0T-kn-jY4"/>
+                <constraint firstItem="BOM-hP-uxA" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="10" id="vEg-PH-9Zc"/>
+                <constraint firstAttribute="trailing" secondItem="BOM-hP-uxA" secondAttribute="trailing" constant="20" id="vds-Qe-AWO"/>
+                <constraint firstItem="m40-tB-nfI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="xPX-Zr-kYj"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="CPu-Rc-klZ"/>
+                    <exclude reference="k0T-kn-jY4"/>
+                    <exclude reference="WqZ-7o-PRg"/>
+                    <exclude reference="Yz8-y4-9Xd"/>
+                    <exclude reference="axU-go-I4A"/>
+                    <exclude reference="ceF-fy-Ckh"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="683.5" y="146.5"/>
+        </view>
+    </objects>
+</document>
