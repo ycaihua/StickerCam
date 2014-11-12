@@ -15,7 +15,7 @@
 @end
 
 @implementation CameraViewController
-AVCaptureSession *session;
+AVCaptureSession *session = nil;
 AVCaptureStillImageOutput *stillImageOutput;
 
 - (void)viewDidLoad {
@@ -28,7 +28,7 @@ AVCaptureStillImageOutput *stillImageOutput;
     // Dispose of any resources that can be recreated.
 }
 
--(void) viewWillAppear:(BOOL)animated{
+- (void) setUpCamera{
     session = [[AVCaptureSession alloc]init];
     [session setSessionPreset:AVCaptureSessionPresetPhoto];
     AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -52,7 +52,14 @@ AVCaptureStillImageOutput *stillImageOutput;
     NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
     [stillImageOutput setOutputSettings:outputSettings];
     [session addOutput:stillImageOutput];
-    
+}
+
+
+
+-(void) viewWillAppear:(BOOL)animated{
+    if(session == nil) {
+        [self setUpCamera];
+    }
     [session startRunning];
 }
 
@@ -85,6 +92,7 @@ AVCaptureStillImageOutput *stillImageOutput;
         UIImage *image = [UIImage imageWithData:imageData];
         CanvasViewController *vc = [[CanvasViewController alloc] init];
         vc.pictureImage = image;
+        [session stopRunning];
         [self.navigationController pushViewController:vc animated:YES];
     }];
 }
