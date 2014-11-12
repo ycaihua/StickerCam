@@ -218,7 +218,19 @@
     }
 }
 
--(void)tapTimerEnd:(NSTimer *)timer {
+- (void)saveCanvasToCameraRoll {
+    self.trayView.hidden = YES;
+    // TODO: change self.view to the square canvas that holds the uploaded image
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);
+    self.trayView.hidden = NO;
+    NSLog(@"image saved");
+}
+
+- (void)tapTimerEnd:(NSTimer *)timer {
     [self.tapTimer invalidate];
     self.tapTimer = nil;
 }
