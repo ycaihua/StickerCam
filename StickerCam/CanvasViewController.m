@@ -133,7 +133,7 @@
     imageView.userInteractionEnabled = YES;
     imageView.image = pImageView.image;
     imageView.center = CGPointMake(recognizer.view.center.x, recognizer.view.center.y + self.trayView.frame.origin.y + self.scrollView.frame.origin.y - collectionView.contentOffset.y);
-    [self.view.superview addSubview:imageView];
+    [self.view addSubview:imageView];
     
     UILongPressGestureRecognizer *pan_gr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPan:)];
     pan_gr.minimumPressDuration = 0.0;
