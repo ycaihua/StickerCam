@@ -58,7 +58,6 @@
                 iv.userInteractionEnabled = YES;
                 [iv addGestureRecognizer:tapRecognizer];
                 [subview addSubview:iv];
-
             }
         }
         
@@ -107,8 +106,8 @@
     
     pinch_gr.delegate = self; // delegate at least one transform to get them to trigger the callback methods in this controller
     
-    [UIView animateWithDuration:.1 animations:^{
-        imageView.center = CGPointMake(self.view.center.x, self.view.center.y);
+    [UIView animateWithDuration:.2 animations:^{
+        imageView.center = CGPointMake(self.previewImageView.center.x, self.previewImageView.center.y);
     }];
 }
 
@@ -138,10 +137,11 @@
             self.tapTimer = [NSTimer scheduledTimerWithTimeInterval:.2 target:self selector:@selector(tapTimerEnd:) userInfo:nil repeats:NO];
         } else {
             // Remove the view animated because we detected two taps within .2 seconds signifying a double tap
-            [UIView animateWithDuration:.25 animations:^{
-                recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, 1.2, 1.2);
+            recognizer.view.alpha = 1;
+            [UIView animateWithDuration:.4 animations:^{
+                recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, 1.3, 1.3);
             } completion:^(BOOL finished) {
-                [UIView animateWithDuration:.20 animations:^{
+                [UIView animateWithDuration:.3 animations:^{
                     recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, .1, .1);
                     recognizer.view.alpha = 0;
                 } completion:^(BOOL finished) {

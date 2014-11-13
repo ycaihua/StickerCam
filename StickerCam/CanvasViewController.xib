@@ -62,16 +62,19 @@
                     </variation>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzA-Mr-set">
-                    <rect key="frame" x="115" y="0.0" width="370" height="368"/>
+                    <rect key="frame" x="116" y="0.0" width="368" height="368"/>
+                    <color key="backgroundColor" red="0.80235669889502759" green="0.80235669889502759" blue="0.80235669889502759" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="nzA-Mr-set" secondAttribute="height" multiplier="185:184" id="82d-jY-KWZ"/>
+                        <constraint firstAttribute="width" secondItem="nzA-Mr-set" secondAttribute="height" multiplier="1:1" id="82d-jY-KWZ"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="144-AT-CCt" firstAttribute="top" secondItem="nzA-Mr-set" secondAttribute="bottom" id="Ckl-hR-JUF"/>
+                <constraint firstItem="nzA-Mr-set" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GmE-sQ-U7C"/>
                 <constraint firstItem="nzA-Mr-set" firstAttribute="centerX" secondItem="144-AT-CCt" secondAttribute="centerX" id="JkO-Z8-vIE"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nzA-Mr-set" secondAttribute="trailing" id="OXE-nR-Io8"/>
                 <constraint firstAttribute="trailing" secondItem="144-AT-CCt" secondAttribute="trailing" id="RLB-1T-l4d"/>
                 <constraint firstItem="nzA-Mr-set" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YVU-G1-7jf"/>
                 <constraint firstItem="144-AT-CCt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="368" id="ZZu-Bm-S5x"/>
@@ -81,14 +84,18 @@
                 <constraint firstItem="144-AT-CCt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kVB-jl-UZD"/>
                 <constraint firstItem="nzA-Mr-set" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qyG-58-YLM"/>
                 <constraint firstItem="144-AT-CCt" firstAttribute="top" secondItem="nzA-Mr-set" secondAttribute="bottom" id="sUm-xZ-opK"/>
+                <constraint firstAttribute="bottom" secondItem="nzA-Mr-set" secondAttribute="bottom" constant="232" id="v3M-6L-a3t"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="GmE-sQ-U7C"/>
+                    <exclude reference="OXE-nR-Io8"/>
                     <exclude reference="YVU-G1-7jf"/>
                     <exclude reference="auu-k9-jj0"/>
                     <exclude reference="fpM-dX-2bV"/>
                     <exclude reference="Ckl-hR-JUF"/>
                     <exclude reference="ZZu-Bm-S5x"/>
+                    <exclude reference="sUm-xZ-opK"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="258" y="154"/>
