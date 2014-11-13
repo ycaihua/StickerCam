@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CanvasViewController : UIViewController<UIGestureRecognizerDelegate,UIScrollViewDelegate>
+@interface CanvasViewController : UIViewController<UIGestureRecognizerDelegate,UIScrollViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) UIImage *pictureImage;
 - (void)setPictureImage:(UIImage *)picture;
 @end

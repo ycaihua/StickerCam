@@ -47,27 +47,38 @@
         frame.origin.y = 0;
         frame.size = CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height);
         
-        UIScrollView *subview = [[UIScrollView alloc] initWithFrame:frame];
-        int columns = self.view.frame.size.width / 50;
-        for (int j = 0; j < 6; j++) {
-            for (int k = 0; k < columns; k++) {
-                UIImage *image = [UIImage imageNamed: (i % 2 == 0 ? @"wink.png": @"dead.png")];
-                UIImageView *iv = [[UIImageView alloc]initWithImage:image];
-                iv.frame = CGRectMake(k * 50, j* 50, 50, 50);
-                
-                UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayAssetTap:)];
-                iv.userInteractionEnabled = YES;
-                [iv addGestureRecognizer:tapRecognizer];
-                [subview addSubview:iv];
-            }
-        }
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
+        collectionView.backgroundColor = self.trayView.backgroundColor;
+        [collectionView setDataSource:self];
+        [collectionView setDelegate:self];
+        [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
         
-        subview.contentSize = CGSizeMake(self.view.frame.size.width, 50 * 6);
         
-        [self.scrollView addSubview:subview];
+        [self.scrollView addSubview:collectionView];
     }
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 8, self.scrollView.frame.size.height);
     [self.scrollView setContentOffset:CGPointMake(0, 0)];
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 50;
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayAssetTap:)];
+    UIImage *image = [UIImage imageNamed: (indexPath.row % 2 == 0 ? @"wink.png": @"dead.png")];
+    UIImageView *iv = [[UIImageView alloc]initWithImage:image];
+    [cell addGestureRecognizer:tapRecognizer];
+    cell.backgroundView = iv;
+    cell.userInteractionEnabled = YES;
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(75, 75);
 }
 
 - (void)onCancelButton {
@@ -87,12 +98,13 @@
 
 - (IBAction)onTrayAssetTap:(UITapGestureRecognizer *)recognizer {
     static UIImageView *imageView;
-    UIScrollView *scrollView = (UIScrollView *)recognizer.view.superview;
-    UIImageView *pImageView =  (UIImageView *)recognizer.view;
+    UICollectionView *collectionView = (UICollectionView *)recognizer.view.superview;
+    UICollectionViewCell *collectionViewCell = (UICollectionViewCell *)recognizer.view;
+    UIImageView *pImageView =  (UIImageView *)collectionViewCell.backgroundView;
     imageView = [[UIImageView alloc] initWithFrame:pImageView.frame];
     imageView.userInteractionEnabled = YES;
     imageView.image = pImageView.image;
-    imageView.center = CGPointMake(recognizer.view.center.x, recognizer.view.center.y + self.trayView.frame.origin.y + self.scrollView.frame.origin.y - scrollView.contentOffset.y);
+    imageView.center = CGPointMake(recognizer.view.center.x, recognizer.view.center.y + self.trayView.frame.origin.y + self.scrollView.frame.origin.y - collectionView.contentOffset.y);
     [self.view.superview addSubview:imageView];
     
     UILongPressGestureRecognizer *pan_gr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPan:)];
