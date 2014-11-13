@@ -11,6 +11,7 @@
 		052601101A131A84004C5951 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0526010D1A131A84004C5951 /* CameraViewController.xib */; };
 		052601111A131A84004C5951 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0526010F1A131A84004C5951 /* CameraViewController.m */; };
 		052601131A131DDF004C5951 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 052601121A131DDF004C5951 /* button.png */; };
+		056B066E1A147F9800BF9BD6 /* tray_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 056B066D1A147F9800BF9BD6 /* tray_icon.png */; };
 		5F6CAD021A121A0600C03768 /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFA1A121A0600C03768 /* down_arrow.png */; };
 		5F6CAD031A121A0600C03768 /* dead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFC1A121A0600C03768 /* dead@2x.png */; };
 		5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFD1A121A0600C03768 /* excited@2x.png */; };
@@ -52,6 +53,7 @@
 		0526010E1A131A84004C5951 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		0526010F1A131A84004C5951 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		052601121A131DDF004C5951 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		056B066D1A147F9800BF9BD6 /* tray_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tray_icon.png; path = images/tray_icon.png; sourceTree = "<group>"; };
 		380E51D967D249867E8BA72F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5F6CACFA1A121A0600C03768 /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_arrow.png; sourceTree = "<group>"; };
 		5F6CACFC1A121A0600C03768 /* dead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dead@2x.png"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				5FA428A51A12095600F00FFF /* Supporting Files */,
 				5FA428CB1A1209D400F00FFF /* CanvasViewController.h */,
 				0526010D1A131A84004C5951 /* CameraViewController.xib */,
+				056B066D1A147F9800BF9BD6 /* tray_icon.png */,
 				0526010E1A131A84004C5951 /* CameraViewController.h */,
 				0526010F1A131A84004C5951 /* CameraViewController.m */,
 				5FA428CC1A1209D400F00FFF /* CanvasViewController.m */,
@@ -274,11 +277,11 @@
 				TargetAttributes = {
 					5FA428A11A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = WE4NL5L554;
+						DevelopmentTeam = V9WTTPBFK9;
 					};
 					5FA428BA1A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = WE4NL5L554;
+						DevelopmentTeam = V9WTTPBFK9;
 						TestTargetID = 5FA428A11A12095600F00FFF;
 					};
 				};
@@ -323,6 +326,7 @@
 				5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */,
 				5F6CAD051A121A0600C03768 /* happy@2x.png in Resources */,
 				FA3BBD2A1A13F1AC00E86C30 /* ShareTableViewCell.xib in Resources */,
+				056B066E1A147F9800BF9BD6 /* tray_icon.png in Resources */,
 				5F6CAD071A121A0600C03768 /* tongue@2x.png in Resources */,
 				5F6CAD061A121A0600C03768 /* sad@2x.png in Resources */,
 			);

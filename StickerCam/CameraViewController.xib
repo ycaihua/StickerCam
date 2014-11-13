@@ -24,16 +24,25 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4l-xR-kM6">
-                    <rect key="frame" x="60" y="358" width="200" height="200"/>
+                    <rect key="frame" x="85" y="408" width="150" height="150"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="7Ce-0l-BV1"/>
-                        <constraint firstAttribute="width" constant="200" id="Wbj-Az-nUP"/>
+                        <constraint firstAttribute="height" constant="150" id="7Ce-0l-BV1"/>
+                        <constraint firstAttribute="width" constant="150" id="Wbj-Az-nUP"/>
                     </constraints>
                     <state key="normal" image="button.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="mRm-ih-o7x"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfr-Sh-DqR">
+                    <rect key="frame" x="8" y="444" width="60" height="60"/>
+                    <state key="normal" image="tray_icon.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="openCameraRoll:" destination="-1" eventType="touchUpInside" id="z4V-ti-Oi0"/>
                     </connections>
                 </button>
             </subviews>
@@ -45,7 +54,7 @@
                 <constraint firstAttribute="bottom" secondItem="t4l-xR-kM6" secondAttribute="bottom" constant="10" id="saM-SW-wjn"/>
                 <constraint firstItem="TGp-na-S6x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="wjS-e6-DRE"/>
             </constraints>
-            <point key="canvasLocation" x="127" y="-37"/>
+            <point key="canvasLocation" x="127" y="-55"/>
         </view>
         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="41I-j2-cFS">
             <rect key="frame" x="0.0" y="0.0" width="311" height="256"/>
@@ -58,6 +67,7 @@
     </objects>
     <resources>
         <image name="button.png" width="256" height="256"/>
+        <image name="tray_icon.png" width="256" height="256"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

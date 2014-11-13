@@ -36,6 +36,7 @@
     tapGestureRecognizer.numberOfTapsRequired = 1;
     self.toggleTrayImage.userInteractionEnabled = YES;
     [self.toggleTrayImage addGestureRecognizer:tapGestureRecognizer];
+    self.previewImageView.image = self.pictureImage;
 }
 
 - (void)viewDidLayoutSubviews {

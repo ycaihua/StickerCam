@@ -96,4 +96,28 @@ AVCaptureStillImageOutput *stillImageOutput;
         [self.navigationController pushViewController:vc animated:YES];
     }];
 }
+- (IBAction)openCameraRoll:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    CanvasViewController *vc = [[CanvasViewController alloc] init];
+    vc.pictureImage = chosenImage;
+    [session stopRunning];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
 @end
