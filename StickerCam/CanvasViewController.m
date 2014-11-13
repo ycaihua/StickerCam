@@ -37,7 +37,8 @@
     tapGestureRecognizer.numberOfTapsRequired = 1;
     self.toggleTrayImage.userInteractionEnabled = YES;
     [self.toggleTrayImage addGestureRecognizer:tapGestureRecognizer];
-    self.previewImageView.image = self.pictureImage;
+    self.previewImageView.image = [UIImage imageNamed: @"preview-placeholder.jpg"]; // self.pictureImage;
+    self.previewImageView.contentMode = UIViewContentModeScaleAspectFill;
     
     self.pages = @[@{@"page": @"Hats", @"images": @[@"Thumb_red puma hat.PNG",
                                               @"Thumb_kids griffin hat.png",
