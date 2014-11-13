@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) NSArray *pages;
 
 @end
 
@@ -37,18 +38,41 @@
     self.toggleTrayImage.userInteractionEnabled = YES;
     [self.toggleTrayImage addGestureRecognizer:tapGestureRecognizer];
     self.previewImageView.image = self.pictureImage;
+    
+    self.pages = @[@{@"page": @"Hats", @"images": @[@"Thumb_red puma hat.PNG",
+                                              @"Thumb_kids griffin hat.png",
+                                              @"Runner-Hat.png",
+                                              @"Round-Hat2-300x300.png",
+                                              @"Hats_SessTrucker_Red.gif",
+                                              @"Hats_SessTrucker_Black.gif",
+                                              @"hat-yachtsman-white-adjustable-back-763285706646.png",
+                                              @"hat-viking-helmet-child-teen-one-size-763285730078.png",
+                                              @"hat-cowboy-black-cattleman-adult-med-9999914598.png",
+                                              @"hat-confederate-general-dlx-adult-sm-9999912643.png",
+                                              @"hat-conductor-adult-large-9999917479.png"]
+                                             },
+                   @{@"page": @"Glasses", @"images": @[@"3D_Glasses_Final_Clipart_Free.png",
+                                                       @"glasses-300x300.png",
+                                                       @"iolanta-black-gold-lorgnette-opera-glasses.png",
+                                                       @"voodoo-tactical-military-glasses-1.gif",
+                                                       @"voodoo-tactical-military-glasses-2.gif",
+                                                       @"voodoo-tactical-military-glasses-3.gif",
+                                                       @"voodoo-tactical-military-glasses-4.gif"]
+                     }];
+    
 }
 
 - (void)viewDidLayoutSubviews {
-
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < [self.pages count]; i++) {
         CGRect frame;
         frame.origin.x = self.view.frame.size.width * i;
         frame.origin.y = 0;
         frame.size = CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height);
         
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        [layout setSectionInset:UIEdgeInsetsMake(0, 10, 10, 10)];
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
+        collectionView.tag = i;
         collectionView.backgroundColor = self.trayView.backgroundColor;
         [collectionView setDataSource:self];
         [collectionView setDelegate:self];
@@ -57,19 +81,22 @@
         
         [self.scrollView addSubview:collectionView];
     }
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 8, self.scrollView.frame.size.height);
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * [self.pages count], self.scrollView.frame.size.height);
     [self.scrollView setContentOffset:CGPointMake(0, 0)];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 50;
+    NSDictionary *page = [self.pages objectAtIndex:collectionView.tag];
+    
+    return [page[@"images"] count];
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayAssetTap:)];
-    UIImage *image = [UIImage imageNamed: (indexPath.row % 2 == 0 ? @"wink.png": @"dead.png")];
+    NSDictionary *page = [self.pages objectAtIndex:collectionView.tag];
+    UIImage *image = [UIImage imageNamed:[page[@"images"] objectAtIndex:indexPath.item]];
     UIImageView *iv = [[UIImageView alloc]initWithImage:image];
     [cell addGestureRecognizer:tapRecognizer];
     cell.backgroundView = iv;
@@ -119,8 +146,10 @@
     
     pinch_gr.delegate = self; // delegate at least one transform to get them to trigger the callback methods in this controller
     
-    [UIView animateWithDuration:.2 animations:^{
+    [UIView animateWithDuration:.25 animations:^{
         imageView.center = CGPointMake(self.previewImageView.center.x, self.previewImageView.center.y);
+        imageView.transform = CGAffineTransformScale(imageView.transform, 2, 2);
+
     }];
 }
 
@@ -151,10 +180,10 @@
         } else {
             // Remove the view animated because we detected two taps within .2 seconds signifying a double tap
             recognizer.view.alpha = 1;
-            [UIView animateWithDuration:.4 animations:^{
+            [UIView animateWithDuration:.2 animations:^{
                 recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, 1.3, 1.3);
             } completion:^(BOOL finished) {
-                [UIView animateWithDuration:.3 animations:^{
+                [UIView animateWithDuration:.2 animations:^{
                     recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, .1, .1);
                     recognizer.view.alpha = 0;
                 } completion:^(BOOL finished) {

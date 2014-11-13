@@ -26,6 +26,24 @@
 		5FA428C21A12095600F00FFF /* StickerCamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428C11A12095600F00FFF /* StickerCamTests.m */; };
 		5FA428CE1A1209D400F00FFF /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428CC1A1209D400F00FFF /* CanvasViewController.m */; };
 		5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */; };
+		5FEA1CC61A1494D3008A94C1 /* Thumb_red puma hat.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */; };
+		5FEA1CC71A1494D3008A94C1 /* Thumb_kids griffin hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */; };
+		5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */; };
+		5FEA1CC91A1494D3008A94C1 /* Round-Hat2-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBE1A1494D3008A94C1 /* Round-Hat2-300x300.png */; };
+		5FEA1CCA1A1494D3008A94C1 /* Hats_SessTrucker_Red.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBF1A1494D3008A94C1 /* Hats_SessTrucker_Red.gif */; };
+		5FEA1CCB1A1494D3008A94C1 /* Hats_SessTrucker_Black.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CC01A1494D3008A94C1 /* Hats_SessTrucker_Black.gif */; };
+		5FEA1CCC1A1494D3008A94C1 /* hat-yachtsman-white-adjustable-back-763285706646.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CC11A1494D3008A94C1 /* hat-yachtsman-white-adjustable-back-763285706646.png */; };
+		5FEA1CCD1A1494D3008A94C1 /* hat-viking-helmet-child-teen-one-size-763285730078.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CC21A1494D3008A94C1 /* hat-viking-helmet-child-teen-one-size-763285730078.png */; };
+		5FEA1CCE1A1494D3008A94C1 /* hat-cowboy-black-cattleman-adult-med-9999914598.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CC31A1494D3008A94C1 /* hat-cowboy-black-cattleman-adult-med-9999914598.png */; };
+		5FEA1CCF1A1494D3008A94C1 /* hat-confederate-general-dlx-adult-sm-9999912643.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CC41A1494D3008A94C1 /* hat-confederate-general-dlx-adult-sm-9999912643.png */; };
+		5FEA1CD01A1494D3008A94C1 /* hat-conductor-adult-large-9999917479.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CC51A1494D3008A94C1 /* hat-conductor-adult-large-9999917479.png */; };
+		5FEA1CDB1A149B24008A94C1 /* 3D_Glasses_Final_Clipart_Free.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CD21A149B24008A94C1 /* 3D_Glasses_Final_Clipart_Free.png */; };
+		5FEA1CDD1A149B24008A94C1 /* glasses-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CD41A149B24008A94C1 /* glasses-300x300.png */; };
+		5FEA1CDE1A149B24008A94C1 /* iolanta-black-gold-lorgnette-opera-glasses.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CD51A149B24008A94C1 /* iolanta-black-gold-lorgnette-opera-glasses.png */; };
+		5FEA1CE01A149B24008A94C1 /* voodoo-tactical-military-glasses-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CD71A149B24008A94C1 /* voodoo-tactical-military-glasses-1.gif */; };
+		5FEA1CE11A149B24008A94C1 /* voodoo-tactical-military-glasses-2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CD81A149B24008A94C1 /* voodoo-tactical-military-glasses-2.gif */; };
+		5FEA1CE21A149B24008A94C1 /* voodoo-tactical-military-glasses-3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CD91A149B24008A94C1 /* voodoo-tactical-military-glasses-3.gif */; };
+		5FEA1CE31A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CDA1A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif */; };
 		D0BDE4BB5367F546BD90C111 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66475AF9A4916408E88124AB /* libPods.a */; };
 		FA3BBD291A13F1AC00E86C30 /* ShareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3BBD271A13F1AC00E86C30 /* ShareTableViewCell.m */; };
 		FA3BBD2A1A13F1AC00E86C30 /* ShareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3BBD281A13F1AC00E86C30 /* ShareTableViewCell.xib */; };
@@ -75,6 +93,24 @@
 		5FA428CB1A1209D400F00FFF /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
 		5FA428CC1A1209D400F00FFF /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
 		5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanvasViewController.xib; sourceTree = "<group>"; };
+		5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb_red puma hat.PNG"; sourceTree = "<group>"; };
+		5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb_kids griffin hat.png"; sourceTree = "<group>"; };
+		5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runner-Hat.png"; sourceTree = "<group>"; };
+		5FEA1CBE1A1494D3008A94C1 /* Round-Hat2-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Round-Hat2-300x300.png"; sourceTree = "<group>"; };
+		5FEA1CBF1A1494D3008A94C1 /* Hats_SessTrucker_Red.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Hats_SessTrucker_Red.gif; sourceTree = "<group>"; };
+		5FEA1CC01A1494D3008A94C1 /* Hats_SessTrucker_Black.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Hats_SessTrucker_Black.gif; sourceTree = "<group>"; };
+		5FEA1CC11A1494D3008A94C1 /* hat-yachtsman-white-adjustable-back-763285706646.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hat-yachtsman-white-adjustable-back-763285706646.png"; sourceTree = "<group>"; };
+		5FEA1CC21A1494D3008A94C1 /* hat-viking-helmet-child-teen-one-size-763285730078.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hat-viking-helmet-child-teen-one-size-763285730078.png"; sourceTree = "<group>"; };
+		5FEA1CC31A1494D3008A94C1 /* hat-cowboy-black-cattleman-adult-med-9999914598.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hat-cowboy-black-cattleman-adult-med-9999914598.png"; sourceTree = "<group>"; };
+		5FEA1CC41A1494D3008A94C1 /* hat-confederate-general-dlx-adult-sm-9999912643.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hat-confederate-general-dlx-adult-sm-9999912643.png"; sourceTree = "<group>"; };
+		5FEA1CC51A1494D3008A94C1 /* hat-conductor-adult-large-9999917479.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hat-conductor-adult-large-9999917479.png"; sourceTree = "<group>"; };
+		5FEA1CD21A149B24008A94C1 /* 3D_Glasses_Final_Clipart_Free.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3D_Glasses_Final_Clipart_Free.png; sourceTree = "<group>"; };
+		5FEA1CD41A149B24008A94C1 /* glasses-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glasses-300x300.png"; sourceTree = "<group>"; };
+		5FEA1CD51A149B24008A94C1 /* iolanta-black-gold-lorgnette-opera-glasses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iolanta-black-gold-lorgnette-opera-glasses.png"; sourceTree = "<group>"; };
+		5FEA1CD71A149B24008A94C1 /* voodoo-tactical-military-glasses-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "voodoo-tactical-military-glasses-1.gif"; sourceTree = "<group>"; };
+		5FEA1CD81A149B24008A94C1 /* voodoo-tactical-military-glasses-2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "voodoo-tactical-military-glasses-2.gif"; sourceTree = "<group>"; };
+		5FEA1CD91A149B24008A94C1 /* voodoo-tactical-military-glasses-3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "voodoo-tactical-military-glasses-3.gif"; sourceTree = "<group>"; };
+		5FEA1CDA1A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "voodoo-tactical-military-glasses-4.gif"; sourceTree = "<group>"; };
 		66475AF9A4916408E88124AB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89445093B28815B28E8F11F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA3BBD261A13F1AC00E86C30 /* ShareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTableViewCell.h; sourceTree = "<group>"; };
@@ -126,6 +162,8 @@
 		5F6CACFB1A121A0600C03768 /* stickers */ = {
 			isa = PBXGroup;
 			children = (
+				5FEA1CD11A149A49008A94C1 /* glasses */,
+				5FEA1CBA1A1494C7008A94C1 /* hats */,
 				5F6CACFC1A121A0600C03768 /* dead@2x.png */,
 				5F6CACFD1A121A0600C03768 /* excited@2x.png */,
 				5F6CACFE1A121A0600C03768 /* happy@2x.png */,
@@ -207,6 +245,38 @@
 				5FA428C01A12095600F00FFF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FEA1CBA1A1494C7008A94C1 /* hats */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */,
+				5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */,
+				5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */,
+				5FEA1CBE1A1494D3008A94C1 /* Round-Hat2-300x300.png */,
+				5FEA1CBF1A1494D3008A94C1 /* Hats_SessTrucker_Red.gif */,
+				5FEA1CC01A1494D3008A94C1 /* Hats_SessTrucker_Black.gif */,
+				5FEA1CC11A1494D3008A94C1 /* hat-yachtsman-white-adjustable-back-763285706646.png */,
+				5FEA1CC21A1494D3008A94C1 /* hat-viking-helmet-child-teen-one-size-763285730078.png */,
+				5FEA1CC31A1494D3008A94C1 /* hat-cowboy-black-cattleman-adult-med-9999914598.png */,
+				5FEA1CC41A1494D3008A94C1 /* hat-confederate-general-dlx-adult-sm-9999912643.png */,
+				5FEA1CC51A1494D3008A94C1 /* hat-conductor-adult-large-9999917479.png */,
+			);
+			name = hats;
+			sourceTree = "<group>";
+		};
+		5FEA1CD11A149A49008A94C1 /* glasses */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA1CD21A149B24008A94C1 /* 3D_Glasses_Final_Clipart_Free.png */,
+				5FEA1CD41A149B24008A94C1 /* glasses-300x300.png */,
+				5FEA1CD51A149B24008A94C1 /* iolanta-black-gold-lorgnette-opera-glasses.png */,
+				5FEA1CD71A149B24008A94C1 /* voodoo-tactical-military-glasses-1.gif */,
+				5FEA1CD81A149B24008A94C1 /* voodoo-tactical-military-glasses-2.gif */,
+				5FEA1CD91A149B24008A94C1 /* voodoo-tactical-military-glasses-3.gif */,
+				5FEA1CDA1A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif */,
+			);
+			name = glasses;
 			sourceTree = "<group>";
 		};
 		9C74D13AF1688848D92407BB /* Pods */ = {
@@ -312,19 +382,37 @@
 			files = (
 				5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */,
 				052601131A131DDF004C5951 /* button.png in Resources */,
+				5FEA1CE11A149B24008A94C1 /* voodoo-tactical-military-glasses-2.gif in Resources */,
 				5FA428B61A12095600F00FFF /* LaunchScreen.xib in Resources */,
+				5FEA1CD01A1494D3008A94C1 /* hat-conductor-adult-large-9999917479.png in Resources */,
+				5FEA1CCA1A1494D3008A94C1 /* Hats_SessTrucker_Red.gif in Resources */,
+				5FEA1CDE1A149B24008A94C1 /* iolanta-black-gold-lorgnette-opera-glasses.png in Resources */,
 				5F6CAD031A121A0600C03768 /* dead@2x.png in Resources */,
 				5F6CAD081A121A0600C03768 /* wink@2x.png in Resources */,
 				5FA428B31A12095600F00FFF /* Images.xcassets in Resources */,
 				FA3BBD751A14282500E86C30 /* test_image_stickercam.jpg in Resources */,
+				5FEA1CE01A149B24008A94C1 /* voodoo-tactical-military-glasses-1.gif in Resources */,
+				5FEA1CC61A1494D3008A94C1 /* Thumb_red puma hat.PNG in Resources */,
 				FA3BBD721A141F0600E86C30 /* TwitterLogo.png in Resources */,
+				5FEA1CCE1A1494D3008A94C1 /* hat-cowboy-black-cattleman-adult-med-9999914598.png in Resources */,
 				FA6772A11A13E1F100C0266D /* ShareViewController.xib in Resources */,
 				052601101A131A84004C5951 /* CameraViewController.xib in Resources */,
 				FA3BBD701A141D2100E86C30 /* FBLogo.png in Resources */,
+				5FEA1CCB1A1494D3008A94C1 /* Hats_SessTrucker_Black.gif in Resources */,
+				5FEA1CE21A149B24008A94C1 /* voodoo-tactical-military-glasses-3.gif in Resources */,
+				5FEA1CCD1A1494D3008A94C1 /* hat-viking-helmet-child-teen-one-size-763285730078.png in Resources */,
+				5FEA1CCC1A1494D3008A94C1 /* hat-yachtsman-white-adjustable-back-763285706646.png in Resources */,
 				FA7099BF1A143C3800DBF6BA /* IGLogo.png in Resources */,
+				5FEA1CC91A1494D3008A94C1 /* Round-Hat2-300x300.png in Resources */,
+				5FEA1CE31A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif in Resources */,
+				5FEA1CDB1A149B24008A94C1 /* 3D_Glasses_Final_Clipart_Free.png in Resources */,
 				5F6CAD021A121A0600C03768 /* down_arrow.png in Resources */,
+				5FEA1CDD1A149B24008A94C1 /* glasses-300x300.png in Resources */,
+				5FEA1CC71A1494D3008A94C1 /* Thumb_kids griffin hat.png in Resources */,
+				5FEA1CCF1A1494D3008A94C1 /* hat-confederate-general-dlx-adult-sm-9999912643.png in Resources */,
 				5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */,
 				5F6CAD051A121A0600C03768 /* happy@2x.png in Resources */,
+				5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */,
 				FA3BBD2A1A13F1AC00E86C30 /* ShareTableViewCell.xib in Resources */,
 				056B066E1A147F9800BF9BD6 /* tray_icon.png in Resources */,
 				5F6CAD071A121A0600C03768 /* tongue@2x.png in Resources */,
