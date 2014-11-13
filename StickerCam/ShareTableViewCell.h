@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *socialNetworkImageView;
 
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (strong, nonatomic) UIImage *shareImage;
+@property (strong, nonatomic) UINavigationController* navigationViewController;
 @property SocialNetwork socialNetwork;
 
 - (IBAction)onShareButtonClicked:(id)sender;

@@ -8,6 +8,8 @@
 
 #import "ShareViewController.h"
 #import "ShareTableViewCell.h"
+#import <FacebookSDK/FacebookSDK.h>
+
 
 @interface ShareViewController ()
 
@@ -30,6 +32,7 @@
     UIImage* resized = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     [self.shareImageView setImage:resized];
+    self.shareTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self.shareTableView registerNib:[UINib nibWithNibName:@"ShareTableViewCell" bundle:nil] forCellReuseIdentifier:@"ShareTableViewCell"];
 }
@@ -55,8 +58,8 @@
             image = [UIImage imageNamed:@"FBLogo.png"];
             break;
         case 1:
-            cell.socialNetwork = Twitter;
-            image = [UIImage imageNamed:@"TwitterLogo.png"];
+            cell.socialNetwork = Instagram;
+            image = [UIImage imageNamed:@"IGLogo.png"];
             break;
         default:
             break;
@@ -64,6 +67,8 @@
     [image drawInRect:CGRectMake(0,0, targetSize.width, targetSize.height)];
     resized = UIGraphicsGetImageFromCurrentImageContext();
     [cell.socialNetworkImageView setImage:resized];
+    cell.shareImage = self.image;
+    cell.navigationViewController = self.navigationController;
     
     return cell;
 }

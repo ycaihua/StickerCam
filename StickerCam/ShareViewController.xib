@@ -18,9 +18,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m40-tB-nfI">
-                    <rect key="frame" x="37" y="74" width="300" height="300"/>
+                    <rect key="frame" x="62" y="74" width="250" height="250"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="300" id="bSg-lU-K7H"/>
+                        <constraint firstAttribute="width" constant="250" id="bSg-lU-K7H"/>
                         <constraint firstAttribute="width" constant="200" id="hes-2q-xvd"/>
                         <constraint firstAttribute="width" secondItem="m40-tB-nfI" secondAttribute="height" multiplier="1:1" id="xz7-75-kQD"/>
                         <constraint firstAttribute="height" constant="200" id="yaF-tW-tEs"/>
@@ -33,10 +33,10 @@
                     </variation>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BOM-hP-uxA">
-                    <rect key="frame" x="20" y="384" width="335" height="244"/>
+                    <rect key="frame" x="20" y="334" width="335" height="344"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="244" id="WCI-ok-XMR"/>
+                        <constraint firstAttribute="height" constant="344" id="WCI-ok-XMR"/>
                         <constraint firstAttribute="width" constant="375" id="lS0-uY-uMA"/>
                     </constraints>
                     <variation key="default">

@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *shareTableView;
 typedef enum {
     Facebook,
-    Twitter
+    Instagram
 } SocialNetwork;
 @end
