@@ -10,19 +10,15 @@
 #import "ShareViewController.h"
 
 @interface CanvasViewController ()
-@property (weak, nonatomic) IBOutlet UIView *stickerContainerView;
-@property (weak, nonatomic) IBOutlet UIImageView *frownImage;
-@property (weak, nonatomic) IBOutlet UIImageView *bigSmileImage;
-@property (weak, nonatomic) IBOutlet UIImageView *smileImage;
-
-@property (weak, nonatomic) IBOutlet UIImageView *tongueImage;
-@property (weak, nonatomic) IBOutlet UIImageView *winkImage;
-@property (weak, nonatomic) IBOutlet UIImageView *deadImage;
 @property (strong, nonatomic) NSTimer *tapTimer;
 @property (weak, nonatomic) IBOutlet UIView *trayView;
 @property (weak, nonatomic) IBOutlet UIImageView *toggleTrayImage;
+
+
 @property BOOL trayOpen;
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -32,44 +28,46 @@
     [super viewDidLoad];
     self.trayOpen = YES;
     
-    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayPan:)];
-    [self.trayView addGestureRecognizer:panGestureRecognizer];
+//    UIPanGestureRecognizer *panGestureRecognizer;
+//    [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayPan:)];
+//    [self.trayView addGestureRecognizer:panGestureRecognizer];
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayToggleTap:)];
     tapGestureRecognizer.numberOfTapsRequired = 1;
     self.toggleTrayImage.userInteractionEnabled = YES;
     [self.toggleTrayImage addGestureRecognizer:tapGestureRecognizer];
-    
-    panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayAssetPan:)];
-    self.smileImage.userInteractionEnabled = YES;
-    [self.smileImage addGestureRecognizer:panGestureRecognizer];
-    
-    panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayAssetPan:)];
-    self.bigSmileImage.userInteractionEnabled = YES;
-    [self.bigSmileImage addGestureRecognizer:panGestureRecognizer];
-    
-    panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayAssetPan:)];
-    self.winkImage.userInteractionEnabled = YES;
-    [self.winkImage addGestureRecognizer:panGestureRecognizer];
-    
-    panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayAssetPan:)];
-    self.tongueImage.userInteractionEnabled = YES;
-    [self.tongueImage addGestureRecognizer:panGestureRecognizer];
-    
-    panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayAssetPan:)];
-    self.deadImage.userInteractionEnabled = YES;
-    [self.deadImage addGestureRecognizer:panGestureRecognizer];
-    
-    panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayAssetPan:)];
-    self.frownImage.userInteractionEnabled = YES;
-    [self.frownImage addGestureRecognizer:panGestureRecognizer];
-    // Do any additional setup after loading the view from its nib.
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancelButton)];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(onShareButton)];
-    
-    self.previewImageView.image = self.pictureImage;
+}
+
+- (void)viewDidLayoutSubviews {
+
+    for (int i = 0; i < 8; i++) {
+        CGRect frame;
+        frame.origin.x = self.view.frame.size.width * i;
+        frame.origin.y = 0;
+        frame.size = CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height);
+        
+        UIScrollView *subview = [[UIScrollView alloc] initWithFrame:frame];
+        int columns = self.view.frame.size.width / 50;
+        for (int j = 0; j < 6; j++) {
+            for (int k = 0; k < columns; k++) {
+                UIImage *image = [UIImage imageNamed: (i % 2 == 0 ? @"wink.png": @"dead.png")];
+                UIImageView *iv = [[UIImageView alloc]initWithImage:image];
+                iv.frame = CGRectMake(k * 50, j* 50, 50, 50);
+                
+                UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayAssetTap:)];
+                iv.userInteractionEnabled = YES;
+                [iv addGestureRecognizer:tapRecognizer];
+                [subview addSubview:iv];
+
+            }
+        }
+        
+        subview.contentSize = CGSizeMake(self.view.frame.size.width, 50 * 6);
+        
+        [self.scrollView addSubview:subview];
+    }
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 8, self.scrollView.frame.size.height);
+    [self.scrollView setContentOffset:CGPointMake(0, 0)];
 }
 
 - (void)onCancelButton {
@@ -87,57 +85,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)onTrayAssetPan:(UIPanGestureRecognizer *)recognizer {
+- (IBAction)onTrayAssetTap:(UITapGestureRecognizer *)recognizer {
     static UIImageView *imageView;
-    static CGPoint originalCenter;
+    UIScrollView *scrollView = (UIScrollView *)recognizer.view.superview;
+    UIImageView *pImageView =  (UIImageView *)recognizer.view;
+    imageView = [[UIImageView alloc] initWithFrame:pImageView.frame];
+    imageView.userInteractionEnabled = YES;
+    imageView.image = pImageView.image;
+    imageView.center = CGPointMake(recognizer.view.center.x, recognizer.view.center.y + self.trayView.frame.origin.y + self.scrollView.frame.origin.y - scrollView.contentOffset.y);
+    [self.view.superview addSubview:imageView];
     
-    if (recognizer.state == UIGestureRecognizerStateBegan) {
-        originalCenter = recognizer.view.center;
-        originalCenter.y = originalCenter.y + self.trayView.frame.origin.y + self.stickerContainerView.frame.origin.y;
-        originalCenter.x = originalCenter.x + self.trayView.frame.origin.x + self.stickerContainerView.frame.origin.x;
-        
-        UIImageView *pImageView =  (UIImageView *)recognizer.view;
-        imageView = [[UIImageView alloc] initWithFrame:pImageView.frame];
-        imageView.userInteractionEnabled = YES;
-        imageView.image = pImageView.image;
-        imageView.center = CGPointMake(pImageView.center.x + self.stickerContainerView.frame.origin.x, pImageView.center.y + self.trayView.frame.origin.y + self.stickerContainerView.frame.origin.y);
-        
-        [UIView animateWithDuration:0.1 animations:^{
-            imageView.transform = CGAffineTransformMakeScale(1.3, 1.3);
-        }];
-        
-        UILongPressGestureRecognizer *pan_gr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPan:)];
-        pan_gr.minimumPressDuration = 0.0;
-        [imageView addGestureRecognizer:pan_gr];
-        
-        UIPinchGestureRecognizer *pinch_gr = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPinch:)];
-        [imageView addGestureRecognizer:pinch_gr];
-        
-        UIRotationGestureRecognizer *rotate_gr = [[UIRotationGestureRecognizer alloc] initWithTarget: self action:@selector(onStickerRotate:)];
-        [imageView addGestureRecognizer:rotate_gr];
-        
-        pinch_gr.delegate = self; // delegate at least one transform to get them to trigger the callback methods in this controller
-        
-        [self.view addSubview:imageView];
-    } else if (recognizer.state == UIGestureRecognizerStateChanged) {
-        CGPoint translation = [recognizer translationInView:self.view];
-        imageView.center = CGPointMake(translation.x + originalCenter.x, translation.y + originalCenter.y);
-    } else if (recognizer.state == UIGestureRecognizerStateEnded) {
-        // If you drop on the tray, move the image copy back to the tray and delete it
-        if ((imageView.frame.origin.y + imageView.frame.size.height) >= self.trayView.frame.origin.y) {
-            [UIView animateWithDuration:.10 animations:^{
-                imageView.center = originalCenter;
-                imageView.transform = CGAffineTransformMakeScale(1, 1);
-            } completion:^(BOOL finished) {
-                [imageView removeFromSuperview];
-            }];
-        } else {
-            // otherwise, scale down to original when you drop on the canvas
-            [UIView animateWithDuration:0.1 animations:^{
-                imageView.transform = CGAffineTransformMakeScale(1, 1);
-            }];
-        }
-    }
+    UILongPressGestureRecognizer *pan_gr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPan:)];
+    pan_gr.minimumPressDuration = 0.0;
+    [imageView addGestureRecognizer:pan_gr];
+    
+    UIPinchGestureRecognizer *pinch_gr = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPinch:)];
+    [imageView addGestureRecognizer:pinch_gr];
+    
+    UIRotationGestureRecognizer *rotate_gr = [[UIRotationGestureRecognizer alloc] initWithTarget: self action:@selector(onStickerRotate:)];
+    [imageView addGestureRecognizer:rotate_gr];
+    
+    pinch_gr.delegate = self; // delegate at least one transform to get them to trigger the callback methods in this controller
+    
+    [UIView animateWithDuration:.1 animations:^{
+        imageView.center = CGPointMake(self.view.center.x, self.view.center.y);
+    }];
 }
 
 - (void)onStickerRotate:(UIRotationGestureRecognizer *)recognizer{
