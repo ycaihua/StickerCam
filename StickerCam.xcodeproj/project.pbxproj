@@ -350,11 +350,11 @@
 				TargetAttributes = {
 					5FA428A11A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = V9WTTPBFK9;
+						DevelopmentTeam = WE4NL5L554;
 					};
 					5FA428BA1A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = V9WTTPBFK9;
+						DevelopmentTeam = WE4NL5L554;
 						TestTargetID = 5FA428A11A12095600F00FFF;
 					};
 				};

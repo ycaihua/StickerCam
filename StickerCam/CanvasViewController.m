@@ -61,7 +61,22 @@
                                                        @"voodoo-tactical-military-glasses-4.gif"]
                      }];
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancelButton)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(onShareButton)];
+    
 }
+
+- (void)onCancelButton {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)onShareButton {
+    UIImage *viewImage = [self getImageFromCanvas];
+    ShareViewController* svc = [[ShareViewController alloc] initWithImage:viewImage];
+    [self.navigationController pushViewController:svc animated:YES];
+}
+
 
 - (void)viewDidLayoutSubviews {
     for (int i = 0; i < [self.pages count]; i++) {
@@ -107,16 +122,6 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(75, 75);
-}
-
-- (void)onCancelButton {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)onShareButton {
-    UIImage *viewImage = [self getImageFromCanvas];
-    ShareViewController* svc = [[ShareViewController alloc] initWithImage:viewImage];
-    [self.navigationController pushViewController:svc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
