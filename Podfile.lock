@@ -2,12 +2,15 @@ PODS:
   - Bolts (1.1.3)
   - Facebook-iOS-SDK (3.20.0):
     - Bolts (~> 1.0)
+  - MGInstagram (0.0.2)
 
 DEPENDENCIES:
   - Facebook-iOS-SDK
+  - MGInstagram
 
 SPEC CHECKSUMS:
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
   Facebook-iOS-SDK: 5854404b4b651f612a8ef79ca06d766858f4cb8e
+  MGInstagram: 2b7722b68caf4b27eae38112fa5ade2541fa9fab
 
 COCOAPODS: 0.34.2

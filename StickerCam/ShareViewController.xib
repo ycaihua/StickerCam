@@ -33,7 +33,7 @@
                     </variation>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BOM-hP-uxA">
-                    <rect key="frame" x="20" y="334" width="335" height="344"/>
+                    <rect key="frame" x="20" y="344" width="335" height="344"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="344" id="WCI-ok-XMR"/>
@@ -57,7 +57,7 @@
                 <constraint firstItem="BOM-hP-uxA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="c5o-7d-4iG"/>
                 <constraint firstItem="BOM-hP-uxA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="20" id="ceF-fy-Ckh"/>
                 <constraint firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" constant="20" id="k0T-kn-jY4"/>
-                <constraint firstItem="BOM-hP-uxA" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="10" id="vEg-PH-9Zc"/>
+                <constraint firstItem="BOM-hP-uxA" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="20" id="vEg-PH-9Zc"/>
                 <constraint firstAttribute="trailing" secondItem="BOM-hP-uxA" secondAttribute="trailing" constant="20" id="vds-Qe-AWO"/>
                 <constraint firstItem="m40-tB-nfI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="xPX-Zr-kYj"/>
             </constraints>

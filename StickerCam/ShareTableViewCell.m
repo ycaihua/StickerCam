@@ -8,6 +8,7 @@
 
 #import "ShareTableViewCell.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import <MGInstagram/MGInstagram.h>
 
 @implementation ShareTableViewCell
 
@@ -41,6 +42,8 @@
                     }
             }];
         }
+    } else if (self.socialNetwork == Instagram) {
+        [MGInstagram postImage:self.shareImage inView:self.socialNetworkImageView];
     }
 }
 @end
