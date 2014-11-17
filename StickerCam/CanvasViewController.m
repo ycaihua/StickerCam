@@ -16,6 +16,7 @@
 
 
 @property BOOL trayOpen;
+@property BOOL layoutComplete;
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -79,26 +80,30 @@
 
 
 - (void)viewDidLayoutSubviews {
-    for (int i = 0; i < [self.pages count]; i++) {
-        CGRect frame;
-        frame.origin.x = self.view.frame.size.width * i;
-        frame.origin.y = 0;
-        frame.size = CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height);
-        
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        [layout setSectionInset:UIEdgeInsetsMake(0, 10, 10, 10)];
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
-        collectionView.tag = i;
-        collectionView.backgroundColor = self.trayView.backgroundColor;
-        [collectionView setDataSource:self];
-        [collectionView setDelegate:self];
-        [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
-        
-        
-        [self.scrollView addSubview:collectionView];
+    
+    if (!self.layoutComplete) {
+        for (int i = 0; i < [self.pages count]; i++) {
+            CGRect frame;
+            frame.origin.x = self.view.frame.size.width * i;
+            frame.origin.y = 0;
+            frame.size = CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height);
+            
+            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+            [layout setSectionInset:UIEdgeInsetsMake(0, 10, 10, 10)];
+            UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
+            collectionView.tag = i;
+            collectionView.backgroundColor = self.trayView.backgroundColor;
+            [collectionView setDataSource:self];
+            [collectionView setDelegate:self];
+            [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+            
+            
+            [self.scrollView addSubview:collectionView];
+        }
+        self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * [self.pages count], self.scrollView.frame.size.height);
+        [self.scrollView setContentOffset:CGPointMake(0, 0)];
+        self.layoutComplete = YES;
     }
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * [self.pages count], self.scrollView.frame.size.height);
-    [self.scrollView setContentOffset:CGPointMake(0, 0)];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
