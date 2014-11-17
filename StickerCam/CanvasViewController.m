@@ -187,7 +187,7 @@
     
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         // If no timer exists, set one, then invalidate it once it's complete, otherwise we know it's a doule tap and we remove this view
-        longFlipTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(flipHorizontal:) userInfo:recognizer.view repeats:NO];
+        longFlipTimer = [NSTimer scheduledTimerWithTimeInterval:0.50 target:self selector:@selector(flipHorizontal:) userInfo:recognizer.view repeats:NO];
         if (!self.tapTimer) {
             originalCenter = recognizer.view.center;
             originalLocationInView = [recognizer locationInView:self.view];
