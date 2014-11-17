@@ -8,6 +8,7 @@
 
 #import "CanvasViewController.h"
 #import "ShareViewController.h"
+#import "UIImage+Trim.h"
 
 @interface CanvasViewController ()
 @property (strong, nonatomic) NSTimer *tapTimer;
@@ -135,13 +136,14 @@
 }
 
 - (IBAction)onTrayAssetTap:(UITapGestureRecognizer *)recognizer {
-    static UIImageView *imageView;
     UICollectionView *collectionView = (UICollectionView *)recognizer.view.superview;
     UICollectionViewCell *collectionViewCell = (UICollectionViewCell *)recognizer.view;
     UIImageView *pImageView =  (UIImageView *)collectionViewCell.backgroundView;
-    imageView = [[UIImageView alloc] initWithFrame:pImageView.frame];
+    UIImage *croppedImage = [pImageView.image imageByTrimmingTransparentPixels];
+    UIImageView *imageView;
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(pImageView.frame.origin.x, pImageView.frame.origin.x, 75, (croppedImage.size.height/croppedImage.size.width) * 75)];
     imageView.userInteractionEnabled = YES;
-    imageView.image = pImageView.image;
+    [imageView setImage:croppedImage];
     imageView.center = CGPointMake(recognizer.view.center.x, recognizer.view.center.y + self.trayView.frame.origin.y + self.scrollView.frame.origin.y - collectionView.contentOffset.y);
     [self.view addSubview:imageView];
     
@@ -181,9 +183,11 @@
 - (IBAction)onStickerPan:(UILongPressGestureRecognizer *)recognizer {
     static CGPoint originalCenter;
     static CGPoint originalLocationInView;
+    static NSTimer *longFlipTimer;
     
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         // If no timer exists, set one, then invalidate it once it's complete, otherwise we know it's a doule tap and we remove this view
+        longFlipTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(flipHorizontal:) userInfo:recognizer.view repeats:NO];
         if (!self.tapTimer) {
             originalCenter = recognizer.view.center;
             originalLocationInView = [recognizer locationInView:self.view];
@@ -203,6 +207,7 @@
             }];
         }
     } else if (recognizer.state == UIGestureRecognizerStateChanged) {
+        [longFlipTimer invalidate];
         CGPoint point = [recognizer locationInView:self.view];
         // We calculate the delta moved from initial the touch point to where it is now and add that to the original center of the image
         recognizer.view.center = CGPointMake((point.x - originalLocationInView.x) + originalCenter.x, (point.y - originalLocationInView.y) + originalCenter.y);
@@ -213,6 +218,8 @@
                 recognizer.view.center = originalCenter;
             }];
         }
+        
+        [longFlipTimer invalidate];
     }
 }
 
@@ -278,6 +285,13 @@
 - (void)tapTimerEnd:(NSTimer *)timer {
     [self.tapTimer invalidate];
     self.tapTimer = nil;
+}
+
+- (void)flipHorizontal:(NSTimer *)timer {
+    UIImageView *view = (UIImageView *)timer.userInfo;
+    [UIView animateWithDuration:.25 animations:^{
+        view.transform = CGAffineTransformScale(view.transform, -1, 1);
+    }];
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
