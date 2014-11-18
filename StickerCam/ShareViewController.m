@@ -10,7 +10,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <MGInstagram/MGInstagram.h>
 
-@interface ShareViewController ()
+@interface ShareViewController()
 
 @end
 
@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    self.captionView.delegate = self;
     //TODO - remove this override
     self.image = [UIImage imageNamed:@"test_image_stickercam.jpg"];
 
@@ -30,8 +30,6 @@
     UIGraphicsEndImageContext();
     [self.shareImageView setImage:resized];
     
-    [self.facebookImageView setImage:[UIImage imageNamed:@"FBLogo.png"]];
-    [self.instagramImageView setImage:[UIImage imageNamed:@"IGLogo.png"]];
     self.facebookShareButton.layer.cornerRadius = 4;
     self.instagramShareButton.layer.cornerRadius = 4;
 }
@@ -49,7 +47,15 @@
     return self;
 }
 
-
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
 
 /*
 #pragma mark - Navigation
@@ -65,6 +71,9 @@
     // Check if the Facebook app is installed and we can present the share dialog
     FBLinkShareParams *params = [[FBLinkShareParams alloc] init];
     params.link = [NSURL URLWithString:@"https://developers.facebook.com/docs/ios/share/"];
+    if ([self.captionView.text length] > 0) {
+        params.caption = self.captionView.text;
+    }
     
     NSArray* photos = @[self.shareImageView.image];
     
