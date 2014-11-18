@@ -19,6 +19,7 @@
 @property BOOL trayOpen;
 @property BOOL layoutComplete;
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
+@property (weak, nonatomic) IBOutlet UIView *previewImageContainerView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) NSArray *pages;
@@ -142,7 +143,8 @@
     imageView.userInteractionEnabled = YES;
     [imageView setImage:croppedImage];
     imageView.center = CGPointMake(recognizer.view.center.x, recognizer.view.center.y + self.trayView.frame.origin.y + self.scrollView.frame.origin.y - collectionView.contentOffset.y);
-    [self.view addSubview:imageView];
+    [self.previewImageContainerView addSubview:imageView];
+    [self.previewImageContainerView bringSubviewToFront:imageView];
     
     UIPanGestureRecognizer *pan_gr = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPan:)];
     [imageView addGestureRecognizer:pan_gr];
@@ -197,11 +199,11 @@
         recognizer.view.center = CGPointMake((point.x - originalLocationInView.x) + originalCenter.x, (point.y - originalLocationInView.y) + originalCenter.y);
     } else if (recognizer.state == UIGestureRecognizerStateEnded) {
         // If you drop on the tray, move the image copy back to original point where you last dropped it
-        if ((recognizer.view.frame.origin.y + recognizer.view.frame.size.height) >= self.trayView.frame.origin.y) {
-            [UIView animateWithDuration:.10 animations:^{
-                recognizer.view.center = originalCenter;
-            }];
-        }
+//        if ((recognizer.view.frame.origin.y + recognizer.view.frame.size.height) >= self.trayView.frame.origin.y) {
+//            [UIView animateWithDuration:.10 animations:^{
+//                recognizer.view.center = originalCenter;
+//            }];
+//        }
     }
 }
 
@@ -273,10 +275,11 @@
 
 - (UIImage *)getImageFromCanvas {
     // TODO: change self.view to the square canvas that holds the uploaded image
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIGraphicsBeginImageContext(self.previewImageView.frame.size);
+    [self.previewImageContainerView.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
     return viewImage;
 }
 

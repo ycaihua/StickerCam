@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CanvasViewController">
             <connections>
+                <outlet property="previewImageContainerView" destination="w7C-3U-BNR" id="ZNg-Z8-dEk"/>
                 <outlet property="previewImageView" destination="nzA-Mr-set" id="mrl-bt-mEt"/>
                 <outlet property="scrollView" destination="Pqn-FF-eMK" id="I3b-gZ-5Nt"/>
                 <outlet property="toggleTrayImage" destination="jbp-rB-56I" id="n6O-0z-wIe"/>
@@ -25,6 +26,7 @@
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqn-FF-eMK">
                             <rect key="frame" x="0.0" y="30" width="320" height="152"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </scrollView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="jbp-rB-56I">
                             <rect key="frame" x="150" y="8" width="20" height="14"/>
@@ -44,23 +46,33 @@
                         <constraint firstItem="jbp-rB-56I" firstAttribute="top" secondItem="144-AT-CCt" secondAttribute="topMargin" id="sDL-T4-Gzq"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzA-Mr-set">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7C-3U-BNR">
                     <rect key="frame" x="8" y="74" width="304" height="304"/>
-                    <color key="backgroundColor" red="0.80235669889502759" green="0.80235669889502759" blue="0.80235669889502759" alpha="1" colorSpace="calibratedRGB"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzA-Mr-set">
+                            <rect key="frame" x="0.0" y="0.0" width="304" height="304"/>
+                            <color key="backgroundColor" red="0.80235669889502759" green="0.80235669889502759" blue="0.80235669889502759" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="nzA-Mr-set" secondAttribute="height" multiplier="1:1" id="wTJ-b0-bzV"/>
+                        <constraint firstAttribute="width" secondItem="w7C-3U-BNR" secondAttribute="height" multiplier="1:1" id="Jz8-L1-Ilv"/>
+                        <constraint firstAttribute="trailing" secondItem="nzA-Mr-set" secondAttribute="trailing" id="WTp-a5-ZPE"/>
+                        <constraint firstItem="nzA-Mr-set" firstAttribute="leading" secondItem="w7C-3U-BNR" secondAttribute="leading" id="bCl-Rp-DTj"/>
+                        <constraint firstAttribute="bottom" secondItem="nzA-Mr-set" secondAttribute="bottom" id="cqg-NO-0Pi"/>
+                        <constraint firstItem="nzA-Mr-set" firstAttribute="top" secondItem="w7C-3U-BNR" secondAttribute="top" id="rzs-db-Dfs"/>
                     </constraints>
-                </imageView>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="nzA-Mr-set" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="1zj-WO-JFF"/>
-                <constraint firstItem="144-AT-CCt" firstAttribute="top" secondItem="nzA-Mr-set" secondAttribute="bottom" constant="8" id="GB9-Ec-2xY"/>
+                <constraint firstItem="144-AT-CCt" firstAttribute="top" secondItem="w7C-3U-BNR" secondAttribute="bottom" constant="8" id="2Uw-JN-Ux7"/>
+                <constraint firstItem="w7C-3U-BNR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="2ie-fU-8Ey"/>
+                <constraint firstAttribute="trailing" secondItem="w7C-3U-BNR" secondAttribute="trailing" constant="8" id="Hl5-1c-pAk"/>
                 <constraint firstAttribute="trailing" secondItem="144-AT-CCt" secondAttribute="trailing" id="RLB-1T-l4d"/>
+                <constraint firstItem="w7C-3U-BNR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="U1U-ZL-Wa1"/>
                 <constraint firstAttribute="bottom" secondItem="144-AT-CCt" secondAttribute="bottom" id="cby-8V-aGg"/>
                 <constraint firstItem="144-AT-CCt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kVB-jl-UZD"/>
-                <constraint firstAttribute="trailing" secondItem="nzA-Mr-set" secondAttribute="trailing" constant="8" id="oMd-5X-czc"/>
-                <constraint firstItem="nzA-Mr-set" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="qyG-58-YLM"/>
             </constraints>
             <point key="canvasLocation" x="258" y="154"/>
         </view>
