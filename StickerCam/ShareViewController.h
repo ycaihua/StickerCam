@@ -12,7 +12,13 @@
 - (id)initWithImage:(UIImage *)image;
 @property (strong, nonatomic) UIImage* image;
 @property (weak, nonatomic) IBOutlet UIImageView *shareImageView;
-@property (weak, nonatomic) IBOutlet UITableView *shareTableView;
+@property (weak, nonatomic) IBOutlet UIImageView *facebookImageView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *instagramImageView;
+@property (weak, nonatomic) IBOutlet UIButton *facebookShareButton;
+@property (weak, nonatomic) IBOutlet UIButton *instagramShareButton;
+- (IBAction)onFacebookShareButtonClicked:(id)sender;
+- (IBAction)onInstagramShareButtonClicked:(id)sender;
 typedef enum {
     Facebook,
     Instagram

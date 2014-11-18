@@ -7,8 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareViewController">
             <connections>
+                <outlet property="facebookImageView" destination="hvT-Li-5RN" id="3WR-3g-vrS"/>
+                <outlet property="facebookShareButton" destination="18L-y6-oP2" id="LWw-Vg-X9n"/>
+                <outlet property="instagramImageView" destination="0tY-cg-gNg" id="xBO-aQ-CLh"/>
+                <outlet property="instagramShareButton" destination="Bj3-Nd-FDz" id="e6P-iv-eGD"/>
                 <outlet property="shareImageView" destination="m40-tB-nfI" id="an7-C0-46R"/>
-                <outlet property="shareTableView" destination="BOM-hP-uxA" id="LRS-rV-oeh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m40-tB-nfI">
-                    <rect key="frame" x="62" y="74" width="250" height="250"/>
+                    <rect key="frame" x="62" y="75" width="250" height="250"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="bSg-lU-K7H"/>
                         <constraint firstAttribute="width" constant="200" id="hes-2q-xvd"/>
@@ -32,47 +35,83 @@
                         </mask>
                     </variation>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BOM-hP-uxA">
-                    <rect key="frame" x="20" y="344" width="335" height="344"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hvT-Li-5RN">
+                    <rect key="frame" x="62" y="365" width="60" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="344" id="WCI-ok-XMR"/>
-                        <constraint firstAttribute="width" constant="375" id="lS0-uY-uMA"/>
+                        <constraint firstAttribute="width" secondItem="hvT-Li-5RN" secondAttribute="height" multiplier="1:1" id="8bQ-Mi-Zj8"/>
+                        <constraint firstAttribute="width" constant="60" id="U80-yD-PUA"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="XLJ-x0-Ho8"/>
+                        <constraint firstAttribute="height" constant="60" id="lc7-ec-Yp3"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="lS0-uY-uMA"/>
+                            <exclude reference="XLJ-x0-Ho8"/>
                         </mask>
                     </variation>
-                </tableView>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0tY-cg-gNg">
+                    <rect key="frame" x="62" y="475" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0tY-cg-gNg" secondAttribute="height" multiplier="1:1" id="2Eb-Up-7ST"/>
+                        <constraint firstAttribute="width" constant="60" id="EMa-RD-OEe"/>
+                        <constraint firstAttribute="height" constant="60" id="bVE-LP-Ped"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="k5h-2x-uVl"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="qeM-Ak-Wtf"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="xxX-0d-s2h"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="k5h-2x-uVl"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18L-y6-oP2">
+                    <rect key="frame" x="272" y="380" width="40" height="30"/>
+                    <state key="normal" title="Share">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onFacebookShareButtonClicked:" destination="-1" eventType="touchUpInside" id="XQM-Yu-DqS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj3-Nd-FDz">
+                    <rect key="frame" x="272" y="490" width="40" height="30"/>
+                    <state key="normal" title="Share">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onInstagramShareButtonClicked:" destination="-1" eventType="touchUpInside" id="HTA-eO-1th"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="0tY-cg-gNg" firstAttribute="width" secondItem="0tY-cg-gNg" secondAttribute="height" multiplier="1:1" id="1AZ-gI-xBC"/>
+                <constraint firstItem="0tY-cg-gNg" firstAttribute="top" secondItem="hvT-Li-5RN" secondAttribute="bottom" constant="50" id="1OU-QK-bcI"/>
+                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="top" secondItem="18L-y6-oP2" secondAttribute="bottom" constant="80" id="77P-YD-naa"/>
+                <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" id="7AV-Wh-vKW"/>
                 <constraint firstAttribute="centerX" secondItem="m40-tB-nfI" secondAttribute="centerX" id="7CE-Yi-Agk"/>
+                <constraint firstItem="hvT-Li-5RN" firstAttribute="leading" secondItem="0tY-cg-gNg" secondAttribute="leading" id="8Bd-bi-vpZ"/>
+                <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="Bj3-Nd-FDz" secondAttribute="trailing" id="9TJ-3L-ebe"/>
                 <constraint firstItem="m40-tB-nfI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="CPu-Rc-klZ"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0tY-cg-gNg" secondAttribute="bottom" constant="30" id="CRM-GU-5y1"/>
+                <constraint firstItem="18L-y6-oP2" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="55" id="EL9-Rr-hKy"/>
                 <constraint firstItem="m40-tB-nfI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="W6H-fb-bht"/>
-                <constraint firstItem="BOM-hP-uxA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WqZ-7o-PRg"/>
-                <constraint firstAttribute="bottom" secondItem="BOM-hP-uxA" secondAttribute="bottom" constant="50" id="Yz8-y4-9Xd"/>
-                <constraint firstItem="BOM-hP-uxA" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="10" id="axU-go-I4A"/>
-                <constraint firstItem="BOM-hP-uxA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="c5o-7d-4iG"/>
-                <constraint firstItem="BOM-hP-uxA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="20" id="ceF-fy-Ckh"/>
+                <constraint firstItem="hvT-Li-5RN" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="40" id="cwu-zj-0XM"/>
+                <constraint firstItem="m40-tB-nfI" firstAttribute="leading" secondItem="hvT-Li-5RN" secondAttribute="leading" id="g0F-Bo-NOY"/>
+                <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" id="ilZ-zP-ePX"/>
                 <constraint firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" constant="20" id="k0T-kn-jY4"/>
-                <constraint firstItem="BOM-hP-uxA" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="20" id="vEg-PH-9Zc"/>
-                <constraint firstAttribute="trailing" secondItem="BOM-hP-uxA" secondAttribute="trailing" constant="20" id="vds-Qe-AWO"/>
-                <constraint firstItem="m40-tB-nfI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="xPX-Zr-kYj"/>
+                <constraint firstItem="hvT-Li-5RN" firstAttribute="leading" secondItem="m40-tB-nfI" secondAttribute="leading" id="nWl-hO-qV7"/>
+                <constraint firstItem="m40-tB-nfI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="xPX-Zr-kYj"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="CPu-Rc-klZ"/>
                     <exclude reference="k0T-kn-jY4"/>
-                    <exclude reference="WqZ-7o-PRg"/>
-                    <exclude reference="Yz8-y4-9Xd"/>
-                    <exclude reference="axU-go-I4A"/>
-                    <exclude reference="ceF-fy-Ckh"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="683.5" y="146.5"/>
+            <point key="canvasLocation" x="293.5" y="140.5"/>
         </view>
     </objects>
 </document>
