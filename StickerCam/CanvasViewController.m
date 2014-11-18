@@ -137,11 +137,11 @@
     UICollectionView *collectionView = (UICollectionView *)recognizer.view.superview;
     UICollectionViewCell *collectionViewCell = (UICollectionViewCell *)recognizer.view;
     UIImageView *pImageView =  (UIImageView *)collectionViewCell.backgroundView;
-    UIImage *croppedImage = [pImageView.image imageByTrimmingTransparentPixels];
+//    UIImage *croppedImage = [pImageView.image imageByTrimmingTransparentPixels];
     UIImageView *imageView;
-    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(pImageView.frame.origin.x, pImageView.frame.origin.x, 75, (croppedImage.size.height/croppedImage.size.width) * 75)];
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(pImageView.frame.origin.x, pImageView.frame.origin.x, 75, (pImageView.image.size.height/pImageView.image.size.width) * 75)];
     imageView.userInteractionEnabled = YES;
-    [imageView setImage:croppedImage];
+    [imageView setImage:pImageView.image];
     imageView.center = CGPointMake(recognizer.view.center.x, recognizer.view.center.y + self.trayView.frame.origin.y + self.scrollView.frame.origin.y - collectionView.contentOffset.y);
     [self.previewImageContainerView addSubview:imageView];
     [self.previewImageContainerView bringSubviewToFront:imageView];
@@ -189,6 +189,8 @@
 - (IBAction)onStickerPan:(UIPanGestureRecognizer *)recognizer {
     static CGPoint originalCenter;
     static CGPoint originalLocationInView;
+    
+    [recognizer.view.superview bringSubviewToFront:recognizer.view];
     
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         originalCenter = recognizer.view.center;
