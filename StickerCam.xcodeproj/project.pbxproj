@@ -29,6 +29,10 @@
 		5FA428C21A12095600F00FFF /* StickerCamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428C11A12095600F00FFF /* StickerCamTests.m */; };
 		5FA428CE1A1209D400F00FFF /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428CC1A1209D400F00FFF /* CanvasViewController.m */; };
 		5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */; };
+		5FBAB0951A1BF7D6009CABA6 /* sc-app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0941A1BF7D6009CABA6 /* sc-app-icon.png */; };
+		5FBAB0971A1BFFDB009CABA6 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0961A1BFFDB009CABA6 /* Images-2.xcassets */; };
+		5FBAB09A1A1C0623009CABA6 /* sc-launch-640-960.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0981A1C0623009CABA6 /* sc-launch-640-960.png */; };
+		5FBAB09B1A1C0623009CABA6 /* sc-launch-640-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0991A1C0623009CABA6 /* sc-launch-640-1136.png */; };
 		5FEA1CC61A1494D3008A94C1 /* Thumb_red puma hat.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */; };
 		5FEA1CC71A1494D3008A94C1 /* Thumb_kids griffin hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */; };
 		5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */; };
@@ -101,6 +105,10 @@
 		5FA428CB1A1209D400F00FFF /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
 		5FA428CC1A1209D400F00FFF /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
 		5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanvasViewController.xib; sourceTree = "<group>"; };
+		5FBAB0941A1BF7D6009CABA6 /* sc-app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sc-app-icon.png"; sourceTree = "<group>"; };
+		5FBAB0961A1BFFDB009CABA6 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		5FBAB0981A1C0623009CABA6 /* sc-launch-640-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc-launch-640-960.png"; path = "Images-2.xcassets/LaunchImage.launchimage/sc-launch-640-960.png"; sourceTree = "<group>"; };
+		5FBAB0991A1C0623009CABA6 /* sc-launch-640-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc-launch-640-1136.png"; path = "Images-2.xcassets/LaunchImage.launchimage/sc-launch-640-1136.png"; sourceTree = "<group>"; };
 		5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb_red puma hat.PNG"; sourceTree = "<group>"; };
 		5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb_kids griffin hat.png"; sourceTree = "<group>"; };
 		5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runner-Hat.png"; sourceTree = "<group>"; };
@@ -193,6 +201,7 @@
 		5FA428991A12095600F00FFF = {
 			isa = PBXGroup;
 			children = (
+				5FBAB0941A1BF7D6009CABA6 /* sc-app-icon.png */,
 				0526010B1A13167D004C5951 /* AVFoundation.framework */,
 				5FA428A41A12095600F00FFF /* StickerCam */,
 				5FA428BE1A12095600F00FFF /* StickerCamTests */,
@@ -214,6 +223,8 @@
 		5FA428A41A12095600F00FFF /* StickerCam */ = {
 			isa = PBXGroup;
 			children = (
+				5FBAB0981A1C0623009CABA6 /* sc-launch-640-960.png */,
+				5FBAB0991A1C0623009CABA6 /* sc-launch-640-1136.png */,
 				FAE6D4EE1A1B2B07002B81E5 /* Billabong.ttf */,
 				5F34894C1A19A36200FC4263 /* UIImage+Trim.h */,
 				FAE6D4EC1A1B2AAD002B81E5 /* FreightSans-MediumItalic.ttf */,
@@ -238,6 +249,7 @@
 				FA67729D1A13E1F100C0266D /* ShareViewController.h */,
 				FA67729E1A13E1F100C0266D /* ShareViewController.m */,
 				FA67729F1A13E1F100C0266D /* ShareViewController.xib */,
+				5FBAB0961A1BFFDB009CABA6 /* Images-2.xcassets */,
 			);
 			path = StickerCam;
 			sourceTree = "<group>";
@@ -402,6 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FBAB0951A1BF7D6009CABA6 /* sc-app-icon.png in Resources */,
 				FAE6D4EF1A1B2C35002B81E5 /* Billabong.ttf in Resources */,
 				5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */,
 				052601131A131DDF004C5951 /* button.png in Resources */,
@@ -420,6 +433,7 @@
 				5FEA1CCE1A1494D3008A94C1 /* hat-cowboy-black-cattleman-adult-med-9999914598.png in Resources */,
 				FA6772A11A13E1F100C0266D /* ShareViewController.xib in Resources */,
 				052601101A131A84004C5951 /* CameraViewController.xib in Resources */,
+				5FBAB09B1A1C0623009CABA6 /* sc-launch-640-1136.png in Resources */,
 				FA3BBD701A141D2100E86C30 /* FBLogo.png in Resources */,
 				5F3489501A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png in Resources */,
 				5FEA1CCB1A1494D3008A94C1 /* Hats_SessTrucker_Black.gif in Resources */,
@@ -438,11 +452,13 @@
 				5FEA1CC71A1494D3008A94C1 /* Thumb_kids griffin hat.png in Resources */,
 				5FEA1CCF1A1494D3008A94C1 /* hat-confederate-general-dlx-adult-sm-9999912643.png in Resources */,
 				5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */,
+				5FBAB09A1A1C0623009CABA6 /* sc-launch-640-960.png in Resources */,
 				0581E3691A1B00DF007B694F /* cameraroll.png in Resources */,
 				5F6CAD051A121A0600C03768 /* happy@2x.png in Resources */,
 				5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */,
 				5F6CAD071A121A0600C03768 /* tongue@2x.png in Resources */,
 				5F6CAD061A121A0600C03768 /* sad@2x.png in Resources */,
+				5FBAB0971A1BFFDB009CABA6 /* Images-2.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,12 +631,14 @@
 			baseConfigurationReference = 380E51D967D249867E8BA72F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "835060f4-3211-425d-b367-a80447ab5e24";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -629,12 +647,14 @@
 			baseConfigurationReference = E89445093B28815B28E8F11F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "835060f4-3211-425d-b367-a80447ab5e24";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -23,6 +23,7 @@ AVCaptureStillImageOutput *stillImageOutput;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Take a Photo";
     // Do any additional setup after loading the view from its nib.
 }
 
