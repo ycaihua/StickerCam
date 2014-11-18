@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "CameraViewController.h"
 #import "CanvasViewController.h"
+#import "ShareViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate ()
@@ -32,7 +33,7 @@
     
     // Override point for customization after application launch.
     //CanvasViewController *vc = [[CanvasViewController alloc]init];
-    CameraViewController *vc = [[CameraViewController alloc]init];
+    ShareViewController *vc = [[ShareViewController alloc]init];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
     self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];

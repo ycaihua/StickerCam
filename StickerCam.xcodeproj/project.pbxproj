@@ -55,6 +55,8 @@
 		FA6772A01A13E1F100C0266D /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA67729E1A13E1F100C0266D /* ShareViewController.m */; };
 		FA6772A11A13E1F100C0266D /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA67729F1A13E1F100C0266D /* ShareViewController.xib */; };
 		FA7099BF1A143C3800DBF6BA /* IGLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7099BE1A143C3800DBF6BA /* IGLogo.png */; };
+		FAE6D4E81A1B2552002B81E5 /* fbshare.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE6D4E71A1B2552002B81E5 /* fbshare.png */; };
+		FAE6D4EF1A1B2C35002B81E5 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAE6D4EE1A1B2B07002B81E5 /* Billabong.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,13 @@
 		FA67729E1A13E1F100C0266D /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		FA67729F1A13E1F100C0266D /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		FA7099BE1A143C3800DBF6BA /* IGLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IGLogo.png; sourceTree = "<group>"; };
+		FAE6D4E71A1B2552002B81E5 /* fbshare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbshare.png; sourceTree = "<group>"; };
+		FAE6D4E91A1B266B002B81E5 /* Instagram Logo 2.eps */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Instagram Logo 2.eps"; sourceTree = "<group>"; };
+		FAE6D4EA1A1B2A7E002B81E5 /* FreightSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans-Bold.ttf"; sourceTree = "<group>"; };
+		FAE6D4EB1A1B2A98002B81E5 /* FreightSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans-Medium.ttf"; sourceTree = "<group>"; };
+		FAE6D4EC1A1B2AAD002B81E5 /* FreightSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FAE6D4ED1A1B2AC2002B81E5 /* FreightSans-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans-Book.ttf"; sourceTree = "<group>"; };
+		FAE6D4EE1A1B2B07002B81E5 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +161,8 @@
 		5F6CACF91A121A0600C03768 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FAE6D4E91A1B266B002B81E5 /* Instagram Logo 2.eps */,
+				FAE6D4E71A1B2552002B81E5 /* fbshare.png */,
 				5FEA1CE41A149DEA008A94C1 /* preview-placeholder.jpg */,
 				FA7099BE1A143C3800DBF6BA /* IGLogo.png */,
 				052601121A131DDF004C5951 /* button.png */,
@@ -203,7 +214,12 @@
 		5FA428A41A12095600F00FFF /* StickerCam */ = {
 			isa = PBXGroup;
 			children = (
+				FAE6D4EE1A1B2B07002B81E5 /* Billabong.ttf */,
 				5F34894C1A19A36200FC4263 /* UIImage+Trim.h */,
+				FAE6D4EC1A1B2AAD002B81E5 /* FreightSans-MediumItalic.ttf */,
+				FAE6D4ED1A1B2AC2002B81E5 /* FreightSans-Book.ttf */,
+				FAE6D4EB1A1B2A98002B81E5 /* FreightSans-Medium.ttf */,
+				FAE6D4EA1A1B2A7E002B81E5 /* FreightSans-Bold.ttf */,
 				5F34894D1A19A36200FC4263 /* UIImage+Trim.m */,
 				5F6CACF91A121A0600C03768 /* images */,
 				5FA428A91A12095600F00FFF /* AppDelegate.h */,
@@ -353,11 +369,11 @@
 				TargetAttributes = {
 					5FA428A11A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = V9WTTPBFK9;
+						DevelopmentTeam = WE4NL5L554;
 					};
 					5FA428BA1A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = V9WTTPBFK9;
+						DevelopmentTeam = WE4NL5L554;
 						TestTargetID = 5FA428A11A12095600F00FFF;
 					};
 				};
@@ -386,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE6D4EF1A1B2C35002B81E5 /* Billabong.ttf in Resources */,
 				5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */,
 				052601131A131DDF004C5951 /* button.png in Resources */,
 				5FEA1CE11A149B24008A94C1 /* voodoo-tactical-military-glasses-2.gif in Resources */,
@@ -411,6 +428,7 @@
 				5FEA1CCD1A1494D3008A94C1 /* hat-viking-helmet-child-teen-one-size-763285730078.png in Resources */,
 				5FEA1CCC1A1494D3008A94C1 /* hat-yachtsman-white-adjustable-back-763285706646.png in Resources */,
 				FA7099BF1A143C3800DBF6BA /* IGLogo.png in Resources */,
+				FAE6D4E81A1B2552002B81E5 /* fbshare.png in Resources */,
 				5FEA1CC91A1494D3008A94C1 /* Round-Hat2-300x300.png in Resources */,
 				5FEA1CE31A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif in Resources */,
 				5FEA1CDB1A149B24008A94C1 /* 3D_Glasses_Final_Clipart_Free.png in Resources */,

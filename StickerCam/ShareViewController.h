@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShareViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface ShareViewController : UIViewController
 - (id)initWithImage:(UIImage *)image;
 @property (strong, nonatomic) UIImage* image;
 @property (weak, nonatomic) IBOutlet UIImageView *shareImageView;

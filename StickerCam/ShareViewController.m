@@ -32,6 +32,8 @@
     
     [self.facebookImageView setImage:[UIImage imageNamed:@"FBLogo.png"]];
     [self.instagramImageView setImage:[UIImage imageNamed:@"IGLogo.png"]];
+    self.facebookShareButton.layer.cornerRadius = 4;
+    self.instagramShareButton.layer.cornerRadius = 4;
 }
 
 - (void)didReceiveMemoryWarning {
