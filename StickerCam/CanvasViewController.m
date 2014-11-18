@@ -71,6 +71,7 @@
 }
 
 - (void)onShareButton {
+    [self saveCanvasToCameraRoll];
     UIImage *viewImage = [self getImageFromCanvas];
     ShareViewController* svc = [[ShareViewController alloc] initWithImage:viewImage];
     [self.navigationController pushViewController:svc animated:YES];
