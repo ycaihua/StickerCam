@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -17,8 +17,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TGp-na-S6x">
-                    <rect key="frame" x="8" y="20" width="304" height="305"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGp-na-S6x">
+                    <rect key="frame" x="8" y="74" width="304" height="304"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="TGp-na-S6x" secondAttribute="height" multiplier="1:1" id="oY8-p4-j4E"/>
@@ -59,7 +59,7 @@
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="t4l-xR-kM6" secondAttribute="centerX" id="3J2-FU-lyU"/>
-                <constraint firstItem="TGp-na-S6x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="7np-sI-Nbl"/>
+                <constraint firstItem="TGp-na-S6x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="7np-sI-Nbl"/>
                 <constraint firstAttribute="trailing" secondItem="TGp-na-S6x" secondAttribute="trailing" constant="8" id="m4N-dW-vUj"/>
                 <constraint firstAttribute="bottom" secondItem="t4l-xR-kM6" secondAttribute="bottom" constant="10" id="saM-SW-wjn"/>
                 <constraint firstItem="TGp-na-S6x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="wjS-e6-DRE"/>
