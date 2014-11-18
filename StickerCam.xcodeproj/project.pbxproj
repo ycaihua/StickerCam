@@ -13,6 +13,7 @@
 		052601131A131DDF004C5951 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 052601121A131DDF004C5951 /* button.png */; };
 		056B066E1A147F9800BF9BD6 /* tray_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 056B066D1A147F9800BF9BD6 /* tray_icon.png */; };
 		5F34894E1A19A36200FC4263 /* UIImage+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F34894D1A19A36200FC4263 /* UIImage+Trim.m */; };
+		5F3489501A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F34894F1A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png */; };
 		5F6CAD021A121A0600C03768 /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFA1A121A0600C03768 /* down_arrow.png */; };
 		5F6CAD031A121A0600C03768 /* dead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFC1A121A0600C03768 /* dead@2x.png */; };
 		5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFD1A121A0600C03768 /* excited@2x.png */; };
@@ -77,6 +78,7 @@
 		380E51D967D249867E8BA72F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5F34894C1A19A36200FC4263 /* UIImage+Trim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Trim.h"; sourceTree = "<group>"; };
 		5F34894D1A19A36200FC4263 /* UIImage+Trim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Trim.m"; sourceTree = "<group>"; };
+		5F34894F1A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_mario_64_animation_by_expodude32-d79f1o1.png"; sourceTree = "<group>"; };
 		5F6CACFA1A121A0600C03768 /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_arrow.png; sourceTree = "<group>"; };
 		5F6CACFC1A121A0600C03768 /* dead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dead@2x.png"; sourceTree = "<group>"; };
 		5F6CACFD1A121A0600C03768 /* excited@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "excited@2x.png"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		5FEA1CBA1A1494C7008A94C1 /* hats */ = {
 			isa = PBXGroup;
 			children = (
+				5F34894F1A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png */,
 				5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */,
 				5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */,
 				5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */,
@@ -355,11 +358,11 @@
 				TargetAttributes = {
 					5FA428A11A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = WE4NL5L554;
+						DevelopmentTeam = V9WTTPBFK9;
 					};
 					5FA428BA1A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = WE4NL5L554;
+						DevelopmentTeam = V9WTTPBFK9;
 						TestTargetID = 5FA428A11A12095600F00FFF;
 					};
 				};
@@ -406,6 +409,7 @@
 				FA6772A11A13E1F100C0266D /* ShareViewController.xib in Resources */,
 				052601101A131A84004C5951 /* CameraViewController.xib in Resources */,
 				FA3BBD701A141D2100E86C30 /* FBLogo.png in Resources */,
+				5F3489501A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png in Resources */,
 				5FEA1CCB1A1494D3008A94C1 /* Hats_SessTrucker_Black.gif in Resources */,
 				5FEA1CE21A149B24008A94C1 /* voodoo-tactical-military-glasses-3.gif in Resources */,
 				5FEA1CE51A149DEA008A94C1 /* preview-placeholder.jpg in Resources */,
@@ -599,9 +603,12 @@
 			baseConfigurationReference = 380E51D967D249867E8BA72F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "835060f4-3211-425d-b367-a80447ab5e24";
 			};
 			name = Debug;
 		};
@@ -610,9 +617,12 @@
 			baseConfigurationReference = E89445093B28815B28E8F11F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "835060f4-3211-425d-b367-a80447ab5e24";
 			};
 			name = Release;
 		};

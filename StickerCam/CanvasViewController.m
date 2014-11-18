@@ -52,7 +52,8 @@
                                               @"hat-viking-helmet-child-teen-one-size-763285730078.png",
                                               @"hat-cowboy-black-cattleman-adult-med-9999914598.png",
                                               @"hat-confederate-general-dlx-adult-sm-9999912643.png",
-                                              @"hat-conductor-adult-large-9999917479.png"]
+                                              @"hat-conductor-adult-large-9999917479.png",
+                                              @"more_mario_64_animation_by_expodude32-d79f1o1.png"]
                                              },
                    @{@"page": @"Glasses", @"images": @[@"3D_Glasses_Final_Clipart_Free.png",
                                                        @"glasses-300x300.png",
