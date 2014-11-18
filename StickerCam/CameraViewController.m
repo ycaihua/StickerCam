@@ -117,6 +117,7 @@ AVCaptureStillImageOutput *stillImageOutput;
                       UIImage *img = [UIImage imageWithCGImage:[repr fullResolutionImage] scale:[repr scale] orientation:270];
                       // we only need the first (most recent) photo -- stop the enumeration
                       [self.cameraRollButton setImage:img forState:UIControlStateNormal];
+                      [self.cameraRollButton setImage:img forState:UIControlStateHighlighted];
                       *stop = YES;
                   }
               }];
