@@ -31,16 +31,11 @@
     [super viewDidLoad];
     self.trayOpen = YES;
     
-//    UIPanGestureRecognizer *panGestureRecognizer;
-//    [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayPan:)];
-//    [self.trayView addGestureRecognizer:panGestureRecognizer];
-    
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayToggleTap:)];
     tapGestureRecognizer.numberOfTapsRequired = 1;
     self.toggleTrayImage.userInteractionEnabled = YES;
     [self.toggleTrayImage addGestureRecognizer:tapGestureRecognizer];
     self.previewImageView.image = self.pictureImage;
-    self.previewImageView.contentMode = UIViewContentModeScaleAspectFill;
     
     self.pages = @[@{@"page": @"Hats", @"images": @[@"Thumb_red puma hat.PNG",
                                               @"Thumb_kids griffin hat.png",
@@ -84,11 +79,12 @@
 - (void)viewDidLayoutSubviews {
     
     if (!self.layoutComplete) {
+        [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width * [self.pages count], self.scrollView.frame.size.height)];
         for (int i = 0; i < [self.pages count]; i++) {
             CGRect frame;
-            frame.origin.x = self.view.frame.size.width * i;
+            frame.origin.x = self.trayView.frame.size.width * i;
             frame.origin.y = 0;
-            frame.size = CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height);
+            frame.size = CGSizeMake(self.trayView.frame.size.width, self.trayView.frame.size.height - self.scrollView.frame.origin.y);
             
             UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
             [layout setSectionInset:UIEdgeInsetsMake(0, 10, 10, 10)];
@@ -98,11 +94,11 @@
             [collectionView setDataSource:self];
             [collectionView setDelegate:self];
             [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
-            
-            
+            self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
             [self.scrollView addSubview:collectionView];
         }
-        self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * [self.pages count], self.scrollView.frame.size.height);
+        
+
         [self.scrollView setContentOffset:CGPointMake(0, 0)];
         self.layoutComplete = YES;
     }

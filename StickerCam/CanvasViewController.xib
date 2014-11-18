@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -17,17 +17,18 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="144-AT-CCt">
-                    <rect key="frame" x="0.0" y="368" width="600" height="232"/>
+                    <rect key="frame" x="0.0" y="386" width="320" height="182"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqn-FF-eMK">
-                            <rect key="frame" x="0.0" y="30" width="600" height="202"/>
+                            <rect key="frame" x="0.0" y="30" width="320" height="152"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </scrollView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="jbp-rB-56I">
-                            <rect key="frame" x="290" y="8" width="20" height="14"/>
+                            <rect key="frame" x="150" y="8" width="20" height="14"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="14" id="iwG-Lc-8s9"/>
                                 <constraint firstAttribute="width" constant="20" id="rHa-tE-DdB"/>
@@ -36,76 +37,41 @@
                     </subviews>
                     <color key="backgroundColor" red="0.95485151933701662" green="0.95485151933701662" blue="0.95485151933701662" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="Pqn-FF-eMK" secondAttribute="bottom" id="0KP-t8-tVy"/>
                         <constraint firstItem="Pqn-FF-eMK" firstAttribute="leading" secondItem="144-AT-CCt" secondAttribute="leading" id="5Nd-3d-HQ3"/>
                         <constraint firstAttribute="trailing" secondItem="Pqn-FF-eMK" secondAttribute="trailing" id="88y-NE-DEZ"/>
-                        <constraint firstAttribute="height" constant="232" id="AW4-xY-0SW"/>
-                        <constraint firstItem="Pqn-FF-eMK" firstAttribute="top" secondItem="jbp-rB-56I" secondAttribute="bottom" id="FL5-S4-8is"/>
                         <constraint firstAttribute="centerX" secondItem="jbp-rB-56I" secondAttribute="centerX" id="HMi-G4-FwJ"/>
+                        <constraint firstItem="Pqn-FF-eMK" firstAttribute="top" secondItem="144-AT-CCt" secondAttribute="top" constant="30" id="Hhm-nQ-MU0"/>
                         <constraint firstAttribute="bottom" secondItem="Pqn-FF-eMK" secondAttribute="bottom" id="agl-zO-RUi"/>
-                        <constraint firstItem="jbp-rB-56I" firstAttribute="centerX" secondItem="Pqn-FF-eMK" secondAttribute="centerX" id="e64-a7-xUC"/>
-                        <constraint firstItem="Pqn-FF-eMK" firstAttribute="top" secondItem="jbp-rB-56I" secondAttribute="bottom" constant="8" id="fRB-SB-KAE"/>
-                        <constraint firstItem="Pqn-FF-eMK" firstAttribute="leading" secondItem="144-AT-CCt" secondAttribute="leading" id="gTr-g6-Nq0"/>
-                        <constraint firstAttribute="trailing" secondItem="Pqn-FF-eMK" secondAttribute="trailing" id="s4L-2d-2ef"/>
                         <constraint firstItem="jbp-rB-56I" firstAttribute="top" secondItem="144-AT-CCt" secondAttribute="topMargin" id="sDL-T4-Gzq"/>
-                        <constraint firstItem="Pqn-FF-eMK" firstAttribute="top" secondItem="144-AT-CCt" secondAttribute="top" constant="22" id="sKU-0M-IrT"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="0KP-t8-tVy"/>
-                            <exclude reference="FL5-S4-8is"/>
-                            <exclude reference="gTr-g6-Nq0"/>
-                            <exclude reference="s4L-2d-2ef"/>
-                            <exclude reference="sKU-0M-IrT"/>
-                            <exclude reference="e64-a7-xUC"/>
-                        </mask>
-                    </variation>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzA-Mr-set">
-                    <rect key="frame" x="116" y="0.0" width="368" height="368"/>
+                    <rect key="frame" x="8" y="74" width="304" height="304"/>
                     <color key="backgroundColor" red="0.80235669889502759" green="0.80235669889502759" blue="0.80235669889502759" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="nzA-Mr-set" secondAttribute="height" multiplier="1:1" id="82d-jY-KWZ"/>
+                        <constraint firstAttribute="width" secondItem="nzA-Mr-set" secondAttribute="height" multiplier="1:1" id="wTJ-b0-bzV"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="nzA-Mr-set" secondAttribute="trailing" constant="8" id="A9Y-mg-cgN"/>
-                <constraint firstItem="144-AT-CCt" firstAttribute="top" secondItem="nzA-Mr-set" secondAttribute="bottom" id="Ckl-hR-JUF"/>
-                <constraint firstItem="nzA-Mr-set" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GmE-sQ-U7C"/>
-                <constraint firstItem="nzA-Mr-set" firstAttribute="centerX" secondItem="144-AT-CCt" secondAttribute="centerX" id="JkO-Z8-vIE"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nzA-Mr-set" secondAttribute="trailing" id="OXE-nR-Io8"/>
+                <constraint firstItem="nzA-Mr-set" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="1zj-WO-JFF"/>
+                <constraint firstItem="144-AT-CCt" firstAttribute="top" secondItem="nzA-Mr-set" secondAttribute="bottom" constant="8" id="GB9-Ec-2xY"/>
                 <constraint firstAttribute="trailing" secondItem="144-AT-CCt" secondAttribute="trailing" id="RLB-1T-l4d"/>
-                <constraint firstItem="nzA-Mr-set" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YVU-G1-7jf"/>
-                <constraint firstItem="144-AT-CCt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="368" id="ZZu-Bm-S5x"/>
-                <constraint firstItem="nzA-Mr-set" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="115" id="auu-k9-jj0"/>
                 <constraint firstAttribute="bottom" secondItem="144-AT-CCt" secondAttribute="bottom" id="cby-8V-aGg"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nzA-Mr-set" secondAttribute="trailing" constant="115" id="fpM-dX-2bV"/>
                 <constraint firstItem="144-AT-CCt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kVB-jl-UZD"/>
-                <constraint firstItem="nzA-Mr-set" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="oLt-qw-IWh"/>
-                <constraint firstItem="nzA-Mr-set" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qyG-58-YLM"/>
-                <constraint firstItem="144-AT-CCt" firstAttribute="top" secondItem="nzA-Mr-set" secondAttribute="bottom" id="sUm-xZ-opK"/>
-                <constraint firstAttribute="bottom" secondItem="nzA-Mr-set" secondAttribute="bottom" constant="232" id="v3M-6L-a3t"/>
+                <constraint firstAttribute="trailing" secondItem="nzA-Mr-set" secondAttribute="trailing" constant="8" id="oMd-5X-czc"/>
+                <constraint firstItem="nzA-Mr-set" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="qyG-58-YLM"/>
             </constraints>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="A9Y-mg-cgN"/>
-                    <exclude reference="GmE-sQ-U7C"/>
-                    <exclude reference="OXE-nR-Io8"/>
-                    <exclude reference="YVU-G1-7jf"/>
-                    <exclude reference="auu-k9-jj0"/>
-                    <exclude reference="fpM-dX-2bV"/>
-                    <exclude reference="oLt-qw-IWh"/>
-                    <exclude reference="Ckl-hR-JUF"/>
-                    <exclude reference="ZZu-Bm-S5x"/>
-                    <exclude reference="sUm-xZ-opK"/>
-                </mask>
-            </variation>
             <point key="canvasLocation" x="258" y="154"/>
         </view>
     </objects>
     <resources>
         <image name="down_arrow.png" width="20" height="14"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
