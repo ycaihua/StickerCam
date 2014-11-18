@@ -11,7 +11,8 @@
 		052601101A131A84004C5951 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0526010D1A131A84004C5951 /* CameraViewController.xib */; };
 		052601111A131A84004C5951 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0526010F1A131A84004C5951 /* CameraViewController.m */; };
 		052601131A131DDF004C5951 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 052601121A131DDF004C5951 /* button.png */; };
-		056B066E1A147F9800BF9BD6 /* tray_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 056B066D1A147F9800BF9BD6 /* tray_icon.png */; };
+		0581E3691A1B00DF007B694F /* cameraroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 0581E3681A1B00DF007B694F /* cameraroll.png */; };
+		0581E36B1A1B1708007B694F /* flipcamera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0581E36A1A1B1708007B694F /* flipcamera.png */; };
 		5F34894E1A19A36200FC4263 /* UIImage+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F34894D1A19A36200FC4263 /* UIImage+Trim.m */; };
 		5F3489501A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F34894F1A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png */; };
 		5F6CAD021A121A0600C03768 /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6CACFA1A121A0600C03768 /* down_arrow.png */; };
@@ -74,7 +75,8 @@
 		0526010E1A131A84004C5951 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		0526010F1A131A84004C5951 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		052601121A131DDF004C5951 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
-		056B066D1A147F9800BF9BD6 /* tray_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tray_icon.png; path = images/tray_icon.png; sourceTree = "<group>"; };
+		0581E3681A1B00DF007B694F /* cameraroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cameraroll.png; path = images/cameraroll.png; sourceTree = "<group>"; };
+		0581E36A1A1B1708007B694F /* flipcamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flipcamera.png; path = images/flipcamera.png; sourceTree = "<group>"; };
 		380E51D967D249867E8BA72F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5F34894C1A19A36200FC4263 /* UIImage+Trim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Trim.h"; sourceTree = "<group>"; };
 		5F34894D1A19A36200FC4263 /* UIImage+Trim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Trim.m"; sourceTree = "<group>"; };
@@ -215,9 +217,10 @@
 				5FA428B41A12095600F00FFF /* LaunchScreen.xib */,
 				5FA428A51A12095600F00FFF /* Supporting Files */,
 				0526010D1A131A84004C5951 /* CameraViewController.xib */,
-				056B066D1A147F9800BF9BD6 /* tray_icon.png */,
+				0581E3681A1B00DF007B694F /* cameraroll.png */,
 				0526010E1A131A84004C5951 /* CameraViewController.h */,
 				0526010F1A131A84004C5951 /* CameraViewController.m */,
+				0581E36A1A1B1708007B694F /* flipcamera.png */,
 				5FA428CB1A1209D400F00FFF /* CanvasViewController.h */,
 				5FA428CC1A1209D400F00FFF /* CanvasViewController.m */,
 				5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */,
@@ -420,14 +423,15 @@
 				5FEA1CE31A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif in Resources */,
 				5FEA1CDB1A149B24008A94C1 /* 3D_Glasses_Final_Clipart_Free.png in Resources */,
 				5F6CAD021A121A0600C03768 /* down_arrow.png in Resources */,
+				0581E36B1A1B1708007B694F /* flipcamera.png in Resources */,
 				5FEA1CDD1A149B24008A94C1 /* glasses-300x300.png in Resources */,
 				5FEA1CC71A1494D3008A94C1 /* Thumb_kids griffin hat.png in Resources */,
 				5FEA1CCF1A1494D3008A94C1 /* hat-confederate-general-dlx-adult-sm-9999912643.png in Resources */,
 				5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */,
+				0581E3691A1B00DF007B694F /* cameraroll.png in Resources */,
 				5F6CAD051A121A0600C03768 /* happy@2x.png in Resources */,
 				5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */,
 				FA3BBD2A1A13F1AC00E86C30 /* ShareTableViewCell.xib in Resources */,
-				056B066E1A147F9800BF9BD6 /* tray_icon.png in Resources */,
 				5F6CAD071A121A0600C03768 /* tongue@2x.png in Resources */,
 				5F6CAD061A121A0600C03768 /* sad@2x.png in Resources */,
 			);
@@ -608,7 +612,7 @@
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "835060f4-3211-425d-b367-a80447ab5e24";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -622,7 +626,7 @@
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "835060f4-3211-425d-b367-a80447ab5e24";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

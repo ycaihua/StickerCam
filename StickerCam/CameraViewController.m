@@ -9,9 +9,12 @@
 #import "CameraViewController.h"
 #import "CanvasViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface CameraViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *cameraRollButton;
+@property (nonatomic, assign) AVCaptureDevicePosition currentCameraPosition;
+@property (strong, nonatomic) AVCaptureDeviceInput *deviceInput;
 @end
 
 @implementation CameraViewController
@@ -32,10 +35,11 @@ AVCaptureStillImageOutput *stillImageOutput;
     session = [[AVCaptureSession alloc]init];
     [session setSessionPreset:AVCaptureSessionPresetPhoto];
     AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    self.currentCameraPosition = AVCaptureDevicePositionBack;
     NSError *error;
-    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:&error];
-    if ([session canAddInput:deviceInput]){
-        [session addInput:deviceInput];
+    self.deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:&error];
+    if ([session canAddInput:self.deviceInput]){
+        [session addInput:self.deviceInput];
     }
     
     AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
@@ -53,6 +57,41 @@ AVCaptureStillImageOutput *stillImageOutput;
     [stillImageOutput setOutputSettings:outputSettings];
     [session addOutput:stillImageOutput];
 }
+- (IBAction)toggleCamera:(id)sender {
+    AVCaptureDevicePosition newPosition = self.currentCameraPosition == AVCaptureDevicePositionBack ? AVCaptureDevicePositionFront : AVCaptureDevicePositionBack;
+    AVCaptureDevice *inputDevice;
+    NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    for (AVCaptureDevice *device in devices) {
+        if ([device position] == newPosition) {
+            inputDevice = device;
+        }
+    }
+    NSError *error;
+    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:&error];
+    
+    [session beginConfiguration];
+    [session removeInput:self.deviceInput];
+    [session setSessionPreset:AVCaptureSessionPresetHigh]; //Always reset preset before testing canAddInput because preset will cause it to return NO
+    
+    if ([session canAddInput:deviceInput]) {
+        [session addInput:deviceInput];
+        self.deviceInput = deviceInput;
+        self.currentCameraPosition = newPosition;
+    } else {
+        [session addInput:self.deviceInput];
+    }
+    
+    if ([inputDevice supportsAVCaptureSessionPreset:AVCaptureSessionPresetPhoto]) {
+        [session setSessionPreset:AVCaptureSessionPresetPhoto];
+    }
+    
+    if ([inputDevice lockForConfiguration:nil]) {
+        [inputDevice setSubjectAreaChangeMonitoringEnabled:YES];
+        [inputDevice  unlockForConfiguration];
+    }
+    
+    [session commitConfiguration];
+}
 
 
 
@@ -60,7 +99,33 @@ AVCaptureStillImageOutput *stillImageOutput;
     if(session == nil) {
         [self setUpCamera];
     }
+    [self setUpCameraRollButton];
     [session startRunning];
+}
+
+-(void) setUpCameraRollButton {
+    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+         if (nil != group) {
+             // be sure to filter the group so you only get photos
+             [group setAssetsFilter:[ALAssetsFilter allPhotos]];
+             
+             [group enumerateAssetsAtIndexes:[NSIndexSet indexSetWithIndex:group.numberOfAssets - 1] options:0 usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+                  if (nil != result) {
+                      ALAssetRepresentation *repr = [result defaultRepresentation];
+                      // this is the most recent saved photo
+                      UIImage *img = [UIImage imageWithCGImage:[repr fullResolutionImage] scale:[repr scale] orientation:270];
+                      // we only need the first (most recent) photo -- stop the enumeration
+                      [self.cameraRollButton setImage:img forState:UIControlStateNormal];
+                      *stop = YES;
+                  }
+              }];
+         }
+         *stop = NO;
+     } failureBlock:^(NSError *error) {
+         NSLog(@"error: %@", error);
+     }];
+    
 }
 
 /*
@@ -90,6 +155,9 @@ AVCaptureStillImageOutput *stillImageOutput;
     [stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
         UIImage *image = [UIImage imageWithData:imageData];
+        if (self.currentCameraPosition == AVCaptureDevicePositionFront) {
+            image = [UIImage imageWithCGImage:image.CGImage scale:image.scale orientation:UIImageOrientationLeftMirrored];
+        }
         CanvasViewController *vc = [[CanvasViewController alloc] init];
         vc.pictureImage = image;
         [session stopRunning];
