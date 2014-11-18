@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view from its nib.
     self.captionView.delegate = self;
     //TODO - remove this override
-    self.image = [UIImage imageNamed:@"test_image_stickercam.jpg"];
+    //self.image = [UIImage imageNamed:@"test_image_stickercam.jpg"];
 
     CGSize targetSize = self.shareImageView.bounds.size;
     UIGraphicsBeginImageContextWithOptions(targetSize, NO, 0.0);
