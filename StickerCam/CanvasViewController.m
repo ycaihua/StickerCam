@@ -144,9 +144,16 @@
     imageView.center = CGPointMake(recognizer.view.center.x, recognizer.view.center.y + self.trayView.frame.origin.y + self.scrollView.frame.origin.y - collectionView.contentOffset.y);
     [self.view addSubview:imageView];
     
-    UILongPressGestureRecognizer *pan_gr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPan:)];
-    pan_gr.minimumPressDuration = 0.0;
+    UIPanGestureRecognizer *pan_gr = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPan:)];
     [imageView addGestureRecognizer:pan_gr];
+    
+    UITapGestureRecognizer *tap_gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerDoubleTap:)];
+    tap_gr.numberOfTapsRequired = 2;
+    [imageView addGestureRecognizer:tap_gr];
+    
+    UILongPressGestureRecognizer *lp_gr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerLongPress:)];
+    lp_gr.minimumPressDuration = 0.5;
+    [imageView addGestureRecognizer:lp_gr];
     
     UIPinchGestureRecognizer *pinch_gr = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPinch:)];
     [imageView addGestureRecognizer:pinch_gr];
@@ -154,7 +161,7 @@
     UIRotationGestureRecognizer *rotate_gr = [[UIRotationGestureRecognizer alloc] initWithTarget: self action:@selector(onStickerRotate:)];
     [imageView addGestureRecognizer:rotate_gr];
     
-    pinch_gr.delegate = self; // delegate at least one transform to get them to trigger the callback methods in this controller
+    rotate_gr.delegate = self; // delegate at least one transform to get them to trigger the callback methods in this controller
     
     [UIView animateWithDuration:.25 animations:^{
         imageView.center = CGPointMake(self.previewImageView.center.x, self.previewImageView.center.y);
@@ -177,34 +184,14 @@
 
 // Use this for immediately moving vs. UIPanGestureRecognizer which has a delay
 // Also detects double taps
-- (IBAction)onStickerPan:(UILongPressGestureRecognizer *)recognizer {
+- (IBAction)onStickerPan:(UIPanGestureRecognizer *)recognizer {
     static CGPoint originalCenter;
     static CGPoint originalLocationInView;
-    static NSTimer *longFlipTimer;
     
     if (recognizer.state == UIGestureRecognizerStateBegan) {
-        // If no timer exists, set one, then invalidate it once it's complete, otherwise we know it's a doule tap and we remove this view
-        longFlipTimer = [NSTimer scheduledTimerWithTimeInterval:0.50 target:self selector:@selector(flipHorizontal:) userInfo:recognizer.view repeats:NO];
-        if (!self.tapTimer) {
-            originalCenter = recognizer.view.center;
-            originalLocationInView = [recognizer locationInView:self.view];
-            self.tapTimer = [NSTimer scheduledTimerWithTimeInterval:.2 target:self selector:@selector(tapTimerEnd:) userInfo:nil repeats:NO];
-        } else {
-            // Remove the view animated because we detected two taps within .2 seconds signifying a double tap
-            recognizer.view.alpha = 1;
-            [UIView animateWithDuration:.2 animations:^{
-                recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, 1.3, 1.3);
-            } completion:^(BOOL finished) {
-                [UIView animateWithDuration:.2 animations:^{
-                    recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, .1, .1);
-                    recognizer.view.alpha = 0;
-                } completion:^(BOOL finished) {
-                    [recognizer.view removeFromSuperview];
-                }];
-            }];
-        }
+        originalCenter = recognizer.view.center;
+        originalLocationInView = [recognizer locationInView:self.view];
     } else if (recognizer.state == UIGestureRecognizerStateChanged) {
-        [longFlipTimer invalidate];
         CGPoint point = [recognizer locationInView:self.view];
         // We calculate the delta moved from initial the touch point to where it is now and add that to the original center of the image
         recognizer.view.center = CGPointMake((point.x - originalLocationInView.x) + originalCenter.x, (point.y - originalLocationInView.y) + originalCenter.y);
@@ -215,8 +202,30 @@
                 recognizer.view.center = originalCenter;
             }];
         }
-        
-        [longFlipTimer invalidate];
+    }
+}
+
+- (IBAction)onStickerDoubleTap:(UITapGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateRecognized) {
+        recognizer.view.alpha = 1;
+        [UIView animateWithDuration:.2 animations:^{
+            recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, 1.3, 1.3);
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:.2 animations:^{
+                recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, .1, .1);
+                recognizer.view.alpha = 0;
+            } completion:^(BOOL finished) {
+                [recognizer.view removeFromSuperview];
+            }];
+        }];
+    }
+}
+
+- (IBAction)onStickerLongPress:(UILongPressGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        [UIView animateWithDuration:.25 animations:^{
+            recognizer.view.transform = CGAffineTransformScale(recognizer.view.transform, -1, 1);
+        }];
     }
 }
 
