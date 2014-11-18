@@ -7,9 +7,8 @@
 //
 
 #import "ShareViewController.h"
-#import "ShareTableViewCell.h"
 #import <FacebookSDK/FacebookSDK.h>
-
+#import <MGInstagram/MGInstagram.h>
 
 @interface ShareViewController ()
 
@@ -23,56 +22,17 @@
     
     //TODO - remove this override
     self.image = [UIImage imageNamed:@"test_image_stickercam.jpg"];
-    
-    self.shareTableView.delegate = self;
-    self.shareTableView.dataSource = self;
+
     CGSize targetSize = self.shareImageView.bounds.size;
     UIGraphicsBeginImageContextWithOptions(targetSize, NO, 0.0);
     [self.image drawInRect:CGRectMake(0, 0, targetSize.width, targetSize.height)];
     UIImage* resized = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     [self.shareImageView setImage:resized];
-    self.shareTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    [self.shareTableView registerNib:[UINib nibWithNibName:@"ShareTableViewCell" bundle:nil] forCellReuseIdentifier:@"ShareTableViewCell"];
+    [self.facebookImageView setImage:[UIImage imageNamed:@"FBLogo.png"]];
+    [self.instagramImageView setImage:[UIImage imageNamed:@"IGLogo.png"]];
 }
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return @"Share Photo";
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ShareTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ShareTableViewCell" forIndexPath:indexPath];
-    CGSize targetSize = cell.socialNetworkImageView.bounds.size;
-    UIImage* resized = nil;
-    UIImage* image = nil;
-    UIGraphicsBeginImageContextWithOptions(targetSize, NO, 0.0);
-    switch (indexPath.row) {
-        case 0:
-            cell.socialNetwork = Facebook;
-            image = [UIImage imageNamed:@"FBLogo.png"];
-            break;
-        case 1:
-            cell.socialNetwork = Instagram;
-            image = [UIImage imageNamed:@"IGLogo.png"];
-            break;
-        default:
-            break;
-    }
-    [image drawInRect:CGRectMake(0,0, targetSize.width, targetSize.height)];
-    resized = UIGraphicsGetImageFromCurrentImageContext();
-    [cell.socialNetworkImageView setImage:resized];
-    cell.shareImage = self.image;
-    cell.navigationViewController = self.navigationController;
-    
-    return cell;
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -99,4 +59,28 @@
 }
 */
 
+- (IBAction)onFacebookShareButtonClicked:(id)sender {
+    // Check if the Facebook app is installed and we can present the share dialog
+    FBLinkShareParams *params = [[FBLinkShareParams alloc] init];
+    params.link = [NSURL URLWithString:@"https://developers.facebook.com/docs/ios/share/"];
+    
+    NSArray* photos = @[self.shareImageView.image];
+    
+    // If the Facebook app is installed and we can present the share dialog
+    if ([FBDialogs canPresentShareDialogWithParams:params]) {
+        // Present the share dialog
+        [FBDialogs presentShareDialogWithPhotos:photos handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
+            if(error) {
+                // An error occurred, we need to handle the error
+                //Throw a UIAlertView here
+                // See: https://developers.facebook.com/docs/ios/errors
+                NSLog(@"Error publishing story: %@", error.description);
+            }
+        }];
+    }
+}
+
+- (IBAction)onInstagramShareButtonClicked:(id)sender {
+    [MGInstagram postImage:self.shareImageView.image inView:self.view];
+}
 @end

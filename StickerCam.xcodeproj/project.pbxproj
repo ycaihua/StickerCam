@@ -49,8 +49,6 @@
 		5FEA1CE31A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CDA1A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif */; };
 		5FEA1CE51A149DEA008A94C1 /* preview-placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CE41A149DEA008A94C1 /* preview-placeholder.jpg */; };
 		D0BDE4BB5367F546BD90C111 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66475AF9A4916408E88124AB /* libPods.a */; };
-		FA3BBD291A13F1AC00E86C30 /* ShareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3BBD271A13F1AC00E86C30 /* ShareTableViewCell.m */; };
-		FA3BBD2A1A13F1AC00E86C30 /* ShareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3BBD281A13F1AC00E86C30 /* ShareTableViewCell.xib */; };
 		FA3BBD701A141D2100E86C30 /* FBLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3BBD6F1A141D2100E86C30 /* FBLogo.png */; };
 		FA3BBD721A141F0600E86C30 /* TwitterLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3BBD711A141F0500E86C30 /* TwitterLogo.png */; };
 		FA3BBD751A14282500E86C30 /* test_image_stickercam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA3BBD741A14282500E86C30 /* test_image_stickercam.jpg */; };
@@ -122,9 +120,6 @@
 		5FEA1CE41A149DEA008A94C1 /* preview-placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "preview-placeholder.jpg"; sourceTree = "<group>"; };
 		66475AF9A4916408E88124AB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89445093B28815B28E8F11F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FA3BBD261A13F1AC00E86C30 /* ShareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTableViewCell.h; sourceTree = "<group>"; };
-		FA3BBD271A13F1AC00E86C30 /* ShareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTableViewCell.m; sourceTree = "<group>"; };
-		FA3BBD281A13F1AC00E86C30 /* ShareTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareTableViewCell.xib; sourceTree = "<group>"; };
 		FA3BBD6F1A141D2100E86C30 /* FBLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FBLogo.png; path = ../FBLogo.png; sourceTree = "<group>"; };
 		FA3BBD711A141F0500E86C30 /* TwitterLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterLogo.png; sourceTree = "<group>"; };
 		FA3BBD741A14282500E86C30 /* test_image_stickercam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_image_stickercam.jpg; sourceTree = "<group>"; };
@@ -227,9 +222,6 @@
 				FA67729D1A13E1F100C0266D /* ShareViewController.h */,
 				FA67729E1A13E1F100C0266D /* ShareViewController.m */,
 				FA67729F1A13E1F100C0266D /* ShareViewController.xib */,
-				FA3BBD261A13F1AC00E86C30 /* ShareTableViewCell.h */,
-				FA3BBD271A13F1AC00E86C30 /* ShareTableViewCell.m */,
-				FA3BBD281A13F1AC00E86C30 /* ShareTableViewCell.xib */,
 			);
 			path = StickerCam;
 			sourceTree = "<group>";
@@ -431,7 +423,6 @@
 				0581E3691A1B00DF007B694F /* cameraroll.png in Resources */,
 				5F6CAD051A121A0600C03768 /* happy@2x.png in Resources */,
 				5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */,
-				FA3BBD2A1A13F1AC00E86C30 /* ShareTableViewCell.xib in Resources */,
 				5F6CAD071A121A0600C03768 /* tongue@2x.png in Resources */,
 				5F6CAD061A121A0600C03768 /* sad@2x.png in Resources */,
 			);
@@ -485,7 +476,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA428AB1A12095600F00FFF /* AppDelegate.m in Sources */,
-				FA3BBD291A13F1AC00E86C30 /* ShareTableViewCell.m in Sources */,
 				052601111A131A84004C5951 /* CameraViewController.m in Sources */,
 				5FA428A81A12095600F00FFF /* main.m in Sources */,
 				5F34894E1A19A36200FC4263 /* UIImage+Trim.m in Sources */,
