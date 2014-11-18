@@ -171,7 +171,7 @@
 }
 
 - (void)onStickerRotate:(UIRotationGestureRecognizer *)recognizer{
-    recognizer.view.transform = CGAffineTransformRotate(recognizer.view.transform, recognizer.rotation);
+    recognizer.view.transform = CGAffineTransformRotate(recognizer.view.transform, recognizer.view.transform.a < 0 ? - 1 *recognizer.rotation : recognizer.rotation);
     recognizer.rotation = 0.0;
 }
 
