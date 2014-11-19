@@ -510,7 +510,7 @@
 				TargetAttributes = {
 					5FA428A11A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = WE4NL5L554;
+						DevelopmentTeam = V9WTTPBFK9;
 					};
 					5FA428BA1A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -801,7 +801,7 @@
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "835060f4-3211-425d-b367-a80447ab5e24";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -817,7 +817,7 @@
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "835060f4-3211-425d-b367-a80447ab5e24";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
