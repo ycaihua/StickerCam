@@ -35,13 +35,8 @@ AVCaptureStillImageOutput *stillImageOutput;
 - (void) setUpCamera{
     self.session = [[AVCaptureSession alloc]init];
     [self.session setSessionPreset:AVCaptureSessionPresetPhoto];
-    AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     self.currentCameraPosition = AVCaptureDevicePositionBack;
-    NSError *error;
-    self.deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:&error];
-    if ([self.session canAddInput:self.deviceInput]){
-        [self.session addInput:self.deviceInput];
-    }
+    [self toggleCamera];
     
     AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
@@ -58,7 +53,7 @@ AVCaptureStillImageOutput *stillImageOutput;
     [stillImageOutput setOutputSettings:outputSettings];
     [self.session addOutput:stillImageOutput];
 }
-- (IBAction)toggleCamera:(id)sender {
+- (IBAction)toggleCamera {
     AVCaptureDevicePosition newPosition = self.currentCameraPosition == AVCaptureDevicePositionBack ? AVCaptureDevicePositionFront : AVCaptureDevicePositionBack;
     AVCaptureDevice *inputDevice;
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
@@ -94,6 +89,52 @@ AVCaptureStillImageOutput *stillImageOutput;
     [self.session commitConfiguration];
 }
 
+CGRect CGRectCenteredInRect(CGRect rect, CGRect mainRect)
+{
+    CGFloat xOffset = CGRectGetMidX(mainRect)-CGRectGetMidX(rect);
+    CGFloat yOffset = CGRectGetMidY(mainRect)-CGRectGetMidY(rect);
+    return CGRectOffset(rect, xOffset, yOffset);
+}
+
+
+// Calculate the destination scale for filling
+CGFloat CGAspectScaleFill(CGSize sourceSize, CGRect destRect)
+{
+    CGSize destSize = destRect.size;
+    CGFloat scaleW = destSize.width / sourceSize.width;
+    CGFloat scaleH = destSize.height / sourceSize.height;
+    return MAX(scaleW, scaleH);
+}
+
+
+CGRect CGRectAspectFillRect(CGSize sourceSize, CGRect destRect)
+{
+    CGSize destSize = destRect.size;
+    CGFloat destScale = CGAspectScaleFill(sourceSize, destRect);
+    CGFloat newWidth = sourceSize.width * destScale;
+    CGFloat newHeight = sourceSize.height * destScale;
+    CGFloat dWidth = ((destSize.width - newWidth) / 2.0f);
+    CGFloat dHeight = ((destSize.height - newHeight) / 2.0f);
+    CGRect rect = CGRectMake (dWidth, dHeight, newWidth, newHeight);
+    return rect;
+}
+
+
+
+- (UIImage *) applyAspectFillImage: (UIImage *) image InRect: (CGRect) bounds
+{
+    CGRect destRect;
+    
+    UIGraphicsBeginImageContext(bounds.size);
+    CGRect rect = CGRectAspectFillRect(image.size, bounds);
+    destRect = CGRectCenteredInRect(rect, bounds);
+    
+    [image drawInRect: destRect];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+    
+}
 
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -115,7 +156,14 @@ AVCaptureStillImageOutput *stillImageOutput;
                   if (nil != result) {
                       ALAssetRepresentation *repr = [result defaultRepresentation];
                       // this is the most recent saved photo
-                      UIImage *img = [UIImage imageWithCGImage:[repr fullResolutionImage] scale:[repr scale] orientation:270];
+                      // Retrieve the image orientation from the ALAsset
+                      UIImageOrientation orientation = UIImageOrientationUp;
+                      NSNumber* orientationValue = [result valueForProperty:@"ALAssetPropertyOrientation"];
+                      if (orientationValue != nil) {
+                          orientation = [orientationValue intValue];
+                      }
+                      CGFloat scale  = 1;
+                      UIImage *img = [UIImage imageWithCGImage:[repr fullResolutionImage] scale:scale orientation:orientation];
                       // we only need the first (most recent) photo -- stop the enumeration
                       [self.cameraRollButton setImage:img forState:UIControlStateNormal];
                       [self.cameraRollButton setImage:img forState:UIControlStateHighlighted];
@@ -161,7 +209,8 @@ AVCaptureStillImageOutput *stillImageOutput;
             image = [UIImage imageWithCGImage:image.CGImage scale:image.scale orientation:UIImageOrientationLeftMirrored];
         }
         CanvasViewController *vc = [[CanvasViewController alloc] init];
-        vc.pictureImage = image;
+        UIImage *newImage = [self applyAspectFillImage:image InRect:self.frameForCapture.bounds];
+        vc.pictureImage = newImage;
         [self.session stopRunning];
         [self.navigationController pushViewController:vc animated:YES];
     }];
