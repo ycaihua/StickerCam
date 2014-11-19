@@ -7,6 +7,7 @@
 //
 
 #import "ShareViewController.h"
+#import "CameraViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import <MGInstagram/MGInstagram.h>
 
@@ -19,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.captionView.delegate = self;
     //TODO - remove this override
     //self.image = [UIImage imageNamed:@"test_image_stickercam.jpg"];
 
@@ -32,6 +32,7 @@
     
     self.facebookShareButton.layer.cornerRadius = 4;
     self.instagramShareButton.layer.cornerRadius = 4;
+    self.stickerCamButton.layer.cornerRadius = 4;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,9 +72,6 @@
     // Check if the Facebook app is installed and we can present the share dialog
     FBLinkShareParams *params = [[FBLinkShareParams alloc] init];
     params.link = [NSURL URLWithString:@"https://developers.facebook.com/docs/ios/share/"];
-    if ([self.captionView.text length] > 0) {
-        params.caption = self.captionView.text;
-    }
     
     NSArray* photos = @[self.shareImageView.image];
     
@@ -93,5 +91,9 @@
 
 - (IBAction)onInstagramShareButtonClicked:(id)sender {
     [MGInstagram postImage:self.shareImageView.image inView:self.view];
+}
+- (IBAction)onStickerCamClick:(id)sender {
+    CameraViewController *cvc = [[CameraViewController alloc]init];
+    [self.navigationController pushViewController:cvc animated:YES];
 }
 @end

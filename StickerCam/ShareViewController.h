@@ -16,7 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *instagramShareButton;
 - (IBAction)onFacebookShareButtonClicked:(id)sender;
 - (IBAction)onInstagramShareButtonClicked:(id)sender;
-@property (weak, nonatomic) IBOutlet UITextView *captionView;
+@property (weak, nonatomic) IBOutlet UIButton *stickerCamButton;
+- (IBAction)onStickerCamClick:(id)sender;
+
 typedef enum {
     Facebook,
     Instagram

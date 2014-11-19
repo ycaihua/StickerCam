@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -12,10 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareViewController">
             <connections>
-                <outlet property="captionView" destination="Xmf-e4-3je" id="oHH-0n-UZI"/>
                 <outlet property="facebookShareButton" destination="18L-y6-oP2" id="LWw-Vg-X9n"/>
                 <outlet property="instagramShareButton" destination="Bj3-Nd-FDz" id="e6P-iv-eGD"/>
                 <outlet property="shareImageView" destination="m40-tB-nfI" id="an7-C0-46R"/>
+                <outlet property="stickerCamButton" destination="7qC-aE-k5U" id="23C-mD-jdw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,7 +40,7 @@
                     </variation>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18L-y6-oP2">
-                    <rect key="frame" x="30" y="425" width="540" height="50"/>
+                    <rect key="frame" x="30" y="350" width="540" height="50"/>
                     <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="C0K-hc-Wyo"/>
@@ -62,7 +62,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj3-Nd-FDz">
-                    <rect key="frame" x="30" y="495" width="540" height="50"/>
+                    <rect key="frame" x="30" y="420" width="540" height="50"/>
                     <color key="backgroundColor" red="0.31764705882352939" green="0.49803921568627452" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="jTr-B6-3h1"/>
@@ -76,38 +76,48 @@
                         <action selector="onInstagramShareButtonClicked:" destination="-1" eventType="touchUpInside" id="HTA-eO-1th"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter caption here..." translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-e4-3je">
-                    <rect key="frame" x="30" y="285" width="540" height="110"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qC-aE-k5U">
+                    <rect key="frame" x="30" y="490" width="540" height="50"/>
+                    <color key="backgroundColor" red="0.79231295620437958" green="0.43165488138686131" blue="0.62015282846715325" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="iTW-K5-CBJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                    <state key="normal" title="New StickerCam">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onStickerCamClick:" destination="-1" eventType="touchUpInside" id="dfX-KH-J6h"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Xmf-e4-3je" firstAttribute="trailing" secondItem="18L-y6-oP2" secondAttribute="trailing" id="5nx-Aa-wMc"/>
                 <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="Bj3-Nd-FDz" secondAttribute="trailing" id="6Hp-mh-QQa"/>
                 <constraint firstItem="Bj3-Nd-FDz" firstAttribute="top" secondItem="18L-y6-oP2" secondAttribute="bottom" constant="20" id="77P-YD-naa"/>
                 <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" id="7AV-Wh-vKW"/>
                 <constraint firstAttribute="centerX" secondItem="m40-tB-nfI" secondAttribute="centerX" id="7CE-Yi-Agk"/>
                 <constraint firstAttribute="centerX" secondItem="Bj3-Nd-FDz" secondAttribute="centerX" id="9SD-kg-bf4"/>
                 <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="Bj3-Nd-FDz" secondAttribute="trailing" id="9TJ-3L-ebe"/>
+                <constraint firstItem="18L-y6-oP2" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="75" id="Awq-GU-1fh"/>
                 <constraint firstItem="Bj3-Nd-FDz" firstAttribute="trailing" secondItem="18L-y6-oP2" secondAttribute="trailing" id="BNp-nt-CpW"/>
                 <constraint firstItem="m40-tB-nfI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="CPu-Rc-klZ"/>
+                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="leading" secondItem="7qC-aE-k5U" secondAttribute="leading" id="DFX-xy-Ab3"/>
                 <constraint firstItem="18L-y6-oP2" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="150" id="EL9-Rr-hKy"/>
                 <constraint firstAttribute="trailing" secondItem="18L-y6-oP2" secondAttribute="trailing" constant="30" id="Ewu-9E-ktA"/>
                 <constraint firstItem="Bj3-Nd-FDz" firstAttribute="leading" secondItem="18L-y6-oP2" secondAttribute="leading" id="FhD-oQ-sXs"/>
-                <constraint firstItem="Xmf-e4-3je" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="10" id="Fwt-wm-z7s"/>
-                <constraint firstItem="18L-y6-oP2" firstAttribute="top" secondItem="Xmf-e4-3je" secondAttribute="bottom" constant="15" id="L0r-oR-QhN"/>
+                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="trailing" secondItem="18L-y6-oP2" secondAttribute="trailing" id="HVH-01-MOb"/>
+                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="leading" secondItem="18L-y6-oP2" secondAttribute="leading" id="Sgj-oH-YzG"/>
+                <constraint firstItem="7qC-aE-k5U" firstAttribute="top" secondItem="Bj3-Nd-FDz" secondAttribute="bottom" constant="20" id="Ul3-D7-61x"/>
                 <constraint firstItem="m40-tB-nfI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="W6H-fb-bht"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="18L-y6-oP2" secondAttribute="trailing" constant="30" id="Ygn-S6-W9X"/>
-                <constraint firstItem="Xmf-e4-3je" firstAttribute="leading" secondItem="18L-y6-oP2" secondAttribute="leading" id="dd0-xa-Nir"/>
-                <constraint firstItem="18L-y6-oP2" firstAttribute="top" secondItem="Xmf-e4-3je" secondAttribute="bottom" constant="30" id="etK-J8-JX3"/>
                 <constraint firstItem="m40-tB-nfI" firstAttribute="top" relation="lessThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="fH1-Ec-d1x"/>
                 <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" id="ilZ-zP-ePX"/>
                 <constraint firstItem="m40-tB-nfI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="jeS-yn-e4z"/>
                 <constraint firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" constant="20" id="k0T-kn-jY4"/>
                 <constraint firstAttribute="centerX" secondItem="m40-tB-nfI" secondAttribute="centerX" id="qk0-Gm-Bpu"/>
+                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="trailing" secondItem="7qC-aE-k5U" secondAttribute="trailing" id="qlS-4f-F9W"/>
                 <constraint firstItem="Bj3-Nd-FDz" firstAttribute="leading" secondItem="18L-y6-oP2" secondAttribute="leading" id="sG6-fZ-J6m"/>
                 <constraint firstAttribute="centerX" secondItem="18L-y6-oP2" secondAttribute="centerX" id="uWN-fr-udF"/>
                 <constraint firstAttribute="bottom" secondItem="Bj3-Nd-FDz" secondAttribute="bottom" constant="55" id="wYQ-4k-YVJ"/>
@@ -121,12 +131,12 @@
                     <exclude reference="k0T-kn-jY4"/>
                     <exclude reference="7AV-Wh-vKW"/>
                     <exclude reference="EL9-Rr-hKy"/>
-                    <exclude reference="L0r-oR-QhN"/>
                     <exclude reference="Ygn-S6-W9X"/>
                     <exclude reference="ilZ-zP-ePX"/>
+                    <exclude reference="wYQ-4k-YVJ"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="293" y="140"/>
+            <point key="canvasLocation" x="42" y="146"/>
         </view>
     </objects>
 </document>
