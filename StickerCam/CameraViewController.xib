@@ -24,24 +24,11 @@
                         <constraint firstAttribute="width" secondItem="TGp-na-S6x" secondAttribute="height" multiplier="1:1" id="oY8-p4-j4E"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4l-xR-kM6">
-                    <rect key="frame" x="85" y="408" width="150" height="150"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="150" id="7Ce-0l-BV1"/>
-                        <constraint firstAttribute="width" constant="150" id="Wbj-Az-nUP"/>
-                    </constraints>
-                    <state key="normal" image="button.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="mRm-ih-o7x"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfr-Sh-DqR">
-                    <rect key="frame" x="8" y="444" width="60" height="60"/>
+                    <rect key="frame" x="16" y="458" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="i7C-kw-seE"/>
-                        <constraint firstAttribute="width" constant="60" id="kev-rS-FZU"/>
+                        <constraint firstAttribute="height" constant="50" id="i7C-kw-seE"/>
+                        <constraint firstAttribute="width" constant="50" id="kev-rS-FZU"/>
                     </constraints>
                     <state key="normal" image="cameraroll.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,38 +38,51 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leu-y7-zof">
-                    <rect key="frame" x="241" y="444" width="71" height="71"/>
+                    <rect key="frame" x="254" y="458" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="71" id="wKQ-WV-N9B"/>
-                        <constraint firstAttribute="height" constant="71" id="xmx-dc-TzF"/>
+                        <constraint firstAttribute="width" constant="50" id="wKQ-WV-N9B"/>
+                        <constraint firstAttribute="height" constant="50" id="xmx-dc-TzF"/>
                     </constraints>
-                    <state key="normal" title="Button" image="flipcamera.png">
+                    <state key="normal" title="Button" image="rotate_camera-100.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="toggleCamera:" destination="-1" eventType="touchUpInside" id="vXh-CH-rGq"/>
+                        <action selector="toggleCamera:" destination="-1" eventType="touchUpInside" id="oci-gi-h8l"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4l-xR-kM6">
+                    <rect key="frame" x="110" y="433" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="7Ce-0l-BV1"/>
+                        <constraint firstAttribute="width" constant="100" id="Wbj-Az-nUP"/>
+                    </constraints>
+                    <state key="normal" image="take_photo_300.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="mRm-ih-o7x"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.1579549378453039" green="0.1579549378453039" blue="0.1579549378453039" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="t4l-xR-kM6" secondAttribute="centerX" id="3J2-FU-lyU"/>
                 <constraint firstItem="TGp-na-S6x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="7np-sI-Nbl"/>
-                <constraint firstAttribute="bottom" secondItem="Leu-y7-zof" secondAttribute="bottom" constant="53" id="AzX-4I-0Ep"/>
-                <constraint firstAttribute="trailing" secondItem="Leu-y7-zof" secondAttribute="trailing" constant="8" id="cBd-Uk-nSJ"/>
-                <constraint firstAttribute="bottom" secondItem="xfr-Sh-DqR" secondAttribute="bottom" constant="64" id="cnH-Hc-dME"/>
+                <constraint firstAttribute="bottom" secondItem="Leu-y7-zof" secondAttribute="bottom" constant="60" id="AzX-4I-0Ep"/>
+                <constraint firstAttribute="trailing" secondItem="Leu-y7-zof" secondAttribute="trailing" constant="16" id="cBd-Uk-nSJ"/>
+                <constraint firstAttribute="bottom" secondItem="xfr-Sh-DqR" secondAttribute="bottom" constant="60" id="cnH-Hc-dME"/>
                 <constraint firstAttribute="trailing" secondItem="TGp-na-S6x" secondAttribute="trailing" constant="8" id="m4N-dW-vUj"/>
-                <constraint firstAttribute="bottom" secondItem="t4l-xR-kM6" secondAttribute="bottom" constant="10" id="saM-SW-wjn"/>
-                <constraint firstItem="xfr-Sh-DqR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="t7x-EP-e3e"/>
+                <constraint firstAttribute="bottom" secondItem="t4l-xR-kM6" secondAttribute="bottom" constant="35" id="saM-SW-wjn"/>
+                <constraint firstItem="xfr-Sh-DqR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="t7x-EP-e3e"/>
                 <constraint firstItem="TGp-na-S6x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="wjS-e6-DRE"/>
             </constraints>
             <point key="canvasLocation" x="127" y="-55"/>
         </view>
     </objects>
     <resources>
-        <image name="button.png" width="256" height="256"/>
         <image name="cameraroll.png" width="256" height="256"/>
-        <image name="flipcamera.png" width="200" height="200"/>
+        <image name="rotate_camera-100.png" width="100" height="100"/>
+        <image name="take_photo_300.png" width="300" height="300"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

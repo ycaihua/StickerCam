@@ -10,6 +10,7 @@
 #import "CanvasViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface CameraViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cameraRollButton;
@@ -36,7 +37,7 @@ AVCaptureStillImageOutput *stillImageOutput;
     self.session = [[AVCaptureSession alloc]init];
     [self.session setSessionPreset:AVCaptureSessionPresetPhoto];
     self.currentCameraPosition = AVCaptureDevicePositionBack;
-    [self toggleCamera];
+    [self handleToggleCamera];
     
     AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
@@ -53,7 +54,11 @@ AVCaptureStillImageOutput *stillImageOutput;
     [stillImageOutput setOutputSettings:outputSettings];
     [self.session addOutput:stillImageOutput];
 }
-- (IBAction)toggleCamera {
+- (IBAction)toggleCamera:(id)sender {
+    [self handleToggleCamera];
+}
+
+- (void)handleToggleCamera {
     AVCaptureDevicePosition newPosition = self.currentCameraPosition == AVCaptureDevicePositionBack ? AVCaptureDevicePositionFront : AVCaptureDevicePositionBack;
     AVCaptureDevice *inputDevice;
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
@@ -87,7 +92,9 @@ AVCaptureStillImageOutput *stillImageOutput;
     }
     
     [self.session commitConfiguration];
+    
 }
+
 
 CGRect CGRectCenteredInRect(CGRect rect, CGRect mainRect)
 {
@@ -167,6 +174,8 @@ CGRect CGRectAspectFillRect(CGSize sourceSize, CGRect destRect)
                       // we only need the first (most recent) photo -- stop the enumeration
                       [self.cameraRollButton setImage:img forState:UIControlStateNormal];
                       [self.cameraRollButton setImage:img forState:UIControlStateHighlighted];
+                      [self.cameraRollButton.layer setCornerRadius:4.0f];
+                      self.cameraRollButton.clipsToBounds = YES;
                       *stop = YES;
                   }
               }];

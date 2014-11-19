@@ -33,6 +33,9 @@
 		5FBAB0971A1BFFDB009CABA6 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0961A1BFFDB009CABA6 /* Images-2.xcassets */; };
 		5FBAB09A1A1C0623009CABA6 /* sc-launch-640-960.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0981A1C0623009CABA6 /* sc-launch-640-960.png */; };
 		5FBAB09B1A1C0623009CABA6 /* sc-launch-640-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0991A1C0623009CABA6 /* sc-launch-640-1136.png */; };
+		5FBAB09D1A1C52E8009CABA6 /* rotate_camera-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB09C1A1C52E8009CABA6 /* rotate_camera-100.png */; };
+		5FBAB09F1A1C5725009CABA6 /* take_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB09E1A1C5725009CABA6 /* take_photo.png */; };
+		5FBAB0A11A1C6726009CABA6 /* take_photo_300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0A01A1C6726009CABA6 /* take_photo_300.png */; };
 		5FEA1CC61A1494D3008A94C1 /* Thumb_red puma hat.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */; };
 		5FEA1CC71A1494D3008A94C1 /* Thumb_kids griffin hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */; };
 		5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */; };
@@ -109,6 +112,9 @@
 		5FBAB0961A1BFFDB009CABA6 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		5FBAB0981A1C0623009CABA6 /* sc-launch-640-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc-launch-640-960.png"; path = "Images-2.xcassets/LaunchImage.launchimage/sc-launch-640-960.png"; sourceTree = "<group>"; };
 		5FBAB0991A1C0623009CABA6 /* sc-launch-640-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc-launch-640-1136.png"; path = "Images-2.xcassets/LaunchImage.launchimage/sc-launch-640-1136.png"; sourceTree = "<group>"; };
+		5FBAB09C1A1C52E8009CABA6 /* rotate_camera-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rotate_camera-100.png"; sourceTree = "<group>"; };
+		5FBAB09E1A1C5725009CABA6 /* take_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_photo.png; sourceTree = "<group>"; };
+		5FBAB0A01A1C6726009CABA6 /* take_photo_300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_photo_300.png; sourceTree = "<group>"; };
 		5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb_red puma hat.PNG"; sourceTree = "<group>"; };
 		5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb_kids griffin hat.png"; sourceTree = "<group>"; };
 		5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runner-Hat.png"; sourceTree = "<group>"; };
@@ -169,6 +175,9 @@
 		5F6CACF91A121A0600C03768 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5FBAB0A01A1C6726009CABA6 /* take_photo_300.png */,
+				5FBAB09E1A1C5725009CABA6 /* take_photo.png */,
+				5FBAB09C1A1C52E8009CABA6 /* rotate_camera-100.png */,
 				FAE6D4E91A1B266B002B81E5 /* Instagram Logo 2.eps */,
 				FAE6D4E71A1B2552002B81E5 /* fbshare.png */,
 				5FEA1CE41A149DEA008A94C1 /* preview-placeholder.jpg */,
@@ -419,6 +428,7 @@
 				5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */,
 				052601131A131DDF004C5951 /* button.png in Resources */,
 				5FEA1CE11A149B24008A94C1 /* voodoo-tactical-military-glasses-2.gif in Resources */,
+				5FBAB09D1A1C52E8009CABA6 /* rotate_camera-100.png in Resources */,
 				5FA428B61A12095600F00FFF /* LaunchScreen.xib in Resources */,
 				5FEA1CD01A1494D3008A94C1 /* hat-conductor-adult-large-9999917479.png in Resources */,
 				5FEA1CCA1A1494D3008A94C1 /* Hats_SessTrucker_Red.gif in Resources */,
@@ -434,6 +444,7 @@
 				FA6772A11A13E1F100C0266D /* ShareViewController.xib in Resources */,
 				052601101A131A84004C5951 /* CameraViewController.xib in Resources */,
 				5FBAB09B1A1C0623009CABA6 /* sc-launch-640-1136.png in Resources */,
+				5FBAB0A11A1C6726009CABA6 /* take_photo_300.png in Resources */,
 				FA3BBD701A141D2100E86C30 /* FBLogo.png in Resources */,
 				5F3489501A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png in Resources */,
 				5FEA1CCB1A1494D3008A94C1 /* Hats_SessTrucker_Black.gif in Resources */,
@@ -459,6 +470,7 @@
 				5F6CAD071A121A0600C03768 /* tongue@2x.png in Resources */,
 				5F6CAD061A121A0600C03768 /* sad@2x.png in Resources */,
 				5FBAB0971A1BFFDB009CABA6 /* Images-2.xcassets in Resources */,
+				5FBAB09F1A1C5725009CABA6 /* take_photo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,12 +644,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Kent Tam (BJ4N2WSLGR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kent Tam (BJ4N2WSLGR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6602b7a7-6f19-4607-aa24-82e204c71667";
+				PROVISIONING_PROFILE = "835060f4-3211-425d-b367-a80447ab5e24";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -648,12 +660,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Kent Tam (BJ4N2WSLGR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kent Tam (BJ4N2WSLGR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6602b7a7-6f19-4607-aa24-82e204c71667";
+				PROVISIONING_PROFILE = "835060f4-3211-425d-b367-a80447ab5e24";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
