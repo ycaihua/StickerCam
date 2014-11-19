@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -21,51 +21,35 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m40-tB-nfI">
-                    <rect key="frame" x="200" y="75" width="200" height="200"/>
+                    <rect key="frame" x="8" y="74" width="304" height="304"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="200" id="bSg-lU-K7H"/>
-                        <constraint firstAttribute="width" constant="200" id="hes-2q-xvd"/>
-                        <constraint firstAttribute="width" secondItem="m40-tB-nfI" secondAttribute="height" multiplier="1:1" id="xz7-75-kQD"/>
-                        <constraint firstAttribute="height" constant="200" id="yaF-tW-tEs"/>
+                        <constraint firstAttribute="width" secondItem="m40-tB-nfI" secondAttribute="height" multiplier="1:1" id="Z3D-Od-ZD5"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="hes-2q-xvd"/>
-                            <exclude reference="yaF-tW-tEs"/>
-                        </mask>
-                    </variation>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18L-y6-oP2">
-                    <rect key="frame" x="30" y="350" width="540" height="50"/>
-                    <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qC-aE-k5U">
+                    <rect key="frame" x="32" y="510" width="256" height="50"/>
+                    <color key="backgroundColor" red="0.79231295620437958" green="0.43165488138686131" blue="0.62015282846715325" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="C0K-hc-Wyo"/>
-                        <constraint firstAttribute="height" constant="50" id="Tfc-YC-tZC"/>
-                        <constraint firstAttribute="width" constant="80" id="hc3-sL-IcJ"/>
+                        <constraint firstAttribute="height" constant="50" id="iTW-K5-CBJ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                    <state key="normal" title="Share on Facebook">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                    <state key="normal" title="New StickerCam">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="C0K-hc-Wyo"/>
-                            <exclude reference="hc3-sL-IcJ"/>
-                        </mask>
-                    </variation>
                     <connections>
-                        <action selector="onFacebookShareButtonClicked:" destination="-1" eventType="touchUpInside" id="XQM-Yu-DqS"/>
+                        <action selector="onStickerCamClick:" destination="-1" eventType="touchUpInside" id="dfX-KH-J6h"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj3-Nd-FDz">
-                    <rect key="frame" x="30" y="420" width="540" height="50"/>
+                    <rect key="frame" x="32" y="452" width="256" height="50"/>
                     <color key="backgroundColor" red="0.31764705882352939" green="0.49803921568627452" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="jTr-B6-3h1"/>
+                        <constraint firstAttribute="height" constant="50" id="lqL-Oy-tnl"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="22"/>
                     <state key="normal" title="Share on Instagram">
@@ -76,67 +60,42 @@
                         <action selector="onInstagramShareButtonClicked:" destination="-1" eventType="touchUpInside" id="HTA-eO-1th"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qC-aE-k5U">
-                    <rect key="frame" x="30" y="490" width="540" height="50"/>
-                    <color key="backgroundColor" red="0.79231295620437958" green="0.43165488138686131" blue="0.62015282846715325" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18L-y6-oP2">
+                    <rect key="frame" x="32" y="394" width="256" height="50"/>
+                    <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="iTW-K5-CBJ"/>
+                        <constraint firstAttribute="height" constant="50" id="Tfc-YC-tZC"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
-                    <state key="normal" title="New StickerCam">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Share on Facebook">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="onStickerCamClick:" destination="-1" eventType="touchUpInside" id="dfX-KH-J6h"/>
+                        <action selector="onFacebookShareButtonClicked:" destination="-1" eventType="touchUpInside" id="XQM-Yu-DqS"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="Bj3-Nd-FDz" secondAttribute="trailing" id="6Hp-mh-QQa"/>
-                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="top" secondItem="18L-y6-oP2" secondAttribute="bottom" constant="20" id="77P-YD-naa"/>
-                <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" id="7AV-Wh-vKW"/>
-                <constraint firstAttribute="centerX" secondItem="m40-tB-nfI" secondAttribute="centerX" id="7CE-Yi-Agk"/>
-                <constraint firstAttribute="centerX" secondItem="Bj3-Nd-FDz" secondAttribute="centerX" id="9SD-kg-bf4"/>
-                <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="Bj3-Nd-FDz" secondAttribute="trailing" id="9TJ-3L-ebe"/>
-                <constraint firstItem="18L-y6-oP2" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="75" id="Awq-GU-1fh"/>
-                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="trailing" secondItem="18L-y6-oP2" secondAttribute="trailing" id="BNp-nt-CpW"/>
-                <constraint firstItem="m40-tB-nfI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="CPu-Rc-klZ"/>
-                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="leading" secondItem="7qC-aE-k5U" secondAttribute="leading" id="DFX-xy-Ab3"/>
-                <constraint firstItem="18L-y6-oP2" firstAttribute="top" secondItem="m40-tB-nfI" secondAttribute="bottom" constant="150" id="EL9-Rr-hKy"/>
-                <constraint firstAttribute="trailing" secondItem="18L-y6-oP2" secondAttribute="trailing" constant="30" id="Ewu-9E-ktA"/>
-                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="leading" secondItem="18L-y6-oP2" secondAttribute="leading" id="FhD-oQ-sXs"/>
-                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="trailing" secondItem="18L-y6-oP2" secondAttribute="trailing" id="HVH-01-MOb"/>
-                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="leading" secondItem="18L-y6-oP2" secondAttribute="leading" id="Sgj-oH-YzG"/>
-                <constraint firstItem="7qC-aE-k5U" firstAttribute="top" secondItem="Bj3-Nd-FDz" secondAttribute="bottom" constant="20" id="Ul3-D7-61x"/>
-                <constraint firstItem="m40-tB-nfI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="W6H-fb-bht"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="18L-y6-oP2" secondAttribute="trailing" constant="30" id="Ygn-S6-W9X"/>
-                <constraint firstItem="m40-tB-nfI" firstAttribute="top" relation="lessThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="fH1-Ec-d1x"/>
-                <constraint firstItem="18L-y6-oP2" firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" id="ilZ-zP-ePX"/>
-                <constraint firstItem="m40-tB-nfI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="jeS-yn-e4z"/>
-                <constraint firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" constant="20" id="k0T-kn-jY4"/>
-                <constraint firstAttribute="centerX" secondItem="m40-tB-nfI" secondAttribute="centerX" id="qk0-Gm-Bpu"/>
-                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="trailing" secondItem="7qC-aE-k5U" secondAttribute="trailing" id="qlS-4f-F9W"/>
-                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="leading" secondItem="18L-y6-oP2" secondAttribute="leading" id="sG6-fZ-J6m"/>
-                <constraint firstAttribute="centerX" secondItem="18L-y6-oP2" secondAttribute="centerX" id="uWN-fr-udF"/>
-                <constraint firstAttribute="bottom" secondItem="Bj3-Nd-FDz" secondAttribute="bottom" constant="55" id="wYQ-4k-YVJ"/>
-                <constraint firstItem="m40-tB-nfI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="xPX-Zr-kYj"/>
+                <constraint firstItem="m40-tB-nfI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="3dS-6H-fhe"/>
+                <constraint firstItem="7qC-aE-k5U" firstAttribute="top" secondItem="Bj3-Nd-FDz" secondAttribute="bottom" constant="8" id="6je-Kz-iKR"/>
+                <constraint firstItem="18L-y6-oP2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="6rI-JO-8oO"/>
+                <constraint firstAttribute="trailing" secondItem="18L-y6-oP2" secondAttribute="trailing" constant="32" id="Ewu-9E-ktA"/>
+                <constraint firstItem="m40-tB-nfI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="Eyx-cQ-RWQ"/>
+                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="KJX-aJ-5tf"/>
+                <constraint firstAttribute="trailing" secondItem="7qC-aE-k5U" secondAttribute="trailing" constant="32" id="OLT-Kf-EXb"/>
+                <constraint firstAttribute="trailing" secondItem="m40-tB-nfI" secondAttribute="trailing" constant="8" id="PTv-cC-Swd"/>
+                <constraint firstItem="Bj3-Nd-FDz" firstAttribute="top" secondItem="18L-y6-oP2" secondAttribute="bottom" constant="8" id="SA5-sS-ZEB"/>
+                <constraint firstAttribute="trailing" secondItem="Bj3-Nd-FDz" secondAttribute="trailing" constant="32" id="cob-aL-ktp"/>
+                <constraint firstItem="7qC-aE-k5U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="uff-9o-DIj"/>
+                <constraint firstAttribute="bottom" secondItem="7qC-aE-k5U" secondAttribute="bottom" constant="8" id="xKq-D1-HGs"/>
             </constraints>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="7CE-Yi-Agk"/>
-                    <exclude reference="CPu-Rc-klZ"/>
-                    <exclude reference="jeS-yn-e4z"/>
-                    <exclude reference="k0T-kn-jY4"/>
-                    <exclude reference="7AV-Wh-vKW"/>
-                    <exclude reference="EL9-Rr-hKy"/>
-                    <exclude reference="Ygn-S6-W9X"/>
-                    <exclude reference="ilZ-zP-ePX"/>
-                    <exclude reference="wYQ-4k-YVJ"/>
-                </mask>
-            </variation>
             <point key="canvasLocation" x="42" y="146"/>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

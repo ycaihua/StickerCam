@@ -35,6 +35,15 @@
     //CanvasViewController *vc = [[CanvasViewController alloc]init];
     CameraViewController *vc = [[CameraViewController alloc]init];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: vc];
+    nvc.navigationBar.barTintColor = [UIColor colorWithRed:(85/255.0) green:(85/255.0) blue:(85/255.0) alpha:1];
+    nvc.navigationBar.tintColor = [UIColor colorWithRed:(108/255.0) green:(178/255.0) blue:(247/255.0) alpha:1];
+    nvc.navigationBar.titleTextAttributes =
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIFont fontWithName:@"Helvetica Neue" size:18],NSFontAttributeName,
+      [UIColor whiteColor], NSForegroundColorAttributeName,
+      nil];
+
+
     self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];
     return YES;

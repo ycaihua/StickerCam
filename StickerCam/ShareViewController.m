@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Share";
     // Do any additional setup after loading the view from its nib.
     //TODO - remove this override
     //self.image = [UIImage imageNamed:@"test_image_stickercam.jpg"];

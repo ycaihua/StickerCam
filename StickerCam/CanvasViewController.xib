@@ -35,7 +35,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.95485151933701662" green="0.95485151933701662" blue="0.95485151933701662" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Pqn-FF-eMK" firstAttribute="leading" secondItem="144-AT-CCt" secondAttribute="leading" id="5Nd-3d-HQ3"/>
                         <constraint firstAttribute="trailing" secondItem="Pqn-FF-eMK" secondAttribute="trailing" id="88y-NE-DEZ"/>
@@ -63,7 +63,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="144-AT-CCt" firstAttribute="top" secondItem="w7C-3U-BNR" secondAttribute="bottom" constant="8" id="2Uw-JN-Ux7"/>
                 <constraint firstItem="w7C-3U-BNR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="2ie-fU-8Ey"/>

@@ -32,6 +32,7 @@
     [super viewDidLoad];
     self.trayOpen = YES;
     
+    self.navigationItem.title = @"Add Stickers";
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayToggleTap:)];
     tapGestureRecognizer.numberOfTapsRequired = 1;
     self.toggleTrayImage.userInteractionEnabled = YES;
@@ -63,7 +64,6 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancelButton)];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(onShareButton)];
-    
 }
 
 - (void)onCancelButton {
