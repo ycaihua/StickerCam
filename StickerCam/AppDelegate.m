@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "CameraViewController.h"
 #import "CanvasViewController.h"
+#import "ShareViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate ()

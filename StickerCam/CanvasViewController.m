@@ -19,6 +19,7 @@
 @property BOOL trayOpen;
 @property BOOL layoutComplete;
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
+@property (weak, nonatomic) IBOutlet UIView *previewImageContainerView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) NSArray *pages;
@@ -31,16 +32,11 @@
     [super viewDidLoad];
     self.trayOpen = YES;
     
-//    UIPanGestureRecognizer *panGestureRecognizer;
-//    [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayPan:)];
-//    [self.trayView addGestureRecognizer:panGestureRecognizer];
-    
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTrayToggleTap:)];
     tapGestureRecognizer.numberOfTapsRequired = 1;
     self.toggleTrayImage.userInteractionEnabled = YES;
     [self.toggleTrayImage addGestureRecognizer:tapGestureRecognizer];
     self.previewImageView.image = self.pictureImage;
-    self.previewImageView.contentMode = UIViewContentModeScaleAspectFill;
     
     self.pages = @[@{@"page": @"Hats", @"images": @[@"Thumb_red puma hat.PNG",
                                               @"Thumb_kids griffin hat.png",
@@ -75,6 +71,7 @@
 }
 
 - (void)onShareButton {
+    [self saveCanvasToCameraRoll];
     UIImage *viewImage = [self getImageFromCanvas];
     ShareViewController* svc = [[ShareViewController alloc] initWithImage:viewImage];
     [self.navigationController pushViewController:svc animated:YES];
@@ -84,11 +81,12 @@
 - (void)viewDidLayoutSubviews {
     
     if (!self.layoutComplete) {
+        [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width * [self.pages count], self.scrollView.frame.size.height)];
         for (int i = 0; i < [self.pages count]; i++) {
             CGRect frame;
-            frame.origin.x = self.view.frame.size.width * i;
+            frame.origin.x = self.trayView.frame.size.width * i;
             frame.origin.y = 0;
-            frame.size = CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height);
+            frame.size = CGSizeMake(self.trayView.frame.size.width, self.trayView.frame.size.height - self.scrollView.frame.origin.y);
             
             UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
             [layout setSectionInset:UIEdgeInsetsMake(0, 10, 10, 10)];
@@ -98,11 +96,11 @@
             [collectionView setDataSource:self];
             [collectionView setDelegate:self];
             [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
-            
-            
+            self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
             [self.scrollView addSubview:collectionView];
         }
-        self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * [self.pages count], self.scrollView.frame.size.height);
+        
+
         [self.scrollView setContentOffset:CGPointMake(0, 0)];
         self.layoutComplete = YES;
     }
@@ -140,17 +138,25 @@
     UICollectionView *collectionView = (UICollectionView *)recognizer.view.superview;
     UICollectionViewCell *collectionViewCell = (UICollectionViewCell *)recognizer.view;
     UIImageView *pImageView =  (UIImageView *)collectionViewCell.backgroundView;
-    UIImage *croppedImage = [pImageView.image imageByTrimmingTransparentPixels];
+//    UIImage *croppedImage = [pImageView.image imageByTrimmingTransparentPixels];
     UIImageView *imageView;
-    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(pImageView.frame.origin.x, pImageView.frame.origin.x, 75, (croppedImage.size.height/croppedImage.size.width) * 75)];
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(pImageView.frame.origin.x, pImageView.frame.origin.x, 75, (pImageView.image.size.height/pImageView.image.size.width) * 75)];
     imageView.userInteractionEnabled = YES;
-    [imageView setImage:croppedImage];
+    [imageView setImage:pImageView.image];
     imageView.center = CGPointMake(recognizer.view.center.x, recognizer.view.center.y + self.trayView.frame.origin.y + self.scrollView.frame.origin.y - collectionView.contentOffset.y);
-    [self.view addSubview:imageView];
+    [self.previewImageContainerView addSubview:imageView];
+    [self.previewImageContainerView bringSubviewToFront:imageView];
     
-    UILongPressGestureRecognizer *pan_gr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPan:)];
-    pan_gr.minimumPressDuration = 0.0;
+    UIPanGestureRecognizer *pan_gr = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPan:)];
     [imageView addGestureRecognizer:pan_gr];
+    
+    UITapGestureRecognizer *tap_gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerDoubleTap:)];
+    tap_gr.numberOfTapsRequired = 2;
+    [imageView addGestureRecognizer:tap_gr];
+    
+    UILongPressGestureRecognizer *lp_gr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerLongPress:)];
+    lp_gr.minimumPressDuration = 0.5;
+    [imageView addGestureRecognizer:lp_gr];
     
     UIPinchGestureRecognizer *pinch_gr = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(onStickerPinch:)];
     [imageView addGestureRecognizer:pinch_gr];
@@ -158,7 +164,7 @@
     UIRotationGestureRecognizer *rotate_gr = [[UIRotationGestureRecognizer alloc] initWithTarget: self action:@selector(onStickerRotate:)];
     [imageView addGestureRecognizer:rotate_gr];
     
-    pinch_gr.delegate = self; // delegate at least one transform to get them to trigger the callback methods in this controller
+    rotate_gr.delegate = self; // delegate at least one transform to get them to trigger the callback methods in this controller
     
     [UIView animateWithDuration:.25 animations:^{
         imageView.center = CGPointMake(self.previewImageView.center.x, self.previewImageView.center.y);
@@ -168,7 +174,7 @@
 }
 
 - (void)onStickerRotate:(UIRotationGestureRecognizer *)recognizer{
-    recognizer.view.transform = CGAffineTransformRotate(recognizer.view.transform, recognizer.rotation);
+    recognizer.view.transform = CGAffineTransformRotate(recognizer.view.transform, recognizer.view.transform.a < 0 ? - 1 *recognizer.rotation : recognizer.rotation);
     recognizer.rotation = 0.0;
 }
 
@@ -181,46 +187,50 @@
 
 // Use this for immediately moving vs. UIPanGestureRecognizer which has a delay
 // Also detects double taps
-- (IBAction)onStickerPan:(UILongPressGestureRecognizer *)recognizer {
+- (IBAction)onStickerPan:(UIPanGestureRecognizer *)recognizer {
     static CGPoint originalCenter;
     static CGPoint originalLocationInView;
-    static NSTimer *longFlipTimer;
+    
+    [recognizer.view.superview bringSubviewToFront:recognizer.view];
     
     if (recognizer.state == UIGestureRecognizerStateBegan) {
-        // If no timer exists, set one, then invalidate it once it's complete, otherwise we know it's a doule tap and we remove this view
-        longFlipTimer = [NSTimer scheduledTimerWithTimeInterval:0.50 target:self selector:@selector(flipHorizontal:) userInfo:recognizer.view repeats:NO];
-        if (!self.tapTimer) {
-            originalCenter = recognizer.view.center;
-            originalLocationInView = [recognizer locationInView:self.view];
-            self.tapTimer = [NSTimer scheduledTimerWithTimeInterval:.2 target:self selector:@selector(tapTimerEnd:) userInfo:nil repeats:NO];
-        } else {
-            // Remove the view animated because we detected two taps within .2 seconds signifying a double tap
-            recognizer.view.alpha = 1;
-            [UIView animateWithDuration:.2 animations:^{
-                recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, 1.3, 1.3);
-            } completion:^(BOOL finished) {
-                [UIView animateWithDuration:.2 animations:^{
-                    recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, .1, .1);
-                    recognizer.view.alpha = 0;
-                } completion:^(BOOL finished) {
-                    [recognizer.view removeFromSuperview];
-                }];
-            }];
-        }
+        originalCenter = recognizer.view.center;
+        originalLocationInView = [recognizer locationInView:self.view];
     } else if (recognizer.state == UIGestureRecognizerStateChanged) {
-        [longFlipTimer invalidate];
         CGPoint point = [recognizer locationInView:self.view];
         // We calculate the delta moved from initial the touch point to where it is now and add that to the original center of the image
         recognizer.view.center = CGPointMake((point.x - originalLocationInView.x) + originalCenter.x, (point.y - originalLocationInView.y) + originalCenter.y);
     } else if (recognizer.state == UIGestureRecognizerStateEnded) {
         // If you drop on the tray, move the image copy back to original point where you last dropped it
-        if ((recognizer.view.frame.origin.y + recognizer.view.frame.size.height) >= self.trayView.frame.origin.y) {
-            [UIView animateWithDuration:.10 animations:^{
-                recognizer.view.center = originalCenter;
+//        if ((recognizer.view.frame.origin.y + recognizer.view.frame.size.height) >= self.trayView.frame.origin.y) {
+//            [UIView animateWithDuration:.10 animations:^{
+//                recognizer.view.center = originalCenter;
+//            }];
+//        }
+    }
+}
+
+- (IBAction)onStickerDoubleTap:(UITapGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateRecognized) {
+        recognizer.view.alpha = 1;
+        [UIView animateWithDuration:.2 animations:^{
+            recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, 1.3, 1.3);
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:.2 animations:^{
+                recognizer.view.transform =  CGAffineTransformScale(recognizer.view.transform, .1, .1);
+                recognizer.view.alpha = 0;
+            } completion:^(BOOL finished) {
+                [recognizer.view removeFromSuperview];
             }];
-        }
-        
-        [longFlipTimer invalidate];
+        }];
+    }
+}
+
+- (IBAction)onStickerLongPress:(UILongPressGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        [UIView animateWithDuration:.25 animations:^{
+            recognizer.view.transform = CGAffineTransformScale(recognizer.view.transform, -1, 1);
+        }];
     }
 }
 
@@ -268,10 +278,11 @@
 
 - (UIImage *)getImageFromCanvas {
     // TODO: change self.view to the square canvas that holds the uploaded image
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIGraphicsBeginImageContext(self.previewImageView.frame.size);
+    [self.previewImageContainerView.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
     return viewImage;
 }
 

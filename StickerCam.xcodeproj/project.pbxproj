@@ -29,6 +29,10 @@
 		5FA428C21A12095600F00FFF /* StickerCamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428C11A12095600F00FFF /* StickerCamTests.m */; };
 		5FA428CE1A1209D400F00FFF /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA428CC1A1209D400F00FFF /* CanvasViewController.m */; };
 		5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */; };
+		5FBAB0951A1BF7D6009CABA6 /* sc-app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0941A1BF7D6009CABA6 /* sc-app-icon.png */; };
+		5FBAB0971A1BFFDB009CABA6 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0961A1BFFDB009CABA6 /* Images-2.xcassets */; };
+		5FBAB09A1A1C0623009CABA6 /* sc-launch-640-960.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0981A1C0623009CABA6 /* sc-launch-640-960.png */; };
+		5FBAB09B1A1C0623009CABA6 /* sc-launch-640-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0991A1C0623009CABA6 /* sc-launch-640-1136.png */; };
 		5FEA1CC61A1494D3008A94C1 /* Thumb_red puma hat.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */; };
 		5FEA1CC71A1494D3008A94C1 /* Thumb_kids griffin hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */; };
 		5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */; };
@@ -55,6 +59,8 @@
 		FA6772A01A13E1F100C0266D /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA67729E1A13E1F100C0266D /* ShareViewController.m */; };
 		FA6772A11A13E1F100C0266D /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA67729F1A13E1F100C0266D /* ShareViewController.xib */; };
 		FA7099BF1A143C3800DBF6BA /* IGLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7099BE1A143C3800DBF6BA /* IGLogo.png */; };
+		FAE6D4E81A1B2552002B81E5 /* fbshare.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE6D4E71A1B2552002B81E5 /* fbshare.png */; };
+		FAE6D4EF1A1B2C35002B81E5 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAE6D4EE1A1B2B07002B81E5 /* Billabong.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +105,10 @@
 		5FA428CB1A1209D400F00FFF /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
 		5FA428CC1A1209D400F00FFF /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
 		5FA428CD1A1209D400F00FFF /* CanvasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanvasViewController.xib; sourceTree = "<group>"; };
+		5FBAB0941A1BF7D6009CABA6 /* sc-app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sc-app-icon.png"; sourceTree = "<group>"; };
+		5FBAB0961A1BFFDB009CABA6 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		5FBAB0981A1C0623009CABA6 /* sc-launch-640-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc-launch-640-960.png"; path = "Images-2.xcassets/LaunchImage.launchimage/sc-launch-640-960.png"; sourceTree = "<group>"; };
+		5FBAB0991A1C0623009CABA6 /* sc-launch-640-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc-launch-640-1136.png"; path = "Images-2.xcassets/LaunchImage.launchimage/sc-launch-640-1136.png"; sourceTree = "<group>"; };
 		5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb_red puma hat.PNG"; sourceTree = "<group>"; };
 		5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb_kids griffin hat.png"; sourceTree = "<group>"; };
 		5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runner-Hat.png"; sourceTree = "<group>"; };
@@ -127,6 +137,13 @@
 		FA67729E1A13E1F100C0266D /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		FA67729F1A13E1F100C0266D /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		FA7099BE1A143C3800DBF6BA /* IGLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IGLogo.png; sourceTree = "<group>"; };
+		FAE6D4E71A1B2552002B81E5 /* fbshare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbshare.png; sourceTree = "<group>"; };
+		FAE6D4E91A1B266B002B81E5 /* Instagram Logo 2.eps */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Instagram Logo 2.eps"; sourceTree = "<group>"; };
+		FAE6D4EA1A1B2A7E002B81E5 /* FreightSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans-Bold.ttf"; sourceTree = "<group>"; };
+		FAE6D4EB1A1B2A98002B81E5 /* FreightSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans-Medium.ttf"; sourceTree = "<group>"; };
+		FAE6D4EC1A1B2AAD002B81E5 /* FreightSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FAE6D4ED1A1B2AC2002B81E5 /* FreightSans-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans-Book.ttf"; sourceTree = "<group>"; };
+		FAE6D4EE1A1B2B07002B81E5 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +169,8 @@
 		5F6CACF91A121A0600C03768 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FAE6D4E91A1B266B002B81E5 /* Instagram Logo 2.eps */,
+				FAE6D4E71A1B2552002B81E5 /* fbshare.png */,
 				5FEA1CE41A149DEA008A94C1 /* preview-placeholder.jpg */,
 				FA7099BE1A143C3800DBF6BA /* IGLogo.png */,
 				052601121A131DDF004C5951 /* button.png */,
@@ -182,6 +201,7 @@
 		5FA428991A12095600F00FFF = {
 			isa = PBXGroup;
 			children = (
+				5FBAB0941A1BF7D6009CABA6 /* sc-app-icon.png */,
 				0526010B1A13167D004C5951 /* AVFoundation.framework */,
 				5FA428A41A12095600F00FFF /* StickerCam */,
 				5FA428BE1A12095600F00FFF /* StickerCamTests */,
@@ -203,7 +223,14 @@
 		5FA428A41A12095600F00FFF /* StickerCam */ = {
 			isa = PBXGroup;
 			children = (
+				5FBAB0981A1C0623009CABA6 /* sc-launch-640-960.png */,
+				5FBAB0991A1C0623009CABA6 /* sc-launch-640-1136.png */,
+				FAE6D4EE1A1B2B07002B81E5 /* Billabong.ttf */,
 				5F34894C1A19A36200FC4263 /* UIImage+Trim.h */,
+				FAE6D4EC1A1B2AAD002B81E5 /* FreightSans-MediumItalic.ttf */,
+				FAE6D4ED1A1B2AC2002B81E5 /* FreightSans-Book.ttf */,
+				FAE6D4EB1A1B2A98002B81E5 /* FreightSans-Medium.ttf */,
+				FAE6D4EA1A1B2A7E002B81E5 /* FreightSans-Bold.ttf */,
 				5F34894D1A19A36200FC4263 /* UIImage+Trim.m */,
 				5F6CACF91A121A0600C03768 /* images */,
 				5FA428A91A12095600F00FFF /* AppDelegate.h */,
@@ -222,6 +249,7 @@
 				FA67729D1A13E1F100C0266D /* ShareViewController.h */,
 				FA67729E1A13E1F100C0266D /* ShareViewController.m */,
 				FA67729F1A13E1F100C0266D /* ShareViewController.xib */,
+				5FBAB0961A1BFFDB009CABA6 /* Images-2.xcassets */,
 			);
 			path = StickerCam;
 			sourceTree = "<group>";
@@ -353,11 +381,11 @@
 				TargetAttributes = {
 					5FA428A11A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = V9WTTPBFK9;
+						DevelopmentTeam = WE4NL5L554;
 					};
 					5FA428BA1A12095600F00FFF = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = V9WTTPBFK9;
+						DevelopmentTeam = WE4NL5L554;
 						TestTargetID = 5FA428A11A12095600F00FFF;
 					};
 				};
@@ -386,6 +414,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FBAB0951A1BF7D6009CABA6 /* sc-app-icon.png in Resources */,
+				FAE6D4EF1A1B2C35002B81E5 /* Billabong.ttf in Resources */,
 				5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */,
 				052601131A131DDF004C5951 /* button.png in Resources */,
 				5FEA1CE11A149B24008A94C1 /* voodoo-tactical-military-glasses-2.gif in Resources */,
@@ -403,6 +433,7 @@
 				5FEA1CCE1A1494D3008A94C1 /* hat-cowboy-black-cattleman-adult-med-9999914598.png in Resources */,
 				FA6772A11A13E1F100C0266D /* ShareViewController.xib in Resources */,
 				052601101A131A84004C5951 /* CameraViewController.xib in Resources */,
+				5FBAB09B1A1C0623009CABA6 /* sc-launch-640-1136.png in Resources */,
 				FA3BBD701A141D2100E86C30 /* FBLogo.png in Resources */,
 				5F3489501A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png in Resources */,
 				5FEA1CCB1A1494D3008A94C1 /* Hats_SessTrucker_Black.gif in Resources */,
@@ -411,6 +442,7 @@
 				5FEA1CCD1A1494D3008A94C1 /* hat-viking-helmet-child-teen-one-size-763285730078.png in Resources */,
 				5FEA1CCC1A1494D3008A94C1 /* hat-yachtsman-white-adjustable-back-763285706646.png in Resources */,
 				FA7099BF1A143C3800DBF6BA /* IGLogo.png in Resources */,
+				FAE6D4E81A1B2552002B81E5 /* fbshare.png in Resources */,
 				5FEA1CC91A1494D3008A94C1 /* Round-Hat2-300x300.png in Resources */,
 				5FEA1CE31A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif in Resources */,
 				5FEA1CDB1A149B24008A94C1 /* 3D_Glasses_Final_Clipart_Free.png in Resources */,
@@ -420,11 +452,13 @@
 				5FEA1CC71A1494D3008A94C1 /* Thumb_kids griffin hat.png in Resources */,
 				5FEA1CCF1A1494D3008A94C1 /* hat-confederate-general-dlx-adult-sm-9999912643.png in Resources */,
 				5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */,
+				5FBAB09A1A1C0623009CABA6 /* sc-launch-640-960.png in Resources */,
 				0581E3691A1B00DF007B694F /* cameraroll.png in Resources */,
 				5F6CAD051A121A0600C03768 /* happy@2x.png in Resources */,
 				5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */,
 				5F6CAD071A121A0600C03768 /* tongue@2x.png in Resources */,
 				5F6CAD061A121A0600C03768 /* sad@2x.png in Resources */,
+				5FBAB0971A1BFFDB009CABA6 /* Images-2.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,12 +631,14 @@
 			baseConfigurationReference = 380E51D967D249867E8BA72F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -611,12 +647,14 @@
 			baseConfigurationReference = E89445093B28815B28E8F11F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StickerCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

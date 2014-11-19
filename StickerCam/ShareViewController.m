@@ -7,10 +7,11 @@
 //
 
 #import "ShareViewController.h"
+#import "CameraViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import <MGInstagram/MGInstagram.h>
 
-@interface ShareViewController ()
+@interface ShareViewController()
 
 @end
 
@@ -19,9 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
     //TODO - remove this override
-    self.image = [UIImage imageNamed:@"test_image_stickercam.jpg"];
+    //self.image = [UIImage imageNamed:@"test_image_stickercam.jpg"];
 
     CGSize targetSize = self.shareImageView.bounds.size;
     UIGraphicsBeginImageContextWithOptions(targetSize, NO, 0.0);
@@ -30,8 +30,9 @@
     UIGraphicsEndImageContext();
     [self.shareImageView setImage:resized];
     
-    [self.facebookImageView setImage:[UIImage imageNamed:@"FBLogo.png"]];
-    [self.instagramImageView setImage:[UIImage imageNamed:@"IGLogo.png"]];
+    self.facebookShareButton.layer.cornerRadius = 4;
+    self.instagramShareButton.layer.cornerRadius = 4;
+    self.stickerCamButton.layer.cornerRadius = 4;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +48,15 @@
     return self;
 }
 
-
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
 
 /*
 #pragma mark - Navigation
@@ -82,5 +91,9 @@
 
 - (IBAction)onInstagramShareButtonClicked:(id)sender {
     [MGInstagram postImage:self.shareImageView.image inView:self.view];
+}
+- (IBAction)onStickerCamClick:(id)sender {
+    CameraViewController *cvc = [[CameraViewController alloc]init];
+    [self.navigationController pushViewController:cvc animated:YES];
 }
 @end

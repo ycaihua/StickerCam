@@ -8,17 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShareViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface ShareViewController : UIViewController<UITextViewDelegate>
 - (id)initWithImage:(UIImage *)image;
 @property (strong, nonatomic) UIImage* image;
 @property (weak, nonatomic) IBOutlet UIImageView *shareImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *facebookImageView;
-
-@property (weak, nonatomic) IBOutlet UIImageView *instagramImageView;
 @property (weak, nonatomic) IBOutlet UIButton *facebookShareButton;
 @property (weak, nonatomic) IBOutlet UIButton *instagramShareButton;
 - (IBAction)onFacebookShareButtonClicked:(id)sender;
 - (IBAction)onInstagramShareButtonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *stickerCamButton;
+- (IBAction)onStickerCamClick:(id)sender;
+
 typedef enum {
     Facebook,
     Instagram

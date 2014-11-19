@@ -15,14 +15,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *cameraRollButton;
 @property (nonatomic, assign) AVCaptureDevicePosition currentCameraPosition;
 @property (strong, nonatomic) AVCaptureDeviceInput *deviceInput;
+@property (strong, nonatomic) AVCaptureSession* session;
 @end
 
 @implementation CameraViewController
-AVCaptureSession *session = nil;
 AVCaptureStillImageOutput *stillImageOutput;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Take a Photo";
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -32,17 +33,17 @@ AVCaptureStillImageOutput *stillImageOutput;
 }
 
 - (void) setUpCamera{
-    session = [[AVCaptureSession alloc]init];
-    [session setSessionPreset:AVCaptureSessionPresetPhoto];
+    self.session = [[AVCaptureSession alloc]init];
+    [self.session setSessionPreset:AVCaptureSessionPresetPhoto];
     AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     self.currentCameraPosition = AVCaptureDevicePositionBack;
     NSError *error;
     self.deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:&error];
-    if ([session canAddInput:self.deviceInput]){
-        [session addInput:self.deviceInput];
+    if ([self.session canAddInput:self.deviceInput]){
+        [self.session addInput:self.deviceInput];
     }
     
-    AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
+    AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     CALayer *rootLayer = [[self view] layer];
     [rootLayer setMasksToBounds:YES];
@@ -55,7 +56,7 @@ AVCaptureStillImageOutput *stillImageOutput;
     stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
     NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
     [stillImageOutput setOutputSettings:outputSettings];
-    [session addOutput:stillImageOutput];
+    [self.session addOutput:stillImageOutput];
 }
 - (IBAction)toggleCamera:(id)sender {
     AVCaptureDevicePosition newPosition = self.currentCameraPosition == AVCaptureDevicePositionBack ? AVCaptureDevicePositionFront : AVCaptureDevicePositionBack;
@@ -69,20 +70,20 @@ AVCaptureStillImageOutput *stillImageOutput;
     NSError *error;
     AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:&error];
     
-    [session beginConfiguration];
-    [session removeInput:self.deviceInput];
-    [session setSessionPreset:AVCaptureSessionPresetHigh]; //Always reset preset before testing canAddInput because preset will cause it to return NO
+    [self.session beginConfiguration];
+    [self.session removeInput:self.deviceInput];
+    [self.session setSessionPreset:AVCaptureSessionPresetHigh]; //Always reset preset before testing canAddInput because preset will cause it to return NO
     
-    if ([session canAddInput:deviceInput]) {
-        [session addInput:deviceInput];
+    if ([self.session canAddInput:deviceInput]) {
+        [self.session addInput:deviceInput];
         self.deviceInput = deviceInput;
         self.currentCameraPosition = newPosition;
     } else {
-        [session addInput:self.deviceInput];
+        [self.session addInput:self.deviceInput];
     }
     
     if ([inputDevice supportsAVCaptureSessionPreset:AVCaptureSessionPresetPhoto]) {
-        [session setSessionPreset:AVCaptureSessionPresetPhoto];
+        [self.session setSessionPreset:AVCaptureSessionPresetPhoto];
     }
     
     if ([inputDevice lockForConfiguration:nil]) {
@@ -90,17 +91,17 @@ AVCaptureStillImageOutput *stillImageOutput;
         [inputDevice  unlockForConfiguration];
     }
     
-    [session commitConfiguration];
+    [self.session commitConfiguration];
 }
 
 
 
 -(void) viewWillAppear:(BOOL)animated{
-    if(session == nil) {
+    if(self.session == nil) {
         [self setUpCamera];
     }
     [self setUpCameraRollButton];
-    [session startRunning];
+    [self.session startRunning];
 }
 
 -(void) setUpCameraRollButton {
@@ -161,7 +162,7 @@ AVCaptureStillImageOutput *stillImageOutput;
         }
         CanvasViewController *vc = [[CanvasViewController alloc] init];
         vc.pictureImage = image;
-        [session stopRunning];
+        [self.session stopRunning];
         [self.navigationController pushViewController:vc animated:YES];
     }];
 }
@@ -178,7 +179,7 @@ AVCaptureStillImageOutput *stillImageOutput;
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     CanvasViewController *vc = [[CanvasViewController alloc] init];
     vc.pictureImage = chosenImage;
-    [session stopRunning];
+    [self.session stopRunning];
     [self.navigationController pushViewController:vc animated:YES];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
