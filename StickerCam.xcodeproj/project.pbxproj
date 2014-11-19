@@ -36,6 +36,38 @@
 		5FBAB09D1A1C52E8009CABA6 /* rotate_camera-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB09C1A1C52E8009CABA6 /* rotate_camera-100.png */; };
 		5FBAB09F1A1C5725009CABA6 /* take_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB09E1A1C5725009CABA6 /* take_photo.png */; };
 		5FBAB0A11A1C6726009CABA6 /* take_photo_300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0A01A1C6726009CABA6 /* take_photo_300.png */; };
+		5FBAB0B11A1C7BEF009CABA6 /* 1-Up_Mushroom_Artwork_-_Super_Mario_3D_World-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0A51A1C7BEF009CABA6 /* 1-Up_Mushroom_Artwork_-_Super_Mario_3D_World-300x300.png */; };
+		5FBAB0B21A1C7BEF009CABA6 /* 12696-high_res-koopa-mario-mushroom-vector-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0A61A1C7BEF009CABA6 /* 12696-high_res-koopa-mario-mushroom-vector-300x300.png */; };
+		5FBAB0B31A1C7BEF009CABA6 /* 300px-Kingbill.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0A71A1C7BEF009CABA6 /* 300px-Kingbill.png */; };
+		5FBAB0B41A1C7BEF009CABA6 /* Banana.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0A81A1C7BEF009CABA6 /* Banana.png */; };
+		5FBAB0B51A1C7BEF009CABA6 /* Blue_Spiny_Shell.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0A91A1C7BEF009CABA6 /* Blue_Spiny_Shell.png */; };
+		5FBAB0B61A1C7BEF009CABA6 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0AA1A1C7BEF009CABA6 /* coin.png */; };
+		5FBAB0B71A1C7BEF009CABA6 /* GoldenShellSME-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0AB1A1C7BEF009CABA6 /* GoldenShellSME-300x300.png */; };
+		5FBAB0B81A1C7BEF009CABA6 /* mario-coin-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0AC1A1C7BEF009CABA6 /* mario-coin-300x300.png */; };
+		5FBAB0B91A1C7BEF009CABA6 /* Mario-kart-8-potted-piranha-plant-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0AD1A1C7BEF009CABA6 /* Mario-kart-8-potted-piranha-plant-300x300.png */; };
+		5FBAB0BA1A1C7BEF009CABA6 /* mario-kart-8-super-star-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0AE1A1C7BEF009CABA6 /* mario-kart-8-super-star-300x300.png */; };
+		5FBAB0BB1A1C7BEF009CABA6 /* snes.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0AF1A1C7BEF009CABA6 /* snes.png */; };
+		5FBAB0BC1A1C7BEF009CABA6 /* Triple_Bananas.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0B01A1C7BEF009CABA6 /* Triple_Bananas.png */; };
+		5FBAB0C61A1C7D96009CABA6 /* 471t.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0BE1A1C7D96009CABA6 /* 471t.png */; };
+		5FBAB0C71A1C7D96009CABA6 /* 508t.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0BF1A1C7D96009CABA6 /* 508t.png */; };
+		5FBAB0C81A1C7D96009CABA6 /* 509t.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0C01A1C7D96009CABA6 /* 509t.png */; };
+		5FBAB0C91A1C7D96009CABA6 /* duh.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0C11A1C7D96009CABA6 /* duh.png */; };
+		5FBAB0CA1A1C7D96009CABA6 /* me gusta.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0C21A1C7D96009CABA6 /* me gusta.png */; };
+		5FBAB0CB1A1C7D96009CABA6 /* meme-lol.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0C31A1C7D96009CABA6 /* meme-lol.png */; };
+		5FBAB0CC1A1C7D96009CABA6 /* PNG Yao Ming.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0C41A1C7D96009CABA6 /* PNG Yao Ming.png */; };
+		5FBAB0CD1A1C7D96009CABA6 /* troll.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0C51A1C7D96009CABA6 /* troll.png */; };
+		5FBAB0DB1A1C7EC0009CABA6 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0CF1A1C7EC0009CABA6 /* apple.png */; };
+		5FBAB0DC1A1C7EC0009CABA6 /* balloons.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0D01A1C7EC0009CABA6 /* balloons.png */; };
+		5FBAB0DD1A1C7EC0009CABA6 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0D11A1C7EC0009CABA6 /* basketball.png */; };
+		5FBAB0DE1A1C7EC0009CABA6 /* beachball.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0D21A1C7EC0009CABA6 /* beachball.png */; };
+		5FBAB0DF1A1C7EC0009CABA6 /* beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0D31A1C7EC0009CABA6 /* beer.png */; };
+		5FBAB0E01A1C7EC0009CABA6 /* Franziskaner_German_Wheat_Beer_Glass_300_x_300.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0D41A1C7EC0009CABA6 /* Franziskaner_German_Wheat_Beer_Glass_300_x_300.png */; };
+		5FBAB0E11A1C7EC0009CABA6 /* Hot dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0D51A1C7EC0009CABA6 /* Hot dog.png */; };
+		5FBAB0E21A1C7EC0009CABA6 /* money.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0D61A1C7EC0009CABA6 /* money.png */; };
+		5FBAB0E31A1C7EC0009CABA6 /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0D71A1C7EC0009CABA6 /* pizza.png */; };
+		5FBAB0E41A1C7EC0009CABA6 /* tennisracket.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0D81A1C7EC0009CABA6 /* tennisracket.png */; };
+		5FBAB0E51A1C7EC0009CABA6 /* veggie-burger-of-the-month-may-2014.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0D91A1C7EC0009CABA6 /* veggie-burger-of-the-month-may-2014.png */; };
+		5FBAB0E61A1C7EC0009CABA6 /* wand.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBAB0DA1A1C7EC0009CABA6 /* wand.png */; };
 		5FEA1CC61A1494D3008A94C1 /* Thumb_red puma hat.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */; };
 		5FEA1CC71A1494D3008A94C1 /* Thumb_kids griffin hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */; };
 		5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */; };
@@ -115,6 +147,38 @@
 		5FBAB09C1A1C52E8009CABA6 /* rotate_camera-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rotate_camera-100.png"; sourceTree = "<group>"; };
 		5FBAB09E1A1C5725009CABA6 /* take_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_photo.png; sourceTree = "<group>"; };
 		5FBAB0A01A1C6726009CABA6 /* take_photo_300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_photo_300.png; sourceTree = "<group>"; };
+		5FBAB0A51A1C7BEF009CABA6 /* 1-Up_Mushroom_Artwork_-_Super_Mario_3D_World-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-Up_Mushroom_Artwork_-_Super_Mario_3D_World-300x300.png"; sourceTree = "<group>"; };
+		5FBAB0A61A1C7BEF009CABA6 /* 12696-high_res-koopa-mario-mushroom-vector-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12696-high_res-koopa-mario-mushroom-vector-300x300.png"; sourceTree = "<group>"; };
+		5FBAB0A71A1C7BEF009CABA6 /* 300px-Kingbill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Kingbill.png"; sourceTree = "<group>"; };
+		5FBAB0A81A1C7BEF009CABA6 /* Banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Banana.png; sourceTree = "<group>"; };
+		5FBAB0A91A1C7BEF009CABA6 /* Blue_Spiny_Shell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue_Spiny_Shell.png; sourceTree = "<group>"; };
+		5FBAB0AA1A1C7BEF009CABA6 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
+		5FBAB0AB1A1C7BEF009CABA6 /* GoldenShellSME-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GoldenShellSME-300x300.png"; sourceTree = "<group>"; };
+		5FBAB0AC1A1C7BEF009CABA6 /* mario-coin-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mario-coin-300x300.png"; sourceTree = "<group>"; };
+		5FBAB0AD1A1C7BEF009CABA6 /* Mario-kart-8-potted-piranha-plant-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mario-kart-8-potted-piranha-plant-300x300.png"; sourceTree = "<group>"; };
+		5FBAB0AE1A1C7BEF009CABA6 /* mario-kart-8-super-star-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mario-kart-8-super-star-300x300.png"; sourceTree = "<group>"; };
+		5FBAB0AF1A1C7BEF009CABA6 /* snes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snes.png; sourceTree = "<group>"; };
+		5FBAB0B01A1C7BEF009CABA6 /* Triple_Bananas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Triple_Bananas.png; sourceTree = "<group>"; };
+		5FBAB0BE1A1C7D96009CABA6 /* 471t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 471t.png; sourceTree = "<group>"; };
+		5FBAB0BF1A1C7D96009CABA6 /* 508t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 508t.png; sourceTree = "<group>"; };
+		5FBAB0C01A1C7D96009CABA6 /* 509t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 509t.png; sourceTree = "<group>"; };
+		5FBAB0C11A1C7D96009CABA6 /* duh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duh.png; sourceTree = "<group>"; };
+		5FBAB0C21A1C7D96009CABA6 /* me gusta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me gusta.png"; sourceTree = "<group>"; };
+		5FBAB0C31A1C7D96009CABA6 /* meme-lol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meme-lol.png"; sourceTree = "<group>"; };
+		5FBAB0C41A1C7D96009CABA6 /* PNG Yao Ming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PNG Yao Ming.png"; sourceTree = "<group>"; };
+		5FBAB0C51A1C7D96009CABA6 /* troll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = troll.png; sourceTree = "<group>"; };
+		5FBAB0CF1A1C7EC0009CABA6 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		5FBAB0D01A1C7EC0009CABA6 /* balloons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloons.png; sourceTree = "<group>"; };
+		5FBAB0D11A1C7EC0009CABA6 /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
+		5FBAB0D21A1C7EC0009CABA6 /* beachball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beachball.png; sourceTree = "<group>"; };
+		5FBAB0D31A1C7EC0009CABA6 /* beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer.png; sourceTree = "<group>"; };
+		5FBAB0D41A1C7EC0009CABA6 /* Franziskaner_German_Wheat_Beer_Glass_300_x_300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Franziskaner_German_Wheat_Beer_Glass_300_x_300.png; sourceTree = "<group>"; };
+		5FBAB0D51A1C7EC0009CABA6 /* Hot dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hot dog.png"; sourceTree = "<group>"; };
+		5FBAB0D61A1C7EC0009CABA6 /* money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money.png; sourceTree = "<group>"; };
+		5FBAB0D71A1C7EC0009CABA6 /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
+		5FBAB0D81A1C7EC0009CABA6 /* tennisracket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tennisracket.png; sourceTree = "<group>"; };
+		5FBAB0D91A1C7EC0009CABA6 /* veggie-burger-of-the-month-may-2014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "veggie-burger-of-the-month-may-2014.png"; sourceTree = "<group>"; };
+		5FBAB0DA1A1C7EC0009CABA6 /* wand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wand.png; sourceTree = "<group>"; };
 		5FEA1CBB1A1494D3008A94C1 /* Thumb_red puma hat.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb_red puma hat.PNG"; sourceTree = "<group>"; };
 		5FEA1CBC1A1494D3008A94C1 /* Thumb_kids griffin hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumb_kids griffin hat.png"; sourceTree = "<group>"; };
 		5FEA1CBD1A1494D3008A94C1 /* Runner-Hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runner-Hat.png"; sourceTree = "<group>"; };
@@ -195,6 +259,9 @@
 		5F6CACFB1A121A0600C03768 /* stickers */ = {
 			isa = PBXGroup;
 			children = (
+				5FBAB0CE1A1C7EC0009CABA6 /* misc */,
+				5FBAB0BD1A1C7D96009CABA6 /* memes */,
+				5FBAB0A41A1C7BEF009CABA6 /* mario */,
 				5FEA1CD11A149A49008A94C1 /* glasses */,
 				5FEA1CBA1A1494C7008A94C1 /* hats */,
 				5F6CACFC1A121A0600C03768 /* dead@2x.png */,
@@ -287,6 +354,59 @@
 				5FA428C01A12095600F00FFF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FBAB0A41A1C7BEF009CABA6 /* mario */ = {
+			isa = PBXGroup;
+			children = (
+				5FBAB0A51A1C7BEF009CABA6 /* 1-Up_Mushroom_Artwork_-_Super_Mario_3D_World-300x300.png */,
+				5FBAB0A61A1C7BEF009CABA6 /* 12696-high_res-koopa-mario-mushroom-vector-300x300.png */,
+				5FBAB0A71A1C7BEF009CABA6 /* 300px-Kingbill.png */,
+				5FBAB0A81A1C7BEF009CABA6 /* Banana.png */,
+				5FBAB0A91A1C7BEF009CABA6 /* Blue_Spiny_Shell.png */,
+				5FBAB0AA1A1C7BEF009CABA6 /* coin.png */,
+				5FBAB0AB1A1C7BEF009CABA6 /* GoldenShellSME-300x300.png */,
+				5FBAB0AC1A1C7BEF009CABA6 /* mario-coin-300x300.png */,
+				5FBAB0AD1A1C7BEF009CABA6 /* Mario-kart-8-potted-piranha-plant-300x300.png */,
+				5FBAB0AE1A1C7BEF009CABA6 /* mario-kart-8-super-star-300x300.png */,
+				5FBAB0AF1A1C7BEF009CABA6 /* snes.png */,
+				5FBAB0B01A1C7BEF009CABA6 /* Triple_Bananas.png */,
+			);
+			path = mario;
+			sourceTree = "<group>";
+		};
+		5FBAB0BD1A1C7D96009CABA6 /* memes */ = {
+			isa = PBXGroup;
+			children = (
+				5FBAB0BE1A1C7D96009CABA6 /* 471t.png */,
+				5FBAB0BF1A1C7D96009CABA6 /* 508t.png */,
+				5FBAB0C01A1C7D96009CABA6 /* 509t.png */,
+				5FBAB0C11A1C7D96009CABA6 /* duh.png */,
+				5FBAB0C21A1C7D96009CABA6 /* me gusta.png */,
+				5FBAB0C31A1C7D96009CABA6 /* meme-lol.png */,
+				5FBAB0C41A1C7D96009CABA6 /* PNG Yao Ming.png */,
+				5FBAB0C51A1C7D96009CABA6 /* troll.png */,
+			);
+			path = memes;
+			sourceTree = "<group>";
+		};
+		5FBAB0CE1A1C7EC0009CABA6 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				5FBAB0CF1A1C7EC0009CABA6 /* apple.png */,
+				5FBAB0D01A1C7EC0009CABA6 /* balloons.png */,
+				5FBAB0D11A1C7EC0009CABA6 /* basketball.png */,
+				5FBAB0D21A1C7EC0009CABA6 /* beachball.png */,
+				5FBAB0D31A1C7EC0009CABA6 /* beer.png */,
+				5FBAB0D41A1C7EC0009CABA6 /* Franziskaner_German_Wheat_Beer_Glass_300_x_300.png */,
+				5FBAB0D51A1C7EC0009CABA6 /* Hot dog.png */,
+				5FBAB0D61A1C7EC0009CABA6 /* money.png */,
+				5FBAB0D71A1C7EC0009CABA6 /* pizza.png */,
+				5FBAB0D81A1C7EC0009CABA6 /* tennisracket.png */,
+				5FBAB0D91A1C7EC0009CABA6 /* veggie-burger-of-the-month-may-2014.png */,
+				5FBAB0DA1A1C7EC0009CABA6 /* wand.png */,
+			);
+			path = misc;
 			sourceTree = "<group>";
 		};
 		5FEA1CBA1A1494C7008A94C1 /* hats */ = {
@@ -425,34 +545,60 @@
 			files = (
 				5FBAB0951A1BF7D6009CABA6 /* sc-app-icon.png in Resources */,
 				FAE6D4EF1A1B2C35002B81E5 /* Billabong.ttf in Resources */,
+				5FBAB0E31A1C7EC0009CABA6 /* pizza.png in Resources */,
+				5FBAB0B61A1C7BEF009CABA6 /* coin.png in Resources */,
 				5FA428CF1A1209D400F00FFF /* CanvasViewController.xib in Resources */,
 				052601131A131DDF004C5951 /* button.png in Resources */,
 				5FEA1CE11A149B24008A94C1 /* voodoo-tactical-military-glasses-2.gif in Resources */,
+				5FBAB0B71A1C7BEF009CABA6 /* GoldenShellSME-300x300.png in Resources */,
 				5FBAB09D1A1C52E8009CABA6 /* rotate_camera-100.png in Resources */,
+				5FBAB0E51A1C7EC0009CABA6 /* veggie-burger-of-the-month-may-2014.png in Resources */,
+				5FBAB0BA1A1C7BEF009CABA6 /* mario-kart-8-super-star-300x300.png in Resources */,
+				5FBAB0B41A1C7BEF009CABA6 /* Banana.png in Resources */,
 				5FA428B61A12095600F00FFF /* LaunchScreen.xib in Resources */,
+				5FBAB0DC1A1C7EC0009CABA6 /* balloons.png in Resources */,
+				5FBAB0B81A1C7BEF009CABA6 /* mario-coin-300x300.png in Resources */,
+				5FBAB0E41A1C7EC0009CABA6 /* tennisracket.png in Resources */,
 				5FEA1CD01A1494D3008A94C1 /* hat-conductor-adult-large-9999917479.png in Resources */,
 				5FEA1CCA1A1494D3008A94C1 /* Hats_SessTrucker_Red.gif in Resources */,
 				5FEA1CDE1A149B24008A94C1 /* iolanta-black-gold-lorgnette-opera-glasses.png in Resources */,
+				5FBAB0CC1A1C7D96009CABA6 /* PNG Yao Ming.png in Resources */,
 				5F6CAD031A121A0600C03768 /* dead@2x.png in Resources */,
+				5FBAB0E61A1C7EC0009CABA6 /* wand.png in Resources */,
 				5F6CAD081A121A0600C03768 /* wink@2x.png in Resources */,
+				5FBAB0B51A1C7BEF009CABA6 /* Blue_Spiny_Shell.png in Resources */,
 				5FA428B31A12095600F00FFF /* Images.xcassets in Resources */,
+				5FBAB0B91A1C7BEF009CABA6 /* Mario-kart-8-potted-piranha-plant-300x300.png in Resources */,
 				FA3BBD751A14282500E86C30 /* test_image_stickercam.jpg in Resources */,
 				5FEA1CE01A149B24008A94C1 /* voodoo-tactical-military-glasses-1.gif in Resources */,
 				5FEA1CC61A1494D3008A94C1 /* Thumb_red puma hat.PNG in Resources */,
 				FA3BBD721A141F0600E86C30 /* TwitterLogo.png in Resources */,
+				5FBAB0CD1A1C7D96009CABA6 /* troll.png in Resources */,
+				5FBAB0BC1A1C7BEF009CABA6 /* Triple_Bananas.png in Resources */,
 				5FEA1CCE1A1494D3008A94C1 /* hat-cowboy-black-cattleman-adult-med-9999914598.png in Resources */,
 				FA6772A11A13E1F100C0266D /* ShareViewController.xib in Resources */,
+				5FBAB0DF1A1C7EC0009CABA6 /* beer.png in Resources */,
 				052601101A131A84004C5951 /* CameraViewController.xib in Resources */,
+				5FBAB0B11A1C7BEF009CABA6 /* 1-Up_Mushroom_Artwork_-_Super_Mario_3D_World-300x300.png in Resources */,
 				5FBAB09B1A1C0623009CABA6 /* sc-launch-640-1136.png in Resources */,
+				5FBAB0DD1A1C7EC0009CABA6 /* basketball.png in Resources */,
 				5FBAB0A11A1C6726009CABA6 /* take_photo_300.png in Resources */,
 				FA3BBD701A141D2100E86C30 /* FBLogo.png in Resources */,
+				5FBAB0CA1A1C7D96009CABA6 /* me gusta.png in Resources */,
 				5F3489501A19BD4C00FC4263 /* more_mario_64_animation_by_expodude32-d79f1o1.png in Resources */,
 				5FEA1CCB1A1494D3008A94C1 /* Hats_SessTrucker_Black.gif in Resources */,
 				5FEA1CE21A149B24008A94C1 /* voodoo-tactical-military-glasses-3.gif in Resources */,
 				5FEA1CE51A149DEA008A94C1 /* preview-placeholder.jpg in Resources */,
+				5FBAB0BB1A1C7BEF009CABA6 /* snes.png in Resources */,
+				5FBAB0DB1A1C7EC0009CABA6 /* apple.png in Resources */,
+				5FBAB0C61A1C7D96009CABA6 /* 471t.png in Resources */,
 				5FEA1CCD1A1494D3008A94C1 /* hat-viking-helmet-child-teen-one-size-763285730078.png in Resources */,
+				5FBAB0B31A1C7BEF009CABA6 /* 300px-Kingbill.png in Resources */,
 				5FEA1CCC1A1494D3008A94C1 /* hat-yachtsman-white-adjustable-back-763285706646.png in Resources */,
 				FA7099BF1A143C3800DBF6BA /* IGLogo.png in Resources */,
+				5FBAB0E01A1C7EC0009CABA6 /* Franziskaner_German_Wheat_Beer_Glass_300_x_300.png in Resources */,
+				5FBAB0C71A1C7D96009CABA6 /* 508t.png in Resources */,
+				5FBAB0E11A1C7EC0009CABA6 /* Hot dog.png in Resources */,
 				FAE6D4E81A1B2552002B81E5 /* fbshare.png in Resources */,
 				5FEA1CC91A1494D3008A94C1 /* Round-Hat2-300x300.png in Resources */,
 				5FEA1CE31A149B24008A94C1 /* voodoo-tactical-military-glasses-4.gif in Resources */,
@@ -461,15 +607,21 @@
 				0581E36B1A1B1708007B694F /* flipcamera.png in Resources */,
 				5FEA1CDD1A149B24008A94C1 /* glasses-300x300.png in Resources */,
 				5FEA1CC71A1494D3008A94C1 /* Thumb_kids griffin hat.png in Resources */,
+				5FBAB0E21A1C7EC0009CABA6 /* money.png in Resources */,
 				5FEA1CCF1A1494D3008A94C1 /* hat-confederate-general-dlx-adult-sm-9999912643.png in Resources */,
+				5FBAB0CB1A1C7D96009CABA6 /* meme-lol.png in Resources */,
 				5F6CAD041A121A0600C03768 /* excited@2x.png in Resources */,
 				5FBAB09A1A1C0623009CABA6 /* sc-launch-640-960.png in Resources */,
+				5FBAB0C81A1C7D96009CABA6 /* 509t.png in Resources */,
 				0581E3691A1B00DF007B694F /* cameraroll.png in Resources */,
+				5FBAB0B21A1C7BEF009CABA6 /* 12696-high_res-koopa-mario-mushroom-vector-300x300.png in Resources */,
 				5F6CAD051A121A0600C03768 /* happy@2x.png in Resources */,
 				5FEA1CC81A1494D3008A94C1 /* Runner-Hat.png in Resources */,
+				5FBAB0C91A1C7D96009CABA6 /* duh.png in Resources */,
 				5F6CAD071A121A0600C03768 /* tongue@2x.png in Resources */,
 				5F6CAD061A121A0600C03768 /* sad@2x.png in Resources */,
 				5FBAB0971A1BFFDB009CABA6 /* Images-2.xcassets in Resources */,
+				5FBAB0DE1A1C7EC0009CABA6 /* beachball.png in Resources */,
 				5FBAB09F1A1C5725009CABA6 /* take_photo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

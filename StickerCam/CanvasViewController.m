@@ -39,7 +39,8 @@
     [self.toggleTrayImage addGestureRecognizer:tapGestureRecognizer];
     self.previewImageView.image = self.pictureImage;
     
-    self.pages = @[@{@"page": @"Hats", @"images": @[@"Thumb_red puma hat.PNG",
+    self.pages = @[
+                    @{@"page": @"Hats", @"images": @[@"Thumb_red puma hat.PNG",
                                               @"Thumb_kids griffin hat.png",
                                               @"Runner-Hat.png",
                                               @"Round-Hat2-300x300.png",
@@ -51,15 +52,50 @@
                                               @"hat-confederate-general-dlx-adult-sm-9999912643.png",
                                               @"hat-conductor-adult-large-9999917479.png",
                                               @"more_mario_64_animation_by_expodude32-d79f1o1.png"]
-                                             },
-                   @{@"page": @"Glasses", @"images": @[@"3D_Glasses_Final_Clipart_Free.png",
-                                                       @"glasses-300x300.png",
-                                                       @"iolanta-black-gold-lorgnette-opera-glasses.png",
-                                                       @"voodoo-tactical-military-glasses-1.gif",
-                                                       @"voodoo-tactical-military-glasses-2.gif",
-                                                       @"voodoo-tactical-military-glasses-3.gif",
-                                                       @"voodoo-tactical-military-glasses-4.gif"]
-                     }];
+                    },
+                    @{@"page": @"Glasses", @"images": @[@"3D_Glasses_Final_Clipart_Free.png",
+                                                   @"glasses-300x300.png",
+                                                   @"iolanta-black-gold-lorgnette-opera-glasses.png",
+                                                   @"voodoo-tactical-military-glasses-1.gif",
+                                                   @"voodoo-tactical-military-glasses-2.gif",
+                                                   @"voodoo-tactical-military-glasses-3.gif",
+                                                   @"voodoo-tactical-military-glasses-4.gif"]
+                    },
+                    @{@"page": @"Mario", @"images": @[@"1-Up_Mushroom_Artwork_-_Super_Mario_3D_World-300x300.png",
+                                                   @"300px-Kingbill.png",
+                                                   @"12696-high_res-koopa-mario-mushroom-vector-300x300.png",
+                                                   @"Banana.png",
+                                                   @"Blue_Spiny_Shell.png",
+                                                   @"coin.png",
+                                                   @"GoldenShellSME-300x300.png",
+                                                   @"mario-coin-300x300.png",
+                                                   @"Mario-kart-8-potted-piranha-plant-300x300.png",
+                                                   @"mario-kart-8-super-star-300x300.png",
+                                                   @"snes.png",
+                                                   @"Triple_Bananas.png"]
+                    },
+                    @{@"page": @"Memes", @"images": @[@"471t.png",
+                                                      @"508t.png",
+                                                      @"509t.png",
+                                                      @"duh.png",
+                                                      @"me gusta.png",
+                                                      @"meme-lol.png",
+                                                      @"PNG Yao Ming.png",
+                                                      @"troll.png"]
+                    },
+                    @{@"page": @"Misc", @"images": @[@"apple.png",
+                                                     @"balloons.png",
+                                                     @"basketball.png",
+                                                     @"beachball.png",
+                                                     @"beer.png",
+                                                     @"Franziskaner_German_Wheat_Beer_Glass_300_x_300.png",
+                                                     @"Hot dog.png",
+                                                     @"money.png",
+                                                     @"pizza.png",
+                                                     @"tennisracket.png",
+                                                     @"veggie-burger-of-the-month-may-2014.png",
+                                                     @"wand.png"]
+                    }];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancelButton)];
     
